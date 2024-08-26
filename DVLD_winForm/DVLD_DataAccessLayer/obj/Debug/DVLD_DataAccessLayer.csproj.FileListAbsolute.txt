@@ -1,0 +1,12 @@
+D:\MyCRUDproject in C#WinForm\DVLDwinForm\DVLD_DataAccessLayer\bin\Debug\DVLD_DataAccessLayer.dll
+D:\MyCRUDproject in C#WinForm\DVLDwinForm\DVLD_DataAccessLayer\bin\Debug\DVLD_DataAccessLayer.pdb
+D:\MyCRUDproject in C#WinForm\DVLDwinForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.csproj.AssemblyReference.cache
+D:\MyCRUDproject in C#WinForm\DVLDwinForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\MyCRUDproject in C#WinForm\DVLDwinForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.dll
+D:\MyCRUDproject in C#WinForm\DVLDwinForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.pdb
+D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_DataAccessLayer\bin\Debug\DVLD_DataAccessLayer.dll
+D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_DataAccessLayer\bin\Debug\DVLD_DataAccessLayer.pdb
+D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.csproj.AssemblyReference.cache
+D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.dll
+D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.pdb
