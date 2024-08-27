@@ -29,37 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlFilterByDriverLicenseInfo));
-            this.ctrlLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlLicenseInfo();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbFilterByLicenseID = new System.Windows.Forms.GroupBox();
             this.btnFindLicenseID = new System.Windows.Forms.Button();
             this.txtLicenseID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.ctrlLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlLicenseInfo();
+            this.gbFilterByLicenseID.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ctrlLicenseInfo1
+            // gbFilterByLicenseID
             // 
-            this.ctrlLicenseInfo1.BackColor = System.Drawing.Color.White;
-            this.ctrlLicenseInfo1.Location = new System.Drawing.Point(3, 81);
-            this.ctrlLicenseInfo1.Name = "ctrlLicenseInfo1";
-            this.ctrlLicenseInfo1.Size = new System.Drawing.Size(796, 373);
-            this.ctrlLicenseInfo1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnFindLicenseID);
-            this.groupBox1.Controls.Add(this.txtLicenseID);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(5, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(561, 81);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filter";
+            this.gbFilterByLicenseID.Controls.Add(this.btnFindLicenseID);
+            this.gbFilterByLicenseID.Controls.Add(this.txtLicenseID);
+            this.gbFilterByLicenseID.Controls.Add(this.label1);
+            this.gbFilterByLicenseID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbFilterByLicenseID.Location = new System.Drawing.Point(5, 3);
+            this.gbFilterByLicenseID.Name = "gbFilterByLicenseID";
+            this.gbFilterByLicenseID.Size = new System.Drawing.Size(561, 81);
+            this.gbFilterByLicenseID.TabIndex = 1;
+            this.gbFilterByLicenseID.TabStop = false;
+            this.gbFilterByLicenseID.Text = "Filter";
             // 
             // btnFindLicenseID
             // 
+            this.btnFindLicenseID.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFindLicenseID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindLicenseID.Image = ((System.Drawing.Image)(resources.GetObject("btnFindLicenseID.Image")));
             this.btnFindLicenseID.Location = new System.Drawing.Point(466, 23);
@@ -75,6 +68,7 @@
             this.txtLicenseID.Name = "txtLicenseID";
             this.txtLicenseID.Size = new System.Drawing.Size(313, 26);
             this.txtLicenseID.TabIndex = 3;
+            this.txtLicenseID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLicenseID_KeyPress);
             // 
             // label1
             // 
@@ -86,18 +80,26 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "LicenseID:";
             // 
+            // ctrlLicenseInfo1
+            // 
+            this.ctrlLicenseInfo1.BackColor = System.Drawing.Color.White;
+            this.ctrlLicenseInfo1.Location = new System.Drawing.Point(3, 90);
+            this.ctrlLicenseInfo1.Name = "ctrlLicenseInfo1";
+            this.ctrlLicenseInfo1.Size = new System.Drawing.Size(788, 358);
+            this.ctrlLicenseInfo1.TabIndex = 0;
+            // 
             // ctrlFilterByDriverLicenseInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbFilterByLicenseID);
             this.Controls.Add(this.ctrlLicenseInfo1);
             this.Name = "ctrlFilterByDriverLicenseInfo";
-            this.Size = new System.Drawing.Size(792, 448);
+            this.Size = new System.Drawing.Size(794, 451);
             this.Load += new System.EventHandler(this.ctrlFilterByDriverLicenseInfo_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbFilterByLicenseID.ResumeLayout(false);
+            this.gbFilterByLicenseID.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -105,7 +107,7 @@
         #endregion
 
         private ctrlLicenseInfo ctrlLicenseInfo1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbFilterByLicenseID;
         private System.Windows.Forms.Button btnFindLicenseID;
         private System.Windows.Forms.TextBox txtLicenseID;
         private System.Windows.Forms.Label label1;

@@ -102,5 +102,13 @@ namespace DVLD_WinForm_PresentationLayer
                 frm.ShowDialog();
             }
         }
+
+        private void internationalDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (New_International_License_Application frm = new New_International_License_Application())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

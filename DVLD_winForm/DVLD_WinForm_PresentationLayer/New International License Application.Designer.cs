@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_International_License_Application));
             this.label1 = new System.Windows.Forms.Label();
-            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlFilterByDriverLicenseInfo();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblCreatedByUser = new System.Windows.Forms.Label();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
@@ -60,6 +59,7 @@
             this.guna2btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.llShowLicensesHistory = new System.Windows.Forms.LinkLabel();
             this.llShowLicenseInfo = new System.Windows.Forms.LinkLabel();
+            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlFilterByDriverLicenseInfo();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -81,14 +81,6 @@
             this.label1.Size = new System.Drawing.Size(439, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "International License Application";
-            // 
-            // ctrlFilterByDriverLicenseInfo1
-            // 
-            this.ctrlFilterByDriverLicenseInfo1.BackColor = System.Drawing.Color.White;
-            this.ctrlFilterByDriverLicenseInfo1.Location = new System.Drawing.Point(12, 49);
-            this.ctrlFilterByDriverLicenseInfo1.Name = "ctrlFilterByDriverLicenseInfo1";
-            this.ctrlFilterByDriverLicenseInfo1.Size = new System.Drawing.Size(792, 448);
-            this.ctrlFilterByDriverLicenseInfo1.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -371,6 +363,7 @@
             this.guna2btnIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2btnIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2btnIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2btnIssue.Enabled = false;
             this.guna2btnIssue.FillColor = System.Drawing.Color.White;
             this.guna2btnIssue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2btnIssue.ForeColor = System.Drawing.Color.Black;
@@ -425,18 +418,28 @@
             this.llShowLicenseInfo.Text = "Show License Info\r\n";
             this.llShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llShowLicenseInfo_LinkClicked);
             // 
+            // ctrlFilterByDriverLicenseInfo1
+            // 
+            this.ctrlFilterByDriverLicenseInfo1.BackColor = System.Drawing.Color.White;
+            this.ctrlFilterByDriverLicenseInfo1.Location = new System.Drawing.Point(12, 43);
+            this.ctrlFilterByDriverLicenseInfo1.Name = "ctrlFilterByDriverLicenseInfo1";
+            this.ctrlFilterByDriverLicenseInfo1.Size = new System.Drawing.Size(794, 451);
+            this.ctrlFilterByDriverLicenseInfo1.TabIndex = 24;
+            this.ctrlFilterByDriverLicenseInfo1.OnLicenseSelected += new System.Action<int>(this.ctrlFilterByDriverLicenseInfo1_OnLicenseSelected);
+            this.ctrlFilterByDriverLicenseInfo1.Load += new System.EventHandler(this.ctrlFilterByDriverLicenseInfo1_Load);
+            // 
             // New_International_License_Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(809, 703);
+            this.Controls.Add(this.ctrlFilterByDriverLicenseInfo1);
             this.Controls.Add(this.llShowLicenseInfo);
             this.Controls.Add(this.llShowLicensesHistory);
             this.Controls.Add(this.guna2btnIssue);
             this.Controls.Add(this.guna2btnClose);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.ctrlFilterByDriverLicenseInfo1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "New_International_License_Application";
@@ -460,7 +463,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private ctrlFilterByDriverLicenseInfo ctrlFilterByDriverLicenseInfo1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label InterApplicationID;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -490,5 +492,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2btnClose;
         private System.Windows.Forms.LinkLabel llShowLicensesHistory;
         private System.Windows.Forms.LinkLabel llShowLicenseInfo;
+        private ctrlFilterByDriverLicenseInfo ctrlFilterByDriverLicenseInfo1;
     }
 }

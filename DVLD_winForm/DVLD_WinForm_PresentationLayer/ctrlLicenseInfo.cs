@@ -41,6 +41,22 @@ namespace DVLD_WinForm_PresentationLayer
                     pbGendor.Load("D:\\Rel_Schema for DVLD\\ICONS\\Woman 32.png");
                 }
 
+                if (string.IsNullOrEmpty(dr["ImagePath"].ToString()))
+                {
+                    if (lblGendor.Text == "Male")
+                    {
+                        pbLicenseInfo.Load("D:\\Rel_Schema for DVLD\\ICONS\\Male 512");
+                    }
+                    else
+                    {
+                        pbLicenseInfo.Load("D:\\Rel_Schema for DVLD\\ICONS\\Female 512");
+                    }
+                }
+                else
+                {
+                    pbLicenseInfo.Load(dr["ImagePath"].ToString());
+                }
+
                 lblIssueDate.Text = Convert.ToDateTime(dr["IssueDate"]).ToString("d");
                 lblExpirationDate.Text = Convert.ToDateTime(dr["ExpirationDate"]).ToString("d");
                 lblDateOfBirth.Text = Convert.ToDateTime(dr["DateOfBirth"]).ToString("d");
