@@ -1,2 +1,2 @@
 # DVLD-Project
-## There are steps to install this project on your local machine. 
+## There are some steps to to open this project
