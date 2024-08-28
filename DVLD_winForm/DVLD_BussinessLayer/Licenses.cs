@@ -150,8 +150,7 @@ namespace DVLD_BussinessLayer
         public static DataTable GetAllLicenses() { return clsLicensesDataAccess.GetAllLicenses(); }
     
         public static DataTable GetAllLicensesInfo_View(int LicenseID) { return clsLicensesDataAccess.GetAllLicensesInfo_View(LicenseID); }
-        public static DataTable GetLocalLicenseHistoryByLicenseID(int LicenseID) { return clsLicensesDataAccess.GetLocalLicenseHistoryByLicenseID(LicenseID); }
-        public static DataTable GetInternationalLicenseHistoryByLicenseID(int LicenseID) { return clsLicensesDataAccess.GetInternationalLicenseHistoryByLicenseID(LicenseID); }
+        public static DataTable GetAllLocalLicenseHistoryByDriverID(int DriverID) { return clsLicensesDataAccess.GetAllLocalLicenseHistoryByDriverID(DriverID); }
 
         public static bool DeleteLicense(int LicenseID) { return clsLicensesDataAccess.DeleteLicense(LicenseID); }
 

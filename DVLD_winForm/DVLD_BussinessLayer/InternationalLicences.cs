@@ -121,6 +121,13 @@ namespace DVLD_BussinessLayer
         public static bool DeleteInternationalLicense(int InternationalLicenseID) { return clsInternationalLicensesDataAccess.DeleteInternationalLicense(InternationalLicenseID); }
 
         public static bool isInternationalLicenseExist(int InternationalLicenseID) { return clsInternationalLicensesDataAccess.IsInternationalLicenseExist(InternationalLicenseID); }
+      
+        public static int IsInternationalLicenseExistAndActive(int LicenseID) { return clsInternationalLicensesDataAccess.IsInternationalLicenseExistAndActive(LicenseID); }
+
+        public static DataTable GetAllInternationalLicenseHistoryByDriverID(int DriverID) { return clsInternationalLicensesDataAccess.GetAllInternationalLicenseHistoryByDriveID(DriverID); }
+     
+        public static DataTable GetInternationalLicenseInfo(int IntLicenseID) { return clsInternationalLicensesDataAccess.GetInternationalLicenseInfo(IntLicenseID); }
+
 
 
     }

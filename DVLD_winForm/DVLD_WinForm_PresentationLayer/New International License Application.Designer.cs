@@ -232,9 +232,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(449, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 21);
+            this.label6.Size = new System.Drawing.Size(108, 21);
             this.label6.TabIndex = 93;
-            this.label6.Text = "I.L.ApplicationID:";
+            this.label6.Text = "I.L.LicenseID:";
             // 
             // lblFees
             // 
@@ -426,7 +426,6 @@
             this.ctrlFilterByDriverLicenseInfo1.Size = new System.Drawing.Size(794, 451);
             this.ctrlFilterByDriverLicenseInfo1.TabIndex = 24;
             this.ctrlFilterByDriverLicenseInfo1.OnLicenseSelected += new System.Action<int>(this.ctrlFilterByDriverLicenseInfo1_OnLicenseSelected);
-            this.ctrlFilterByDriverLicenseInfo1.Load += new System.EventHandler(this.ctrlFilterByDriverLicenseInfo1_Load);
             // 
             // New_International_License_Application
             // 

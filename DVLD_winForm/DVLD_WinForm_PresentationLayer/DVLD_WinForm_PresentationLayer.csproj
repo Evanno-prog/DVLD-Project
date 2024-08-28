@@ -89,6 +89,12 @@
     <Compile Include="ctrlFilterByDriverLicenseInfo.Designer.cs">
       <DependentUpon>ctrlFilterByDriverLicenseInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlInternationalLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlInternationalLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -112,6 +118,12 @@
     </Compile>
     <Compile Include="ctrlPersonInformationFindBy.Designer.cs">
       <DependentUpon>ctrlPersonInformationFindBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InternationalDriverInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InternationalDriverInfo.Designer.cs">
+      <DependentUpon>InternationalDriverInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="IssueDriverLicenseForFirstTime.cs">
       <SubType>Form</SubType>
@@ -277,6 +289,9 @@
     <EmbeddedResource Include="ctrlFilterByDriverLicenseInfo.resx">
       <DependentUpon>ctrlFilterByDriverLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ctrlInternationalLicenseInfo.resx">
+      <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctrlLicenseInfo.resx">
       <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlUserInformation.resx">
       <DependentUpon>ctrlUserInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InternationalDriverInfo.resx">
+      <DependentUpon>InternationalDriverInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IssueDriverLicenseForFirstTime.resx">
       <DependentUpon>IssueDriverLicenseForFirstTime.cs</DependentUpon>

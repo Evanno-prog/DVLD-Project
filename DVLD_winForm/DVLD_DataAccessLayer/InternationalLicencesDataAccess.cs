@@ -52,6 +52,7 @@ namespace DVLD_DataAccessLayer
             return isFound;
 
         }
+     
         public static int AddNewInternationalLicense(int ApplicationID, int DriverID, int IssuedUsingLocalLicenseID, DateTime IssueDate, DateTime ExpirationDate, bool IsActive, int CreatedByUserID)
         {
 
@@ -103,7 +104,6 @@ namespace DVLD_DataAccessLayer
 
         }
 
-
         public static bool UpdateInternationalLicense(int InternationalLicenseID, int ApplicationID, int DriverID, int IssuedUsingLocalLicenseID, DateTime IssueDate, DateTime ExpirationDate, bool IsActive, int CreatedByUserID)
         {
             int rowsAffected = 0;
@@ -151,6 +151,7 @@ namespace DVLD_DataAccessLayer
             return (rowsAffected > 0);
 
         }
+   
         public static bool DeleteInternationalLicense(int InternationalLicenseID)
         {
             int rowsAffected = 0;
@@ -202,6 +203,38 @@ namespace DVLD_DataAccessLayer
 
         }
 
+        public static int IsInternationalLicenseExistAndActive(int LicenseID)
+        {
+            int ID = -1;
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    string query = "SELECT InternationalLicenseID FROM InternationalLicenses WHERE IssuedUsingLocalLicenseID = @LicenseID and IsActive = 1";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+
+                        command.Parameters.AddWithValue("@LicenseID", LicenseID);
+
+                        connection.Open();
+                        object result = command.ExecuteScalar();
+
+
+                        if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                        {
+                            ID = insertedID;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) {  }
+
+            return ID;
+
+        }
+
+      
         public static DataTable GetAllInternationalLicenses()
         {
 
@@ -226,6 +259,65 @@ namespace DVLD_DataAccessLayer
             }
 
             catch (Exception ex) {  }
+
+            return dt;
+        }
+
+        public static DataTable GetInternationalLicenseInfo(int IntLicenseID)
+        {
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    string query = "Select * From ListIntLicenseID_View Where InternationalLicenseID = @IntLicenseID;";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@IntLicenseID", IntLicenseID);
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                            reader.Close();
+                        }
+                    }
+                }
+            }
+
+            catch (Exception ex) {  }
+
+            return dt;
+        }
+
+        public static DataTable GetAllInternationalLicenseHistoryByDriveID(int DriverID)
+        {
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    string query = "SELECT InternationalLicenseID, ApplicationID, LLicenseID = IssuedUsingLocalLicenseID, IssueDate, ExpirationDate, IsActive FROM InternationalLicenses Where DriverID = @DriverID";
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@DriverID", DriverID);
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                            reader.Close();
+                        }
+                    }
+                }
+            }
+
+            catch (Exception ex) { }
 
             return dt;
         }

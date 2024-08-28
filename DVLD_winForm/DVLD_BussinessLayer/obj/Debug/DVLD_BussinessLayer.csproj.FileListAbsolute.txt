@@ -16,3 +16,12 @@ D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_BussinessLayer\obj\Debug\DVLD_Bu
 D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_BussinessLayer\obj\Debug\DVLD_BussinessLayer.csproj.CopyComplete
 D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_BussinessLayer\obj\Debug\DVLD_BussinessLayer.dll
 D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_BussinessLayer\obj\Debug\DVLD_BussinessLayer.pdb
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_BussinessLayer\bin\Debug\DVLD_BussinessLayer.dll
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_BussinessLayer\bin\Debug\DVLD_BussinessLayer.pdb
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_BussinessLayer\bin\Debug\DVLD_DataAccessLayer.dll
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_BussinessLayer\bin\Debug\DVLD_DataAccessLayer.pdb
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_BussinessLayer\obj\Debug\DVLD_BussinessLayer.csproj.AssemblyReference.cache
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_BussinessLayer\obj\Debug\DVLD_BussinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_BussinessLayer\obj\Debug\DVLD_BussinessLayer.csproj.CopyComplete
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_BussinessLayer\obj\Debug\DVLD_BussinessLayer.dll
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_BussinessLayer\obj\Debug\DVLD_BussinessLayer.pdb

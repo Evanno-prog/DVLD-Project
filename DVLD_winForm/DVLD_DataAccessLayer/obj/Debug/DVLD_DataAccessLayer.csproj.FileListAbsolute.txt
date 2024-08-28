@@ -10,3 +10,9 @@ D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_D
 D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.csproj.CoreCompileInputs.cache
 D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.dll
 D:\MyCRUDproject in C#WinForm\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.pdb
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_DataAccessLayer\bin\Debug\DVLD_DataAccessLayer.dll
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_DataAccessLayer\bin\Debug\DVLD_DataAccessLayer.pdb
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.dll
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_DataAccessLayer\obj\Debug\DVLD_DataAccessLayer.pdb

@@ -23,17 +23,15 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void _RefreshLocalLicenseHistory()
         {
-
-            DataView dv = clsLicense.GetLocalLicenseHistoryByLicenseID(clsLicense.FindLicenseInfoByApplicationID(_ApplicationID).LicenseID).DefaultView;
+            DataView dv = clsLicense.GetAllLocalLicenseHistoryByDriverID(clsDriver.FindDriverByPersonID(clsApplication.Find(_ApplicationID).ApplicantPersonID).DriverID).DefaultView;
             dgvLocalLicensesHistory.DataSource = dv;
             lblRecordCount.Text = dv.Count.ToString();
-
         }
 
         private void _RefreshInternationalLicenseHistory()
         {
 
-            DataView Dv = clsLicense.GetInternationalLicenseHistoryByLicenseID(clsLicense.FindLicenseInfoByApplicationID(_ApplicationID).LicenseID).DefaultView;
+            DataView Dv = clsInternationalLicense.GetAllInternationalLicenseHistoryByDriverID(clsDriver.FindDriverByPersonID(clsApplication.Find(_ApplicationID).ApplicantPersonID).DriverID).DefaultView;
             dgvInternationalLicensesHistory.DataSource = Dv;
             lblCountInterRecord.Text = Dv.Count.ToString();
 

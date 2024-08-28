@@ -358,7 +358,7 @@ namespace DVLD_DataAccessLayer
             return dt;
         }
    
-        public static DataTable GetLocalLicenseHistoryByLicenseID(int LicenseID)
+        public static DataTable GetAllLocalLicenseHistoryByDriverID(int DriverID)
         {
 
             DataTable dt = new DataTable();
@@ -367,11 +367,11 @@ namespace DVLD_DataAccessLayer
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                    string query = "SELECT Licenses.LicenseID, Licenses.ApplicationID, LicenseClasses.ClassName, Licenses.IssueDate, Licenses.ExpirationDate, Licenses.IsActive FROM  LicenseClasses INNER JOIN Licenses ON LicenseClasses.LicenseClassID = Licenses.LicenseClass Where LicenseID = @LicenseID;";
+                    string query = "SELECT Licenses.LicenseID, Licenses.ApplicationID, LicenseClasses.ClassName, Licenses.IssueDate, Licenses.ExpirationDate, Licenses.IsActive FROM  LicenseClasses INNER JOIN Licenses ON LicenseClasses.LicenseClassID = Licenses.LicenseClass Where DriverID = @DriverID;";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@LicenseID", LicenseID);
+                        command.Parameters.AddWithValue("@DriverID", DriverID);
                         connection.Open();
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
@@ -388,35 +388,6 @@ namespace DVLD_DataAccessLayer
             return dt;
         }
    
-        public static DataTable GetInternationalLicenseHistoryByLicenseID(int LicenseID)
-        {
-
-            DataTable dt = new DataTable();
-
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                {
-                    string query = "SELECT InternationalLicenseID, ApplicationID, LLicenseID = IssuedUsingLocalLicenseID, IssueDate, ExpirationDate, IsActive FROM InternationalLicenses Where IssuedUsingLocalLicenseID = @LicenseID";
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@LicenseID", LicenseID);
-                        connection.Open();
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            if (reader.HasRows)
-                                dt.Load(reader);
-                            reader.Close();
-                        }
-                    }
-                }
-            }
-
-            catch (Exception ex) {  }
-
-            return dt;
-        }
 
 
     }
