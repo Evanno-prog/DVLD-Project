@@ -58,5 +58,10 @@ namespace DVLD_WinForm_PresentationLayer
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void txtLicenseID_TextChanged(object sender, EventArgs e)
+        {
+            btnFindLicenseID.Enabled = (string.IsNullOrEmpty(txtLicenseID.Text)) ? false : true;
+        }
     }
 }

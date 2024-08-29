@@ -53,6 +53,7 @@
             // btnFindLicenseID
             // 
             this.btnFindLicenseID.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFindLicenseID.Enabled = false;
             this.btnFindLicenseID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindLicenseID.Image = ((System.Drawing.Image)(resources.GetObject("btnFindLicenseID.Image")));
             this.btnFindLicenseID.Location = new System.Drawing.Point(466, 23);
@@ -68,6 +69,7 @@
             this.txtLicenseID.Name = "txtLicenseID";
             this.txtLicenseID.Size = new System.Drawing.Size(313, 26);
             this.txtLicenseID.TabIndex = 3;
+            this.txtLicenseID.TextChanged += new System.EventHandler(this.txtLicenseID_TextChanged);
             this.txtLicenseID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLicenseID_KeyPress);
             // 
             // label1

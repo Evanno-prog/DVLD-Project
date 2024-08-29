@@ -126,9 +126,9 @@ namespace DVLD_WinForm_PresentationLayer
             }
 
             DateTime dt = DateTime.Now;
-            if (dt > _License.ExpirationDate)
+            if (dt >= _License.ExpirationDate)
             {
-                MessageBox.Show("Sorry! this license date is Ended", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Sorry! this license date is Expired", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
