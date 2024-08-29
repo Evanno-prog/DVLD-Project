@@ -30,10 +30,6 @@ namespace DVLD_WinForm_PresentationLayer
             }
         }
 
-        private void ctrlFilterByDriverLicenseInfo_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnFindLicenseID_Click(object sender, EventArgs e)
         {

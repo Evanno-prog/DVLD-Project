@@ -31,27 +31,30 @@ namespace DVLD_WinForm_PresentationLayer
                 lblLicenseID.Text = dr["IssuedUsingLocalLicenseID"].ToString();
                 lblNationalNo.Text = dr["NationalNo"].ToString();
 
-                lblGendor.Text = dr["Gendor"].ToString();
-
+                lblGendor.Text = (dr["Gendor"].ToString() == "Male") ? "Male" : "Female";
+             
+                
                 if (lblGendor.Text == "Male")
                 {
                     pbGendor.Load("D:\\Rel_Schema for DVLD\\ICONS\\Man 32.png");
                 }
+
                 else
                 {
                     pbGendor.Load("D:\\Rel_Schema for DVLD\\ICONS\\Woman 32.png");
                 }
+
 
                 if (string.IsNullOrEmpty(dr["ImagePath"].ToString()))
                 {
 
                     if (lblGendor.Text == "Male")
                     {
-                        pbIntLicenseInfo.Load("D:\\Rel_Schema for DVLD\\ICONS\\Male 512");
+                        pbIntLicenseInfo.Load("D:\\Rel_Schema for DVLD\\ICONS\\male.png");
                     }
                     else
                     {
-                        pbIntLicenseInfo.Load("D:\\Rel_Schema for DVLD\\ICONS\\Female 512");
+                        pbIntLicenseInfo.Load("D:\\Rel_Schema for DVLD\\ICONS\\Female 512.png");
                     }
 
                 }

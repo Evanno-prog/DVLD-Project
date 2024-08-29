@@ -85,7 +85,7 @@
             this.ctrlLicenseInfo1.BackColor = System.Drawing.Color.White;
             this.ctrlLicenseInfo1.Location = new System.Drawing.Point(3, 90);
             this.ctrlLicenseInfo1.Name = "ctrlLicenseInfo1";
-            this.ctrlLicenseInfo1.Size = new System.Drawing.Size(788, 358);
+            this.ctrlLicenseInfo1.Size = new System.Drawing.Size(788, 368);
             this.ctrlLicenseInfo1.TabIndex = 0;
             // 
             // ctrlFilterByDriverLicenseInfo
@@ -96,8 +96,7 @@
             this.Controls.Add(this.gbFilterByLicenseID);
             this.Controls.Add(this.ctrlLicenseInfo1);
             this.Name = "ctrlFilterByDriverLicenseInfo";
-            this.Size = new System.Drawing.Size(794, 451);
-            this.Load += new System.EventHandler(this.ctrlFilterByDriverLicenseInfo_Load);
+            this.Size = new System.Drawing.Size(794, 459);
             this.gbFilterByLicenseID.ResumeLayout(false);
             this.gbFilterByLicenseID.PerformLayout();
             this.ResumeLayout(false);

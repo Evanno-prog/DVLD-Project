@@ -143,11 +143,23 @@
     <Compile Include="ListDrivers.Designer.cs">
       <DependentUpon>ListDrivers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListInternationalDrivingLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListInternationalDrivingLicenseApplication.Designer.cs">
+      <DependentUpon>ListInternationalDrivingLicenseApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="New International License Application.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="New International License Application.Designer.cs">
       <DependentUpon>New International License Application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenewLocalDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenewLocalDrivingLicense.Designer.cs">
+      <DependentUpon>RenewLocalDrivingLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="ShowLicenseInfo.cs">
       <SubType>Form</SubType>
@@ -319,6 +331,9 @@
     <EmbeddedResource Include="ListDrivers.resx">
       <DependentUpon>ListDrivers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListInternationalDrivingLicenseApplication.resx">
+      <DependentUpon>ListInternationalDrivingLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListLocalDrivingLicenseApplication.resx">
       <DependentUpon>ListLocalDrivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +368,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenewLocalDrivingLicense.resx">
+      <DependentUpon>RenewLocalDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleStreetTest.resx">
       <DependentUpon>ScheduleStreetTest.cs</DependentUpon>
