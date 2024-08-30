@@ -118,5 +118,13 @@ namespace DVLD_WinForm_PresentationLayer
                 frm.ShowDialog();
             }
         }
+
+        private void renewDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (RenewLocalDrivingLicense frm = new RenewLocalDrivingLicense())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

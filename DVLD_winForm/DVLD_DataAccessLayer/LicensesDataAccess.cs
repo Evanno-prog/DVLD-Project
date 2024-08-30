@@ -200,7 +200,7 @@ namespace DVLD_DataAccessLayer
 
                         command.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
 
-                        if (Notes == null)
+                        if (string.IsNullOrEmpty(Notes))
                             command.Parameters.AddWithValue("@Notes", DBNull.Value);
                         else
                             command.Parameters.AddWithValue("@Notes", Notes);
@@ -213,7 +213,8 @@ namespace DVLD_DataAccessLayer
                         command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
 
 
-                        connection.Open(); rowsAffected = command.ExecuteNonQuery();
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
                     }
                 }
             }

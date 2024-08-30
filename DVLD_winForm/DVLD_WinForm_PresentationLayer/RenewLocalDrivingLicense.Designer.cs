@@ -512,6 +512,7 @@
             this.guna2btnRenew.Size = new System.Drawing.Size(104, 29);
             this.guna2btnRenew.TabIndex = 122;
             this.guna2btnRenew.Text = "Renew";
+            this.guna2btnRenew.Click += new System.EventHandler(this.guna2btnRenew_Click);
             // 
             // llShowLicensesHistory
             // 
@@ -523,6 +524,7 @@
             this.llShowLicensesHistory.TabIndex = 123;
             this.llShowLicensesHistory.TabStop = true;
             this.llShowLicensesHistory.Text = "Show Licenses History";
+            this.llShowLicensesHistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llShowLicensesHistory_LinkClicked);
             // 
             // llShowNewLicenseInfo
             // 
@@ -535,6 +537,7 @@
             this.llShowNewLicenseInfo.TabIndex = 124;
             this.llShowNewLicenseInfo.TabStop = true;
             this.llShowNewLicenseInfo.Text = "Show New License Info";
+            this.llShowNewLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llShowNewLicenseInfo_LinkClicked);
             // 
             // ctrlFilterByDriverLicenseInfo1
             // 
