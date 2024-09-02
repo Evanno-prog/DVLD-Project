@@ -29,7 +29,7 @@ namespace DVLD_WinForm_PresentationLayer
                 PersonName.Text = dr["Name"].ToString();
                 lblLicenseID.Text = dr["LicenseID"].ToString();
                 lblNationalNo.Text = dr["NationalNo"].ToString();
-                    
+                lblIsDetained.Text = (string.IsNullOrEmpty(dr["IsReleased"].ToString())) ? "[???]" : (dr["IsReleased"].ToString() == "0") ? "Yes" : "No";
                 lblGendor.Text = dr["Gendor"].ToString();
 
                 if (lblGendor.Text == "Male")

@@ -142,5 +142,13 @@ namespace DVLD_WinForm_PresentationLayer
                 frm.ShowDialog();
             }
         }
+
+        private void detainLicenseToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            using (Detain_License frm = new Detain_License())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
