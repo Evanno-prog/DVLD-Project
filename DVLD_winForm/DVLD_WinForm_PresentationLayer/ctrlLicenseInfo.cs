@@ -60,7 +60,7 @@ namespace DVLD_WinForm_PresentationLayer
                 lblIssueDate.Text = Convert.ToDateTime(dr["IssueDate"]).ToString("d");
                 lblExpirationDate.Text = Convert.ToDateTime(dr["ExpirationDate"]).ToString("d");
                 lblDateOfBirth.Text = Convert.ToDateTime(dr["DateOfBirth"]).ToString("d");
-                lblIsActive.Text = (Convert.ToBoolean(dr["IsActive"])) ? "Yes" : "False";
+                lblIsActive.Text = (Convert.ToBoolean(dr["IsActive"])) ? "Yes" : "No";
                 lblDriverID.Text = dr["DriverID"].ToString();
                 lblIssueReason.Text = dr["IssueReason"].ToString();
                 lblNotes.Text = (string.IsNullOrEmpty(dr["Notes"].ToString())) ? "No Notes" : dr["Notes"].ToString();

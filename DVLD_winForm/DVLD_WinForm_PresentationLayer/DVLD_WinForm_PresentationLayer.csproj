@@ -161,6 +161,12 @@
     <Compile Include="RenewLocalDrivingLicense.Designer.cs">
       <DependentUpon>RenewLocalDrivingLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReplacementForDamageOrLostLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReplacementForDamageOrLostLicense.Designer.cs">
+      <DependentUpon>ReplacementForDamageOrLostLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,6 +377,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RenewLocalDrivingLicense.resx">
       <DependentUpon>RenewLocalDrivingLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReplacementForDamageOrLostLicense.resx">
+      <DependentUpon>ReplacementForDamageOrLostLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ScheduleStreetTest.resx">
       <DependentUpon>ScheduleStreetTest.cs</DependentUpon>

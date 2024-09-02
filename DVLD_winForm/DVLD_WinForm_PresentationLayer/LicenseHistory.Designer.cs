@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LicenseHistory));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -45,6 +46,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvInternationalLicensesHistory = new System.Windows.Forms.DataGridView();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.cbManageLicenseHistory = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ShowLicenseDetails = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -52,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicensesHistory)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternationalLicensesHistory)).BeginInit();
+            this.cbManageLicenseHistory.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -143,6 +147,7 @@
             // 
             this.dgvLocalLicensesHistory.BackgroundColor = System.Drawing.Color.White;
             this.dgvLocalLicensesHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocalLicensesHistory.ContextMenuStrip = this.cbManageLicenseHistory;
             this.dgvLocalLicensesHistory.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dgvLocalLicensesHistory.Location = new System.Drawing.Point(16, 32);
             this.dgvLocalLicensesHistory.Name = "dgvLocalLicensesHistory";
@@ -231,6 +236,22 @@
             this.guna2Button1.Text = "Close";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // cbManageLicenseHistory
+            // 
+            this.cbManageLicenseHistory.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.cbManageLicenseHistory.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ShowLicenseDetails});
+            this.cbManageLicenseHistory.Name = "contextMenuStrip1";
+            this.cbManageLicenseHistory.Size = new System.Drawing.Size(198, 62);
+            // 
+            // ShowLicenseDetails
+            // 
+            this.ShowLicenseDetails.Image = ((System.Drawing.Image)(resources.GetObject("ShowLicenseDetails.Image")));
+            this.ShowLicenseDetails.Name = "ShowLicenseDetails";
+            this.ShowLicenseDetails.Size = new System.Drawing.Size(197, 36);
+            this.ShowLicenseDetails.Text = "Show License Details";
+            this.ShowLicenseDetails.Click += new System.EventHandler(this.ShowLicenseDetails_Click);
+            // 
             // LicenseHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +276,7 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternationalLicensesHistory)).EndInit();
+            this.cbManageLicenseHistory.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +300,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblCountInterRecord;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ContextMenuStrip cbManageLicenseHistory;
+        private System.Windows.Forms.ToolStripMenuItem ShowLicenseDetails;
     }
 }

@@ -126,5 +126,21 @@ namespace DVLD_WinForm_PresentationLayer
                 frm.ShowDialog();
             }
         }
+
+        private void replacmentForLostOrDamegedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (ReplacementForDamageOrLostLicense frm = new ReplacementForDamageOrLostLicense())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void retakeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (ListLocalDrivingLicenseApplication frm = new ListLocalDrivingLicenseApplication())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
