@@ -6,6 +6,7 @@ namespace DVLD_BussinessLayer
 
     public class clsDetainedLicense
     {
+
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
         public int DetainID { get; set; }
@@ -121,10 +122,14 @@ namespace DVLD_BussinessLayer
         }
 
         public static DataTable GetAllDetainedLicenses() { return clsDetainedLicensesDataAccess.GetAllDetainedLicenses(); }
+    
+        public static DataTable GetDetainedLicenseByLicenseID(int LicenseID) { return clsDetainedLicensesDataAccess.GetDetainedLicenseByLicenseID(LicenseID); }
 
         public static bool DeleteDetainedLicense(int DetainID) { return clsDetainedLicensesDataAccess.DeleteDetainedLicense(DetainID); }
 
         public static bool isDetainedLicenseExist(int DetainID) { return clsDetainedLicensesDataAccess.IsDetainedLicenseExist(DetainID); }
+    
+        public static bool IsLicenseDetained(int LicenseID) { return clsDetainedLicensesDataAccess.IsLicenseDetained(LicenseID); }
 
 
     }

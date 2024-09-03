@@ -1,5 +1,6 @@
 ﻿using DVLD_BussinessLayer;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,7 @@ namespace DVLD_WinForm_PresentationLayer
                 PersonName.Text = dr["Name"].ToString();
                 lblLicenseID.Text = dr["LicenseID"].ToString();
                 lblNationalNo.Text = dr["NationalNo"].ToString();
-                lblIsDetained.Text = (string.IsNullOrEmpty(dr["IsReleased"].ToString())) ? "[???]" : (dr["IsReleased"].ToString() == "0") ? "Yes" : "No";
+                lblIsDetained.Text = (string.IsNullOrEmpty(dr["IsReleased"].ToString())) ? "[???]" : (dr["IsReleased"].ToString() == "False") ? "Yes" : "No";
                 lblGendor.Text = dr["Gendor"].ToString();
 
                 if (lblGendor.Text == "Male")
@@ -45,11 +46,11 @@ namespace DVLD_WinForm_PresentationLayer
                 {
                     if (lblGendor.Text == "Male")
                     {
-                        pbLicenseInfo.Load("D:\\Rel_Schema for DVLD\\ICONS\\Male 512");
+                        pbLicenseInfo.Load("D:\\Rel_Schema for DVLD\\ICONS\\Male 512.png");
                     }
                     else
                     {
-                        pbLicenseInfo.Load("D:\\Rel_Schema for DVLD\\ICONS\\Female 512");
+                        pbLicenseInfo.Load("D:\\Rel_Schema for DVLD\\ICONS\\Female 512.png");
                     }
                 }
                 else

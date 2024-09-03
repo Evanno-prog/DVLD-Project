@@ -161,6 +161,12 @@
     <Compile Include="New International License Application.Designer.cs">
       <DependentUpon>New International License Application.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReleaseDetainedLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReleaseDetainedLicense.Designer.cs">
+      <DependentUpon>ReleaseDetainedLicense.cs</DependentUpon>
+    </Compile>
     <Compile Include="RenewLocalDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,6 +389,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReleaseDetainedLicense.resx">
+      <DependentUpon>ReleaseDetainedLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RenewLocalDrivingLicense.resx">
       <DependentUpon>RenewLocalDrivingLicense.cs</DependentUpon>

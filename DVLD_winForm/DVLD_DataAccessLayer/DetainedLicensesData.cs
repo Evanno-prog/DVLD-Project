@@ -52,6 +52,7 @@ namespace DVLD_DataAccessLayer
             return isFound;
 
         }
+  
         public static int AddNewDetainedLicense(int LicenseID, DateTime DetainDate, decimal FineFees, int CreatedByUserID, bool IsReleased, DateTime ReleaseDate, int ReleasedByUserID, int ReleaseApplicationID)
         {
 
@@ -61,8 +62,8 @@ namespace DVLD_DataAccessLayer
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
 
-                    string query = @"INSERT INTO DetainedLicenses VALUES (@LicenseID, @DetainDate, @FineFees, @CreatedByUserID, @IsReleased, @ReleaseDate, @ReleasedByUserID?, @ReleaseApplicationID?)
-        SELECT SCOPE_IDENTITY()";
+                    string query = @"INSERT INTO DetainedLicenses VALUES (@LicenseID, @DetainDate, @FineFees, @CreatedByUserID, @IsReleased, @ReleaseDate, @ReleasedByUserID, @ReleaseApplicationID)
+                      SELECT SCOPE_IDENTITY()";
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
@@ -78,15 +79,15 @@ namespace DVLD_DataAccessLayer
 
                         command.Parameters.AddWithValue("@IsReleased", IsReleased);
 
-                        if (ReleaseDate == null)
+                        if (ReleaseDate == default)
                             command.Parameters.AddWithValue("@ReleaseDate", DBNull.Value);
                         else
                             command.Parameters.AddWithValue("@ReleaseDate", ReleaseDate);
-                        if (ReleasedByUserID == null)
+                        if (ReleasedByUserID == default)
                             command.Parameters.AddWithValue("@ReleasedByUserID", DBNull.Value);
                         else
                             command.Parameters.AddWithValue("@ReleasedByUserID", ReleasedByUserID);
-                        if (ReleaseApplicationID == null)
+                        if (ReleaseApplicationID == default)
                             command.Parameters.AddWithValue("@ReleaseApplicationID", DBNull.Value);
                         else
                             command.Parameters.AddWithValue("@ReleaseApplicationID", ReleaseApplicationID);
@@ -145,15 +146,15 @@ namespace DVLD_DataAccessLayer
 
                         command.Parameters.AddWithValue("@IsReleased", IsReleased);
 
-                        if (ReleaseDate == null)
+                        if (ReleaseDate == default)
                             command.Parameters.AddWithValue("@ReleaseDate", DBNull.Value);
                         else
                             command.Parameters.AddWithValue("@ReleaseDate", ReleaseDate);
-                        if (ReleasedByUserID == null)
+                        if (ReleasedByUserID == default)
                             command.Parameters.AddWithValue("@ReleasedByUserID", DBNull.Value);
                         else
                             command.Parameters.AddWithValue("@ReleasedByUserID", ReleasedByUserID);
-                        if (ReleaseApplicationID == null)
+                        if (ReleaseApplicationID == default)
                             command.Parameters.AddWithValue("@ReleaseApplicationID", DBNull.Value);
                         else
                             command.Parameters.AddWithValue("@ReleaseApplicationID", ReleaseApplicationID);
@@ -167,6 +168,7 @@ namespace DVLD_DataAccessLayer
             return (rowsAffected > 0);
 
         }
+    
         public static bool DeleteDetainedLicense(int DetainID)
         {
             int rowsAffected = 0;
@@ -218,6 +220,34 @@ namespace DVLD_DataAccessLayer
 
         }
 
+        public static bool IsLicenseDetained(int LicenseID)
+        {
+
+            bool isFound = false;
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    string query = "Select Found = 1 From DetainedLicenses Where LicenseID = @LicenseID and IsReleased = 0;";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+
+                        command.Parameters.AddWithValue("@LicenseID", LicenseID);
+
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            isFound = reader.HasRows;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { }
+
+            return isFound;
+
+        }
+
         public static DataTable GetAllDetainedLicenses()
         {
 
@@ -246,6 +276,34 @@ namespace DVLD_DataAccessLayer
             return dt;
         }
 
+        public static DataTable GetDetainedLicenseByLicenseID(int LicenseID)
+        {
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+                {
+                    string query = "Select top 1 * From DetainedLicenses where LicenseID = @LicenseID Order by DetainID desc";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@LicenseID", LicenseID);
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                            reader.Close();
+                        }
+                    }
+                }
+            }
+
+            catch (Exception ex) { }
+
+            return dt;
+        }
 
     }
 
