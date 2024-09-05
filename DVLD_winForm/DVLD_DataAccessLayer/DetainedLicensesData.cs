@@ -257,7 +257,7 @@ namespace DVLD_DataAccessLayer
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                    string query = "SELECT * FROM DetainedLicenses";
+                    string query = "Select * From ListDetainedLicences_View;";
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         connection.Open();

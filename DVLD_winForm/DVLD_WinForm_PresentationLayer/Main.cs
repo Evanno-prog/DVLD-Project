@@ -158,5 +158,13 @@ namespace DVLD_WinForm_PresentationLayer
                 frm.ShowDialog();
             }
         }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (ListDetainedLicensesManagement frm = new ListDetainedLicensesManagement())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }

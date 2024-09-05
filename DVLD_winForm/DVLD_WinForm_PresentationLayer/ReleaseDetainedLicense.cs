@@ -22,9 +22,17 @@ namespace DVLD_WinForm_PresentationLayer
         private clsApplication _NewApplication = new clsApplication();
         private clsDetainedLicense _OldDetainedLicense = null;
         private DataTable _dt = null;
+  
         private void ReleaseDetainedLicense_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void SetValueTotxtLicenseID(string Num)
+        {
+            ctrlFilterByDriverLicenseInfo1.SetTextValue(Num);
+            ctrlFilterByDriverLicenseInfo1.btnFindLicenseID_Click(null, null);
+            ctrlFilterByDriverLicenseInfo1.IsgbFilterByLicenseIDEnabled(false);
         }
 
         private void ctrlFilterByDriverLicenseInfo1_OnLicenseSelected(int LicenseID)

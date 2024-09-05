@@ -31,7 +31,12 @@ namespace DVLD_WinForm_PresentationLayer
         }
 
 
-        private void btnFindLicenseID_Click(object sender, EventArgs e)
+        public void SetTextValue(string Num)
+        {
+            txtLicenseID.Text = Num;
+        }
+
+        public void btnFindLicenseID_Click(object sender, EventArgs e)
         {
 
             if (!clsLicense.isLicenseExist(Convert.ToInt16(txtLicenseID.Text)))

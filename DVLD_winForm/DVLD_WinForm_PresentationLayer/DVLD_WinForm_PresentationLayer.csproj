@@ -143,6 +143,12 @@
     <Compile Include="LicenseHistory.Designer.cs">
       <DependentUpon>LicenseHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListDetainedLicensesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDetainedLicensesManagement.Designer.cs">
+      <DependentUpon>ListDetainedLicensesManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -348,6 +354,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseHistory.resx">
       <DependentUpon>LicenseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDetainedLicensesManagement.resx">
+      <DependentUpon>ListDetainedLicensesManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListDrivers.resx">
       <DependentUpon>ListDrivers.cs</DependentUpon>
