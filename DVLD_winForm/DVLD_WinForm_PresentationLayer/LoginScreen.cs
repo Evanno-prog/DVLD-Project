@@ -56,6 +56,8 @@ namespace DVLD_WinForm_PresentationLayer
             {
                 frm.ShowDialog();
             }
+
+            this.Close();
         }
 
         private void LoginScreen_Load(object sender, EventArgs e)

@@ -5,110 +5,46 @@ namespace DVLD_BussinessLayer
 {
     public class clsCountry
     {
-        public enum enMode { AddNew = 0, Update = 1 };
-        public enMode Mode = enMode.AddNew;
-        public int CountryID { get; set; }
-        public string CountryName { get; set; }
 
+        public int ID { set; get; }
+   
+        public string CountryName { set; get; }
 
         public clsCountry()
         {
-            this.CountryID = default;
-            this.CountryName = default;
-
-
-            Mode = enMode.AddNew;
-
+            this.ID = -1;
+            this.CountryName = "";
         }
-
-        private clsCountry(int CountryID, string CountryName)
+    
+        private clsCountry(int ID, string CountryName)
         {
-            this.CountryID = CountryID;
+            this.ID = ID;
             this.CountryName = CountryName;
-
-
-            Mode = enMode.Update;
-
         }
-
-        private bool _AddNewCountry()
+    
+        public static clsCountry Find(int ID)
         {
-            //call DataAccess Layer 
-
-            this.CountryID = clsCountriesDataAccess.AddNewCountry(this.CountryName);
-
-            return (this.CountryID != -1);
-
-        }
-
-        private bool _UpdateCountry()
-        {
-            //call DataAccess Layer 
-
-            return clsCountriesDataAccess.UpdateCountry(this.CountryID, this.CountryName);
-
-        }
-
-        public static clsCountry Find(int CountryID)
-        {
-            string CountryName = default;
-
-
-            if (clsCountriesDataAccess.GetCountryInfoByID(CountryID, ref CountryName))
-                return new clsCountry(CountryID, CountryName);
+            string CountryName = "";
+            if (clsCountryData.GetCountryInfoByID(ID, ref CountryName))
+                return new clsCountry(ID, CountryName);
             else
                 return null;
-
         }
+
         public static clsCountry Find(string CountryName)
         {
-            int CountryID = default;
+            int ID = -1;
 
-            if (clsCountriesDataAccess.GetCountryInfoByName(CountryName, ref CountryID))  
-                return new clsCountry(CountryID, CountryName);
+            if (clsCountryData.GetCountryInfoByName(CountryName, ref ID))
+                return new clsCountry(ID, CountryName);
             else
                 return null;
-
         }
-
-
-        public bool Save()
+  
+        public static DataTable GetAllCountries()
         {
-
-
-            switch (Mode)
-            {
-                case enMode.AddNew:
-                    if (_AddNewCountry())
-                    {
-
-                        Mode = enMode.Update;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-
-                case enMode.Update:
-
-                    return _UpdateCountry();
-
-            }
-
-
-
-
-            return false;
+            return clsCountryData.GetAllCountries();
         }
-
-        public static DataTable GetAllCountries() { return clsCountriesDataAccess.GetAllCountries(); }
-
-        public static bool DeleteCountry(int CountryID) { return clsCountriesDataAccess.DeleteCountry(CountryID); }
-
-        public static bool isCountryExist(int CountryID) { return clsCountriesDataAccess.IsCountryExist(CountryID); }
-
-
+  
     }
-
 }

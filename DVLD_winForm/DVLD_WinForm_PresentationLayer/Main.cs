@@ -22,24 +22,26 @@ namespace DVLD_WinForm_PresentationLayer
         private void peopleToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-            ManagePeople managePeople = new ManagePeople();
-           
-                managePeople.MdiParent = this;
-                managePeople.Show();
-            
+            using (ManagePeople managePeople = new ManagePeople())
+            {
+                managePeople.ShowDialog();
+            }                
            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-              
+          
         }
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Manage_Users frm = new Manage_Users();
-            frm.MdiParent = this;
-            frm.Show();
+
+            using (Manage_Users frm = new Manage_Users())
+            {
+                frm.ShowDialog();
+            } 
+           
         }
 
         private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,21 +63,32 @@ namespace DVLD_WinForm_PresentationLayer
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             clsGlobalSettings.CurrentUser = null;
+           
+            using (LoginScreen frm = new LoginScreen())
+            {
+                frm.ShowDialog();
+            }
             this.Close();
         }
 
         private void manageApplicationsTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Manage_Application_Types frm = new Manage_Application_Types();
-            frm.MdiParent = this;
-            frm.Show();
+            using (Manage_Application_Types frm = new Manage_Application_Types())
+            {
+                frm.ShowDialog();
+            }   
+                
+             
         }
 
         private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ManageTestTypes frm = new ManageTestTypes();
-            frm.MdiParent = this;
-            frm.Show();
+            using (ManageTestTypes frm = new ManageTestTypes())
+            {
+                frm.ShowDialog();   
+            }  
+            
+         
         }
 
         private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)

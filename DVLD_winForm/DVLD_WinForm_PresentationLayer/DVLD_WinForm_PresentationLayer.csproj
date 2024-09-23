@@ -227,10 +227,10 @@
     <Compile Include="Manage Users.Designer.cs">
       <DependentUpon>Manage Users.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManagePeople.cs">
+    <Compile Include="People\ManagePeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagePeople.Designer.cs">
+    <Compile Include="People\ManagePeople.Designer.cs">
       <DependentUpon>ManagePeople.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageTestTypes.cs">
@@ -379,7 +379,7 @@
     <EmbeddedResource Include="Manage Users.resx">
       <DependentUpon>Manage Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManagePeople.resx">
+    <EmbeddedResource Include="People\ManagePeople.resx">
       <DependentUpon>ManagePeople.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageTestTypes.resx">
