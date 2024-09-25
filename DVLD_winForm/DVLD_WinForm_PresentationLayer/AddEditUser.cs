@@ -61,7 +61,7 @@ namespace DVLD_WinForm_PresentationLayer
         private void guna2btnNext_Click(object sender, EventArgs e)
         {
 
-            if (!clsPersone.isPersoneExist(ctrlPersonInformationFindBy1.Person_id))
+            if (!clsPerson.isPersonExist(ctrlPersonInformationFindBy1.Person_id))
             {
                 MessageBox.Show("Sorry! PersonID Or NationalNo is not exist", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

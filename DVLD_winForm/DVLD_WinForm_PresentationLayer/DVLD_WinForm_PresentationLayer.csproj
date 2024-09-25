@@ -53,10 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEditPersoneInfo.cs">
+    <Compile Include="People\AddEditPersoneInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEditPersoneInfo.Designer.cs">
+    <Compile Include="People\AddEditPersoneInfo.Designer.cs">
       <DependentUpon>AddEditPersoneInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="AddEditUser.cs">
@@ -125,6 +125,10 @@
     <Compile Include="Detain License.Designer.cs">
       <DependentUpon>Detain License.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global Classes\clsFormat.cs" />
+    <Compile Include="Global Classes\clsGlobal.cs" />
+    <Compile Include="Global Classes\clsUtil.cs" />
+    <Compile Include="Global Classes\clsValidation.cs" />
     <Compile Include="InternationalDriverInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,7 +311,7 @@
     <Compile Include="Written test appointment.Designer.cs">
       <DependentUpon>Written test appointment.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddEditPersoneInfo.resx">
+    <EmbeddedResource Include="People\AddEditPersoneInfo.resx">
       <DependentUpon>AddEditPersoneInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddEditUser.resx">

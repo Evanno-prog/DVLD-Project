@@ -14,7 +14,7 @@ namespace DVLD_WinForm_PresentationLayer
     public partial class ctrlPersonInformation : UserControl
     {
         private int _PersonID = 0;
-        clsPersone Persone;
+        clsPerson Persone;
         public ctrlPersonInformation()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         }
 
-        private void DataBack_Personid(int PersonID)
+        private void DataBack_Personid(object sender,int PersonID)
         {
             LoadPersonInfoData(PersonID);
         }
@@ -37,7 +37,7 @@ namespace DVLD_WinForm_PresentationLayer
         public void LoadPersonInfoData(int PersonID)
         {
             _PersonID = PersonID;
-            Persone = clsPersone.Find(_PersonID);
+            Persone = clsPerson.Find(_PersonID);
             lblPersonID.Text = _PersonID.ToString();
             lblName.Text = $"{Persone.FirstName} {Persone.SecondName} {Persone.ThirdName} {Persone.LastName}";
             lblNationalNo.Text = Persone.NationalNo;

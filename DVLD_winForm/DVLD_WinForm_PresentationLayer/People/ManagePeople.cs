@@ -22,7 +22,7 @@ namespace DVLD_WinForm_PresentationLayer
         
         private void _RefreshListPeople()
         {
-            DataView dv = clsPersone.GetAllPeople().DefaultView;
+            DataView dv = clsPerson.GetAllPeople().DefaultView;
             dataGridView1.DataSource = dv;
             lblRecordCount.Text = dv.Count.ToString();
         }
@@ -61,7 +61,7 @@ namespace DVLD_WinForm_PresentationLayer
         {
             if (MessageBox.Show("Are you sure you want to delete this Person ?","Confirm",MessageBoxButtons.OKCancel,MessageBoxIcon.Information) == DialogResult.OK)
             {
-                if (clsPersone.DeletePersone((int)dataGridView1.CurrentRow.Cells[0].Value))
+                if (clsPerson.DeletePerson((int)dataGridView1.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("Person deleted succfully :-)", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _RefreshListPeople();
@@ -157,7 +157,7 @@ namespace DVLD_WinForm_PresentationLayer
         private void txtFilterNumber_TextChanged(object sender, EventArgs e)
         {
 
-            DataView dv = clsPersone.GetAllPeople().DefaultView;
+            DataView dv = clsPerson.GetAllPeople().DefaultView;
 
             if (string.IsNullOrEmpty(txtFilterNumber.Text))
             {
@@ -191,7 +191,7 @@ namespace DVLD_WinForm_PresentationLayer
         private void txtFilterString_TextChanged(object sender, EventArgs e)
         {
 
-            DataView dv = clsPersone.GetAllPeople().DefaultView;
+            DataView dv = clsPerson.GetAllPeople().DefaultView;
 
             if (string.IsNullOrEmpty(txtFilterString.Text))
             {

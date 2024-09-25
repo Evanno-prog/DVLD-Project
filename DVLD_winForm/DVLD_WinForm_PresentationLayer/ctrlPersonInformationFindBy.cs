@@ -39,23 +39,23 @@ namespace DVLD_WinForm_PresentationLayer
 
                 case "NationalNo":
 
-                    if (!clsPersone.IsNationalNoExist(txtFilterByNationalNo.Text))
+                    if (!clsPerson.isPersonExist(txtFilterByNationalNo.Text))
                     {
                         MessageBox.Show("Sorry! NationalNo is not exist", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Person_id = -1;
                         return;
                     }
-                    Person_id = clsPersone.Find(txtFilterByNationalNo.Text).PersoneID;
+                    Person_id = clsPerson.Find(txtFilterByNationalNo.Text).PersonID;
                     ctrlPersonInformation1.LoadPersonInfoData(Person_id);
                     break;
                 case "PersonID":
-                    if (!clsPersone.isPersoneExist(Convert.ToInt16(txtFilterByPersonID.Text)))
+                    if (!clsPerson.isPersonExist(Convert.ToInt16(txtFilterByPersonID.Text)))
                     {
                         MessageBox.Show("Sorry! PersonID is not exist", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Person_id = -1;
                         return;
                     }
-                    Person_id = clsPersone.Find(Convert.ToInt16(txtFilterByPersonID.Text)).PersoneID;
+                    Person_id = clsPerson.Find(Convert.ToInt16(txtFilterByPersonID.Text)).PersonID;
                     ctrlPersonInformation1.LoadPersonInfoData(Person_id);
                     break;
 
@@ -71,7 +71,7 @@ namespace DVLD_WinForm_PresentationLayer
             }
         }
 
-        private void DataBack_PersonID(int PersonId)
+        private void DataBack_PersonID(object sender, int PersonId)
         {
             LoadPersonInfoByPersonID(PersonId);
             cbFindPersonInfo.SelectedIndex = 1;
