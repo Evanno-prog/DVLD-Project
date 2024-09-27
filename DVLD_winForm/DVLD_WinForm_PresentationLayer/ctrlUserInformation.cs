@@ -28,7 +28,6 @@ namespace DVLD_WinForm_PresentationLayer
         public void LoadUserInfoData(int User_id)
         {
             clsUser User = clsUser.Find(User_id);
-            ctrlPersonInformation1.LoadPersonInfoData(User.PersonID);
             lblUserName.Text = User.UserName;
             lblUserID.Text = User.UserID.ToString();
             lblIsActive.Text = (User.IsActive == true) ? "Yes" : "No";

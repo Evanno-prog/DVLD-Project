@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlPersonInformation1 = new DVLD_WinForm_PresentationLayer.ctrlPersonInformation();
+            this.ctrlPersonInformation1 = new DVLD_WinForm_PresentationLayer.ctrlPersonCard();
             this.gbLoginInformation = new System.Windows.Forms.GroupBox();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblIsActive = new System.Windows.Forms.Label();
@@ -141,7 +141,7 @@
 
         #endregion
 
-        private ctrlPersonInformation ctrlPersonInformation1;
+        private ctrlPersonCard ctrlPersonInformation1;
         private System.Windows.Forms.GroupBox gbLoginInformation;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

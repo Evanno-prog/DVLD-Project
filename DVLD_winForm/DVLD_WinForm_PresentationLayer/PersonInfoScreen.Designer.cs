@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonInfoScreen));
-            this.ctrlPersonInformation1 = new DVLD_WinForm_PresentationLayer.ctrlPersonInformation();
+            this.ctrlPersonInformation1 = new DVLD_WinForm_PresentationLayer.ctrlPersonCard();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
@@ -91,7 +91,7 @@
 
         #endregion
 
-        private ctrlPersonInformation ctrlPersonInformation1;
+        private ctrlPersonCard ctrlPersonInformation1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }

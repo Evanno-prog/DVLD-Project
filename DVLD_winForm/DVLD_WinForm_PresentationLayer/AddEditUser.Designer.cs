@@ -34,7 +34,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpPersonalInfo = new System.Windows.Forms.TabPage();
             this.guna2btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlPersonInformationFindBy1 = new DVLD_WinForm_PresentationLayer.ctrlPersonInformationFindBy();
+            this.ctrlPersonInformationFindBy1 = new DVLD_WinForm_PresentationLayer.ctrlPersonCardWithFilter();
             this.tpLoginInfo = new System.Windows.Forms.TabPage();
             this.chkIsActive = new System.Windows.Forms.CheckBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
@@ -353,7 +353,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tpPersonalInfo;
         private System.Windows.Forms.TabPage tpLoginInfo;
-        private ctrlPersonInformationFindBy ctrlPersonInformationFindBy1;
+        private ctrlPersonCardWithFilter ctrlPersonInformationFindBy1;
         private Guna.UI2.WinForms.Guna2Button guna2btnSave;
         private Guna.UI2.WinForms.Guna2Button guna2btnClose;
         private Guna.UI2.WinForms.Guna2Button guna2btnNext;

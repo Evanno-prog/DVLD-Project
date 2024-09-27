@@ -84,8 +84,6 @@ namespace DVLD_WinForm_PresentationLayer
             // Edit Application Code Will Be here :-)
             _LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.Find(_LocalDrivingLicenseID);
             _Application = clsApplication.Find(_LocalDrivingLicenseApplication.ApplicationID);
-            ctrlPersonInformationFindBy1.IsEnableGbFilter(false);
-            ctrlPersonInformationFindBy1.LoadPersonInfoByPersonID(_Application.ApplicantPersonID);
             guna2btnNext.Enabled = false;
             this.Text = lblTitle.Text = "Update Local driving license class";
             lblApplicationID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
@@ -98,12 +96,12 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void guna2btnNext_Click(object sender, EventArgs e)
         {
-            if (!clsPerson.isPersonExist(ctrlPersonInformationFindBy1.Person_id))
+            if (!clsPerson.isPersonExist(2))
             {
                 MessageBox.Show("Sorry! PersonID Or NationalNo is not exist", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (clsUser.IsUserPersonIdExist(ctrlPersonInformationFindBy1.Person_id)) 
+            if (clsUser.IsUserPersonIdExist(4)) 
             {
                 MessageBox.Show("Sorry! this Person info is a User Exist in the System\n Choose another Person", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -151,7 +149,7 @@ namespace DVLD_WinForm_PresentationLayer
         private void guna2btnSave_Click(object sender, EventArgs e)
         {
 
-            clsDriver Driver = clsDriver.FindDriverByPersonID(ctrlPersonInformationFindBy1.Person_id);
+            clsDriver Driver = clsDriver.FindDriverByPersonID(5);
             if (Driver != null)
             {
                 int LicenseID = cbLicenseClass.SelectedIndex + 1;
@@ -168,7 +166,6 @@ namespace DVLD_WinForm_PresentationLayer
                 _Application.ApplicationDate = DateTime.Now;
             }
             
-            _Application.ApplicantPersonID = ctrlPersonInformationFindBy1.Person_id;
             
             _Application.ApplicationTypeID = clsApplicationType.FindFees(15).ApplicationTypeID;
          

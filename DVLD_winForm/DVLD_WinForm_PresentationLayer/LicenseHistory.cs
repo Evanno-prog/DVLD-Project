@@ -39,8 +39,6 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void LicenseHistory_Load(object sender, EventArgs e)
         {
-            ctrlPersonInformationFindBy1.IsEnableGbFilter(false);
-            ctrlPersonInformationFindBy1.LoadPersonInfoByPersonID(clsApplication.Find(_ApplicationID).ApplicantPersonID);
             _RefreshLocalLicenseHistory();
 
             _RefreshInternationalLicenseHistory();

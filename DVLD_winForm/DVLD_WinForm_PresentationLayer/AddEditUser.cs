@@ -44,13 +44,11 @@ namespace DVLD_WinForm_PresentationLayer
             }
 
 
-            ctrlPersonInformationFindBy1.IsEnableGbFilter(false);
             guna2btnNext.Enabled = false;
             this.Text = "Update User";
             lblAddEditUser.Text = "Update User";
             lblUserID.Text = _UserID.ToString();
             _User = clsUser.Find(_UserID);
-            ctrlPersonInformationFindBy1.LoadPersonInfoByPersonID(_User.PersonID);
             txtUserName.Text = _User.UserName;
             txtPassword.Text = _User.Password;
             txtConfirmPassword.Text = _User.Password;
@@ -61,19 +59,6 @@ namespace DVLD_WinForm_PresentationLayer
         private void guna2btnNext_Click(object sender, EventArgs e)
         {
 
-            if (!clsPerson.isPersonExist(ctrlPersonInformationFindBy1.Person_id))
-            {
-                MessageBox.Show("Sorry! PersonID Or NationalNo is not exist", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            if (clsUser.IsUserPersonIdExist(ctrlPersonInformationFindBy1.Person_id)) 
-            {
-                MessageBox.Show("Sorry! this Person info is a User Exist in the System\n Choose another Person","Error!",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                return;
-            }
-            tabControl1.SelectedIndex = 1;
-            txtUserName.Focus();
 
         }
 
@@ -122,7 +107,6 @@ namespace DVLD_WinForm_PresentationLayer
             _User.UserName = txtUserName.Text;
             _User.Password = txtPassword.Text;
             _User.IsActive = (chkIsActive.Checked) ? true : false;
-            _User.PersonID = ctrlPersonInformationFindBy1.Person_id;
 
             if (_User.Save())
             {

@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LicenseHistory));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ctrlPersonInformationFindBy1 = new DVLD_WinForm_PresentationLayer.ctrlPersonInformationFindBy();
+            this.ctrlPersonInformationFindBy1 = new DVLD_WinForm_PresentationLayer.ctrlPersonCardWithFilter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -84,7 +84,6 @@
             this.ctrlPersonInformationFindBy1.BackColor = System.Drawing.Color.White;
             this.ctrlPersonInformationFindBy1.Location = new System.Drawing.Point(199, 51);
             this.ctrlPersonInformationFindBy1.Name = "ctrlPersonInformationFindBy1";
-            this.ctrlPersonInformationFindBy1.Person_id = 0;
             this.ctrlPersonInformationFindBy1.Size = new System.Drawing.Size(817, 402);
             this.ctrlPersonInformationFindBy1.TabIndex = 1;
             // 
@@ -285,7 +284,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private ctrlPersonInformationFindBy ctrlPersonInformationFindBy1;
+        private ctrlPersonCardWithFilter ctrlPersonInformationFindBy1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;

@@ -51,7 +51,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.guna2btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlPersonInformationFindBy1 = new DVLD_WinForm_PresentationLayer.ctrlPersonInformationFindBy();
+            this.ctrlPersonInformationFindBy1 = new DVLD_WinForm_PresentationLayer.ctrlPersonCardWithFilter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -370,7 +370,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private ctrlPersonInformationFindBy ctrlPersonInformationFindBy1;
+        private ctrlPersonCardWithFilter ctrlPersonInformationFindBy1;
         private Guna.UI2.WinForms.Guna2Button guna2btnNext;
         private Guna.UI2.WinForms.Guna2Button guna2btnSave;
         private Guna.UI2.WinForms.Guna2Button guna2btnClose;

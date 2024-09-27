@@ -26,7 +26,6 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void PersonInfoScreen_Load(object sender, EventArgs e)
         {
-            ctrlPersonInformation1.LoadPersonInfoData(_PersonID);
         }
     }
 }
