@@ -22,7 +22,7 @@ namespace DVLD_WinForm_PresentationLayer
         private void peopleToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-            using (ManagePeople managePeople = new ManagePeople())
+            using (frmListPeople managePeople = new frmListPeople())
             {
                 managePeople.ShowDialog();
             }                

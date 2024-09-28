@@ -43,7 +43,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (PersonInfoScreen frm = new PersonInfoScreen(clsDriver.Find(clsLicense.Find((int)dataGridView1.CurrentRow.Cells[1].Value).DriverID).PersonID)) 
+            using (frmShowPersonInfo frm = new frmShowPersonInfo(clsDriver.Find(clsLicense.Find((int)dataGridView1.CurrentRow.Cells[1].Value).DriverID).PersonID)) 
             {
                 frm.ShowDialog();
             }

@@ -118,7 +118,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (PersonInfoScreen frm = new PersonInfoScreen(_Application.ApplicantPersonID))
+            using (frmShowPersonInfo frm = new frmShowPersonInfo(_Application.ApplicantPersonID))
             {
                 frm.ShowDialog();
             }

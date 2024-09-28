@@ -117,7 +117,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void llEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (AddEditPersoneInfo frm = new AddEditPersoneInfo(_PersonID))
+            using (frmAddEditPersoneInfo frm = new frmAddEditPersoneInfo(_PersonID))
             {
                 frm.ShowDialog();     
             }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_WinForm_PresentationLayer.People;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,8 @@ namespace DVLD_WinForm_PresentationLayer
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LoginScreen());
-            Application.Run(new AddEditPersoneInfo());
+            //Application.Run(new AddEditPersoneInfo());
+            Application.Run(new frmListPeople());
         }
     }
 }

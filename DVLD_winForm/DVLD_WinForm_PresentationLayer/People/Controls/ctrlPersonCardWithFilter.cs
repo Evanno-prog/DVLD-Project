@@ -144,7 +144,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void guna2btnAddNewPerson_Click(object sender, EventArgs e)
         {
-            using (AddEditPersoneInfo frm = new AddEditPersoneInfo())
+            using (frmAddEditPersoneInfo frm = new frmAddEditPersoneInfo())
             {
                 frm.DataBack += DataBackEvent;
                 frm.ShowDialog();

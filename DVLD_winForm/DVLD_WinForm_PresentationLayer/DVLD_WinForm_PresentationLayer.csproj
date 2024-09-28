@@ -53,11 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="People\AddEditPersoneInfo.cs">
+    <Compile Include="People\frmAddEditPersoneInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="People\AddEditPersoneInfo.Designer.cs">
-      <DependentUpon>AddEditPersoneInfo.cs</DependentUpon>
+    <Compile Include="People\frmAddEditPersoneInfo.Designer.cs">
+      <DependentUpon>frmAddEditPersoneInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="AddEditUser.cs">
       <SubType>Form</SubType>
@@ -171,6 +171,12 @@
     <Compile Include="New International License Application.Designer.cs">
       <DependentUpon>New International License Application.cs</DependentUpon>
     </Compile>
+    <Compile Include="People\frmFindPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmFindPerson.Designer.cs">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReleaseDetainedLicense.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,11 +237,11 @@
     <Compile Include="Manage Users.Designer.cs">
       <DependentUpon>Manage Users.cs</DependentUpon>
     </Compile>
-    <Compile Include="People\ManagePeople.cs">
+    <Compile Include="People\frmListPeople.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="People\ManagePeople.Designer.cs">
-      <DependentUpon>ManagePeople.cs</DependentUpon>
+    <Compile Include="People\frmListPeople.Designer.cs">
+      <DependentUpon>frmListPeople.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageTestTypes.cs">
       <SubType>Form</SubType>
@@ -249,11 +255,11 @@
     <Compile Include="NewLocalDrivingLicenseApplication.Designer.cs">
       <DependentUpon>NewLocalDrivingLicenseApplication.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonInfoScreen.cs">
+    <Compile Include="People\frmShowPersonInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PersonInfoScreen.Designer.cs">
-      <DependentUpon>PersonInfoScreen.cs</DependentUpon>
+    <Compile Include="People\frmShowPersonInfo.Designer.cs">
+      <DependentUpon>frmShowPersonInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -311,8 +317,8 @@
     <Compile Include="Written test appointment.Designer.cs">
       <DependentUpon>Written test appointment.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="People\AddEditPersoneInfo.resx">
-      <DependentUpon>AddEditPersoneInfo.cs</DependentUpon>
+    <EmbeddedResource Include="People\frmAddEditPersoneInfo.resx">
+      <DependentUpon>frmAddEditPersoneInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddEditUser.resx">
       <DependentUpon>AddEditUser.cs</DependentUpon>
@@ -383,8 +389,11 @@
     <EmbeddedResource Include="Manage Users.resx">
       <DependentUpon>Manage Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="People\ManagePeople.resx">
-      <DependentUpon>ManagePeople.cs</DependentUpon>
+    <EmbeddedResource Include="People\frmFindPerson.resx">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmListPeople.resx">
+      <DependentUpon>frmListPeople.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageTestTypes.resx">
       <DependentUpon>ManageTestTypes.cs</DependentUpon>
@@ -395,8 +404,8 @@
     <EmbeddedResource Include="NewLocalDrivingLicenseApplication.resx">
       <DependentUpon>NewLocalDrivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PersonInfoScreen.resx">
-      <DependentUpon>PersonInfoScreen.cs</DependentUpon>
+    <EmbeddedResource Include="People\frmShowPersonInfo.resx">
+      <DependentUpon>frmShowPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
