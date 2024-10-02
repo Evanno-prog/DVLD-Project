@@ -89,7 +89,6 @@ namespace DVLD_WinForm_PresentationLayer
             lblApplicationID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
             lblDateNow.Text = _Application.ApplicationDate.ToString("d");
             lblFeesApp.Text = Convert.ToInt16(_Application.PaidFees).ToString();
-            lblCreatedBy.Text = clsUser.Find(_Application.CreatedByUserID).UserName;
             guna2btnSave.Enabled = true;
             cbLicenseClass.SelectedIndex = cbLicenseClass.FindString(_GetLicenseClassName(_LocalDrivingLicenseApplication.LicenseClassID));
         }
@@ -99,11 +98,6 @@ namespace DVLD_WinForm_PresentationLayer
             if (!clsPerson.isPersonExist(2))
             {
                 MessageBox.Show("Sorry! PersonID Or NationalNo is not exist", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (clsUser.IsUserPersonIdExist(4)) 
-            {
-                MessageBox.Show("Sorry! this Person info is a User Exist in the System\n Choose another Person", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             tabControl1.SelectedIndex = 1;

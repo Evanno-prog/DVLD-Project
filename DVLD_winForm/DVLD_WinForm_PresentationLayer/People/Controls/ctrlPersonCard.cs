@@ -33,7 +33,7 @@ namespace DVLD_WinForm_PresentationLayer
             InitializeComponent();
         }
 
-        private void _ResetDefaultValues()
+        public void ResetPersonInfo()
         {
             _PersonID = -1;
             lblPersonID.Text = "[????]";
@@ -92,7 +92,7 @@ namespace DVLD_WinForm_PresentationLayer
             _Person = clsPerson.Find(PersonID);
             if (_Person == null)
             {
-                _ResetDefaultValues();
+                ResetPersonInfo();
                 MessageBox.Show($"Could not found Person with ID = {_PersonID}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -106,7 +106,7 @@ namespace DVLD_WinForm_PresentationLayer
             _Person = clsPerson.Find(NationalNo);
             if (_Person == null)
             {
-                _ResetDefaultValues();
+                ResetPersonInfo();
                 MessageBox.Show($"Could not found Person with NationalNo = {NationalNo}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }

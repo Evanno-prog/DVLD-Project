@@ -46,7 +46,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (UserInfoScreen frm = new UserInfoScreen(clsGlobalSettings.CurrentUser.UserID))
+            using (frmUserInfo frm = new frmUserInfo(clsGlobalSettings.CurrentUser.UserID))
             {
                 frm.ShowDialog();
             }
@@ -54,7 +54,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ChangePassword frm = new ChangePassword(clsGlobalSettings.CurrentUser.UserID))
+            using (frmChangePassword frm = new frmChangePassword(clsGlobalSettings.CurrentUser.UserID))
             {
                 frm.ShowDialog();
             }

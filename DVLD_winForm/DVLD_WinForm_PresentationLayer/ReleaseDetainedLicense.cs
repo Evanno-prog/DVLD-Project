@@ -61,7 +61,6 @@ namespace DVLD_WinForm_PresentationLayer
             DataRow dr = _dt.Rows[0];
             lblDetainID.Text = dr["DetainID"].ToString();
             lblDetainDate.Text = Convert.ToDateTime(dr["DetainDate"]).ToString("d");
-            lblCreatedBy.Text = clsUser.Find(Convert.ToInt16(dr["CreatedByUserID"])).UserName;
             lblFineFees.Text = Convert.ToInt16(dr["FineFees"]).ToString();
             lblApplicationFees.Text = Convert.ToInt16(clsApplicationType.Find(5).ApplicationFees).ToString();
             lblTotalFees.Text = (Convert.ToInt16(lblFineFees.Text) + Convert.ToInt16(lblApplicationFees.Text)).ToString();

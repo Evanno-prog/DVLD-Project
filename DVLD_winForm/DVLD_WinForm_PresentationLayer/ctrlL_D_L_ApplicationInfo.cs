@@ -106,8 +106,6 @@ namespace DVLD_WinForm_PresentationLayer
             lblApplicationFees.Text =  (Convert.ToInt16(_Application.PaidFees)).ToString();
             lblApplicationTypes.Text = _GetApplicationTypeName(_Application.ApplicationTypeID);
             lblApplicationStatusDate.Text = _Application.LastStatusDate.ToString("d");
-            clsUser User = clsUser.Find(_Application.CreatedByUserID);
-            lblCreatedByUser.Text = User.UserName.ToString();
             lblApplicationDate.Text = _Application.ApplicationDate.ToString("d");
         }
 

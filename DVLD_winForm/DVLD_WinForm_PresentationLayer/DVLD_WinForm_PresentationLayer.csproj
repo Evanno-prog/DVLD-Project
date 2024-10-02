@@ -59,11 +59,11 @@
     <Compile Include="People\frmAddEditPersoneInfo.Designer.cs">
       <DependentUpon>frmAddEditPersoneInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEditUser.cs">
+    <Compile Include="Users\frmAddEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEditUser.Designer.cs">
-      <DependentUpon>AddEditUser.cs</DependentUpon>
+    <Compile Include="Users\frmAddEditUser.Designer.cs">
+      <DependentUpon>frmAddEditUser.cs</DependentUpon>
     </Compile>
     <Compile Include="ApplicationInfoScreen.cs">
       <SubType>Form</SubType>
@@ -77,11 +77,11 @@
     <Compile Include="AppointementsVisionTest.Designer.cs">
       <DependentUpon>AppointementsVisionTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChangePassword.cs">
+    <Compile Include="Users\frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChangePassword.Designer.cs">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
+    <Compile Include="Users\frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlFilterByDriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
@@ -201,11 +201,11 @@
     <Compile Include="ShowLicenseInfo.Designer.cs">
       <DependentUpon>ShowLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlUserInformation.cs">
+    <Compile Include="Users\Controls\ctrlUserCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlUserInformation.Designer.cs">
-      <DependentUpon>ctrlUserInformation.cs</DependentUpon>
+    <Compile Include="Users\Controls\ctrlUserCard.Designer.cs">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
     </Compile>
     <Compile Include="ListLocalDrivingLicenseApplication.cs">
       <SubType>Form</SubType>
@@ -305,11 +305,11 @@
     <Compile Include="UpdateTestTypes.Designer.cs">
       <DependentUpon>UpdateTestTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInfoScreen.cs">
+    <Compile Include="Users\frmUserInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInfoScreen.Designer.cs">
-      <DependentUpon>UserInfoScreen.cs</DependentUpon>
+    <Compile Include="Users\frmUserInfo.Designer.cs">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Written test appointment.cs">
       <SubType>Form</SubType>
@@ -320,8 +320,8 @@
     <EmbeddedResource Include="People\frmAddEditPersoneInfo.resx">
       <DependentUpon>frmAddEditPersoneInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddEditUser.resx">
-      <DependentUpon>AddEditUser.cs</DependentUpon>
+    <EmbeddedResource Include="Users\frmAddEditUser.resx">
+      <DependentUpon>frmAddEditUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationInfoScreen.resx">
       <DependentUpon>ApplicationInfoScreen.cs</DependentUpon>
@@ -329,8 +329,8 @@
     <EmbeddedResource Include="AppointementsVisionTest.resx">
       <DependentUpon>AppointementsVisionTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChangePassword.resx">
-      <DependentUpon>ChangePassword.cs</DependentUpon>
+    <EmbeddedResource Include="Users\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlFilterByDriverLicenseInfo.resx">
       <DependentUpon>ctrlFilterByDriverLicenseInfo.cs</DependentUpon>
@@ -350,8 +350,8 @@
     <EmbeddedResource Include="People\Controls\ctrlPersonCardWithFilter.resx">
       <DependentUpon>ctrlPersonCardWithFilter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlUserInformation.resx">
-      <DependentUpon>ctrlUserInformation.cs</DependentUpon>
+    <EmbeddedResource Include="Users\Controls\ctrlUserCard.resx">
+      <DependentUpon>ctrlUserCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Detain License.resx">
       <DependentUpon>Detain License.cs</DependentUpon>
@@ -445,8 +445,8 @@
     <EmbeddedResource Include="UpdateTestTypes.resx">
       <DependentUpon>UpdateTestTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInfoScreen.resx">
-      <DependentUpon>UserInfoScreen.cs</DependentUpon>
+    <EmbeddedResource Include="Users\frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Written test appointment.resx">
       <DependentUpon>Written test appointment.cs</DependentUpon>

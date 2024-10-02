@@ -175,7 +175,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (AddEditUser frm = new AddEditUser(-1))
+            using (frmAddEditUser frm = new frmAddEditUser(-1))
             {
                 frm.ShowDialog();
             }
@@ -189,7 +189,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (AddEditUser frm = new AddEditUser((int)dataGridView1.CurrentRow.Cells[0].Value))
+            using (frmAddEditUser frm = new frmAddEditUser((int)dataGridView1.CurrentRow.Cells[0].Value))
             {
                 frm.ShowDialog();
             }
@@ -227,7 +227,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void ChangePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ChangePassword frm = new ChangePassword((int)dataGridView1.CurrentRow.Cells[0].Value)) 
+            using (frmChangePassword frm = new frmChangePassword((int)dataGridView1.CurrentRow.Cells[0].Value)) 
             {
                 frm.ShowDialog();
             }
@@ -236,7 +236,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (UserInfoScreen frm = new UserInfoScreen((int)dataGridView1.CurrentRow.Cells[0].Value))
+            using (frmUserInfo frm = new frmUserInfo((int)dataGridView1.CurrentRow.Cells[0].Value))
             {
                 frm.ShowDialog();
             }

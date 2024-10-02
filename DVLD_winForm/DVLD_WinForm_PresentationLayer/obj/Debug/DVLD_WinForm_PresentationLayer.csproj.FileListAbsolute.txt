@@ -71,14 +71,11 @@ C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_Prese
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\bin\Debug\DVLD_DataAccessLayer.pdb
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.csproj.AssemblyReference.cache
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.csproj.SuggestedBindingRedirects.cache
-C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.AddEditUser.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ApplicationInfoScreen.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.AppointementsVisionTest.resources
-C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ChangePassword.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlFilterByDriverLicenseInfo.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlLicenseInfo.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlL_D_L_ApplicationInfo.resources
-C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlUserInformation.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.IssueDriverLicenseForFirstTime.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.LicenseHistory.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ListDrivers.resources
@@ -99,7 +96,6 @@ C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_Prese
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.TakeTest.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.UpdateApplicationTypes.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.UpdateTestTypes.resources
-C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.UserInfoScreen.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.Written_test_appointment.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.csproj.GenerateResource.cache
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.csproj.CoreCompileInputs.cache
@@ -120,3 +116,7 @@ C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_Prese
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmListPeople.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmShowPersonInfo.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmAddEditPersoneInfo.resources
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlUserCard.resources
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmAddEditUser.resources
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmUserInfo.resources
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmChangePassword.resources
