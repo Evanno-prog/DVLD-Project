@@ -1,4 +1,5 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,7 @@ namespace DVLD_WinForm_PresentationLayer
         private void _LoadData()
         {
             lblDetainDate.Text = DateTime.Now.ToString("d");
-            lblCreatedBy.Text = clsGlobalSettings.CurrentUser.UserName;
+            lblCreatedBy.Text = clsGlobal.CurrentUser.UserName;
         }
 
         private void Detain_License_Load(object sender, EventArgs e)
@@ -94,7 +95,7 @@ namespace DVLD_WinForm_PresentationLayer
                 _DetainedLicense.LicenseID = _License.LicenseID;
                 _DetainedLicense.DetainDate = DateTime.Now; 
                 _DetainedLicense.FineFees = Convert.ToDecimal(txtFineFees.Text);    
-                _DetainedLicense.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                _DetainedLicense.CreatedByUserID = clsGlobal.CurrentUser.UserID;
                 _DetainedLicense.IsReleased = false;
                 
 

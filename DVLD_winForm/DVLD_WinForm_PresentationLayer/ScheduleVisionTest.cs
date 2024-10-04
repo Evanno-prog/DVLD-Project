@@ -1,4 +1,5 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -154,7 +155,7 @@ namespace DVLD_WinForm_PresentationLayer
             _TestAppointment.PaidFees = clsTestType.Find(1).TestTypeFees;
             if (_Mode == enMode.AddNew)
             {
-                _TestAppointment.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                _TestAppointment.CreatedByUserID = clsGlobal.CurrentUser.UserID;
             }
 
             if (_Mode == enMode.AddNew)

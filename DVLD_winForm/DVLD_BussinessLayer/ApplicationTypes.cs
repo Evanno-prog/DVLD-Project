@@ -1,97 +1,69 @@
 ﻿using System;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using DVLD_DataAccessLayer;
 
 namespace DVLD_BussinessLayer
 {
-
     public class clsApplicationType
     {
 
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
-        public int ApplicationTypeID { get; set; }
-        public string ApplicationTypeTitle { get; set; }
-        public decimal ApplicationFees { get; set; }
-
-
+        public int ID { set; get; }
+        public string Title { set; get; }
+        public float Fees { set; get; }
         public clsApplicationType()
         {
-            this.ApplicationTypeID = default;
-            this.ApplicationTypeTitle = default;
-            this.ApplicationFees = default;
-
-
+            this.ID = -1;
+            this.Title = "";
+            this.Fees = 0;
             Mode = enMode.AddNew;
-
         }
 
-        private clsApplicationType(int ApplicationTypeID, string ApplicationTypeTitle, decimal ApplicationFees)
+        private clsApplicationType(int ID, string ApplicationTypeTitel, float ApplicationTypeFees)
         {
-            this.ApplicationTypeID = ApplicationTypeID;
-            this.ApplicationTypeTitle = ApplicationTypeTitle;
-            this.ApplicationFees = ApplicationFees;
-
-
+            this.ID = ID;
+            this.Title = ApplicationTypeTitel;
+            this.Fees = ApplicationTypeFees;
             Mode = enMode.Update;
-
         }
 
         private bool _AddNewApplicationType()
         {
             //call DataAccess Layer 
+            this.ID = clsApplicationTypeData.AddNewApplicationType(this.Title, this.Fees);
 
-            this.ApplicationTypeID = clsApplicationTypesDataAccess.AddNewApplicationType(this.ApplicationTypeTitle, this.ApplicationFees);
-
-            return (this.ApplicationTypeID != -1);
-
+            return (this.ID != -1);
         }
 
         private bool _UpdateApplicationType()
         {
             //call DataAccess Layer 
-
-            return clsApplicationTypesDataAccess.UpdateApplicationType(this.ApplicationTypeID, this.ApplicationTypeTitle, this.ApplicationFees);
-
+            return clsApplicationTypeData.UpdateApplicationType(this.ID, this.Title, this.Fees);
         }
 
-        public static clsApplicationType Find(int ApplicationTypeID)
+        public static clsApplicationType Find(int ID)
         {
-            string ApplicationTypeTitle = default;
-            decimal ApplicationFees = default;
-
-
-            if (clsApplicationTypesDataAccess.GetApplicationTypeInfoByID(ApplicationTypeID, ref ApplicationTypeTitle, ref ApplicationFees))
-                return new clsApplicationType(ApplicationTypeID, ApplicationTypeTitle, ApplicationFees);
+            string Title = ""; float Fees = 0;
+            if (clsApplicationTypeData.GetApplicationTypeInfoByID(ID, ref Title, ref Fees))
+                return new clsApplicationType(ID, Title, Fees);
             else
                 return null;
+        }
 
-        } 
-        
-        public static clsApplicationType FindFees(decimal ApplicationFees)
+        public static DataTable GetAllApplicationTypes()
         {
-           
-            string ApplicationTypeTitle = default;
-            int ApplicationTypeID = default;
-
-
-            if (clsApplicationTypesDataAccess.GetApplicationTypeInfoByFees(ref ApplicationTypeID, ref ApplicationTypeTitle, ApplicationFees)) 
-                return new clsApplicationType(ApplicationTypeID, ApplicationTypeTitle, ApplicationFees);
-            else
-                return null;
-
+            return clsApplicationTypeData.GetAllApplicationTypes();
         }
 
         public bool Save()
         {
-
-
             switch (Mode)
             {
                 case enMode.AddNew:
                     if (_AddNewApplicationType())
                     {
-
                         Mode = enMode.Update;
                         return true;
                     }
@@ -99,26 +71,11 @@ namespace DVLD_BussinessLayer
                     {
                         return false;
                     }
-
                 case enMode.Update:
-
                     return _UpdateApplicationType();
-
             }
-
-
-
-
             return false;
         }
-
-        public static DataTable GetAllApplicationTypes() { return clsApplicationTypesDataAccess.GetAllApplicationTypes(); }
-
-        public static bool DeleteApplicationType(int ApplicationTypeID) { return clsApplicationTypesDataAccess.DeleteApplicationType(ApplicationTypeID); }
-
-        public static bool isApplicationTypeExist(int ApplicationTypeID) { return clsApplicationTypesDataAccess.IsApplicationTypeExist(ApplicationTypeID); }
-
-
+   
     }
-
-}
+}

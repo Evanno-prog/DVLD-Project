@@ -17,9 +17,7 @@ namespace DVLD_WinForm_PresentationLayer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginScreen());
-            //Application.Run(new AddEditPersoneInfo());
-            Application.Run(new frmListPeople());
+            Application.Run(new frmLogin());
         }
     }
 }

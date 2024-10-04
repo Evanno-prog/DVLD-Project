@@ -1,4 +1,5 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -118,7 +119,7 @@ namespace DVLD_WinForm_PresentationLayer
                 else
                     _Test.Notes = DBNull.Value.ToString();
 
-                _Test.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                _Test.CreatedByUserID = clsGlobal.CurrentUser.UserID;
 
                 if (_Test.Save())
                 {

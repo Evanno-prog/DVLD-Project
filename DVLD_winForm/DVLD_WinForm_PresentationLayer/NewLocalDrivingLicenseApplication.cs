@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
+
 namespace DVLD_WinForm_PresentationLayer
 {
     public partial class NewLocalDrivingLicenseApplication : Form
@@ -72,7 +74,7 @@ namespace DVLD_WinForm_PresentationLayer
 
             lblDateNow.Text = DateTime.Now.ToString("d");
             lblFeesApp.Text = "15";
-            lblCreatedBy.Text = clsGlobalSettings.CurrentUser.UserName;
+            lblCreatedBy.Text = clsGlobal.CurrentUser.UserName;
 
             if (_Mode == enMode.AddNew)
             {
@@ -161,11 +163,11 @@ namespace DVLD_WinForm_PresentationLayer
             }
             
             
-            _Application.ApplicationTypeID = clsApplicationType.FindFees(15).ApplicationTypeID;
+            //_Application.ApplicationTypeID = clsApplicationType.FindFees(15).ApplicationTypeID;
          
             if (_Mode == enMode.AddNew)
             {
-                _Application.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                _Application.CreatedByUserID = clsGlobal.CurrentUser.UserID;
             }
 
             if (_Mode == enMode.AddNew)

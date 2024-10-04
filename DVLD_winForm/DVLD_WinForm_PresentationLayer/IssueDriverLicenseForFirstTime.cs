@@ -1,4 +1,5 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -44,7 +45,7 @@ namespace DVLD_WinForm_PresentationLayer
                 _Driver = new clsDriver();
                 _Driver.PersonID = _Application.ApplicantPersonID;
                 _Driver.CreatedDate = DateTime.Now;
-                _Driver.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                _Driver.CreatedByUserID = clsGlobal.CurrentUser.UserID;
                 _Driver.Save();
             }
           
@@ -56,7 +57,7 @@ namespace DVLD_WinForm_PresentationLayer
             _License.PaidFees = _Application.PaidFees;
             _License.IsActive = true;
             _License.IssueReason = 1;
-            _License.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+            _License.CreatedByUserID = clsGlobal.CurrentUser.UserID;
             _License.IssueDate = DateTime.Now;
             _License.ExpirationDate = DateTime.Now.AddYears(_LicenseClass.DefaultValidityLength);
 

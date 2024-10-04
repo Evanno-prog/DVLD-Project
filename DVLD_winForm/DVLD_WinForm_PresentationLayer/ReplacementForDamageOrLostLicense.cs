@@ -1,4 +1,5 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,7 @@ namespace DVLD_WinForm_PresentationLayer
         {
             rbDamagedLicense.Checked = true;
             lblApplicationDate.Text = DateTime.Now.ToString("d");
-            lblCreatedBy.Text = clsGlobalSettings.CurrentUser.UserName;
+            lblCreatedBy.Text = clsGlobal.CurrentUser.UserName;
         }
       
         private void ReplacementForDamageOrLostLicense_Load(object sender, EventArgs e)
@@ -37,13 +38,13 @@ namespace DVLD_WinForm_PresentationLayer
         private void rbDamagedLicense_CheckedChanged(object sender, EventArgs e)
         {
             this.Text = lblTitle.Text = "Replacement for a Damaged License";
-            lblApplicationFees.Text = Convert.ToInt16(clsApplicationType.Find(4).ApplicationFees).ToString();
+            //lblApplicationFees.Text = Convert.ToInt16(clsApplicationType.Find(4).ApplicationFees).ToString();
         }
 
         private void rbLostLicense_CheckedChanged(object sender, EventArgs e)
         {
             this.Text = lblTitle.Text = "Replacement for a Lost License";
-            lblApplicationFees.Text = Convert.ToInt16(clsApplicationType.Find(3).ApplicationFees).ToString();
+            //lblApplicationFees.Text = Convert.ToInt16(clsApplicationType.Find(3).ApplicationFees).ToString();
         }
 
         private void guna2btnClose_Click(object sender, EventArgs e)
@@ -84,8 +85,8 @@ namespace DVLD_WinForm_PresentationLayer
                 _NewApplication.ApplicationTypeID = (rbDamagedLicense.Checked) ? 4 : 3;
                 _NewApplication.ApplicationStatus = 1;
                 _NewApplication.LastStatusDate = DateTime.Now;
-                _NewApplication.PaidFees = clsApplicationType.Find(_NewApplication.ApplicationTypeID).ApplicationFees;
-                _NewApplication.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                //_NewApplication.PaidFees = clsApplicationType.Find(_NewApplication.ApplicationTypeID).ApplicationFees;
+                _NewApplication.CreatedByUserID = clsGlobal.CurrentUser.UserID;
                 _NewApplication.Save();
             //  --------------------------------------------------------------------------------------------------------
                 _NewLicense.ApplicationID = _NewApplication.ApplicationID;
@@ -98,7 +99,7 @@ namespace DVLD_WinForm_PresentationLayer
                 _NewLicense.PaidFees = clsLicenseClass.Find(_NewLicense.LicenseClass).ClassFees;
                 _NewLicense.IsActive = true;
                 _NewLicense.IssueReason = (rbDamagedLicense.Checked) ? 3 : 4;
-                _NewLicense.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                _NewLicense.CreatedByUserID = clsGlobal.CurrentUser.UserID;
 
                 if (_NewLicense.Save())
                 {

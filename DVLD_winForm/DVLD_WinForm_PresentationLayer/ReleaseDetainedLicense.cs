@@ -1,4 +1,5 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,7 +63,7 @@ namespace DVLD_WinForm_PresentationLayer
             lblDetainID.Text = dr["DetainID"].ToString();
             lblDetainDate.Text = Convert.ToDateTime(dr["DetainDate"]).ToString("d");
             lblFineFees.Text = Convert.ToInt16(dr["FineFees"]).ToString();
-            lblApplicationFees.Text = Convert.ToInt16(clsApplicationType.Find(5).ApplicationFees).ToString();
+            //lblApplicationFees.Text = Convert.ToInt16(clsApplicationType.Find(5).ApplicationFees).ToString();
             lblTotalFees.Text = (Convert.ToInt16(lblFineFees.Text) + Convert.ToInt16(lblApplicationFees.Text)).ToString();
 
             guna2btnRelease.Enabled = true;
@@ -83,8 +84,8 @@ namespace DVLD_WinForm_PresentationLayer
                 _NewApplication.ApplicationTypeID = 5;
                 _NewApplication.ApplicationStatus = 1;
                 _NewApplication.LastStatusDate = DateTime.Now;
-                _NewApplication.PaidFees = clsApplicationType.Find(_NewApplication.ApplicationTypeID).ApplicationFees;
-                _NewApplication.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                //_NewApplication.PaidFees = clsApplicationType.Find(_NewApplication.ApplicationTypeID).ApplicationFees;
+                _NewApplication.CreatedByUserID = clsGlobal.CurrentUser.UserID;
                 _NewApplication.Save();
         //  ------------------------------------------------------------------------
                 DataRow dr = _dt.Rows[0];
@@ -92,7 +93,7 @@ namespace DVLD_WinForm_PresentationLayer
                 _OldDetainedLicense.IsReleased = true;  
                 _OldDetainedLicense.ReleaseDate = DateTime.Now;
                 _OldDetainedLicense.ReleaseApplicationID = _NewApplication.ApplicationID;
-                _OldDetainedLicense.ReleasedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                _OldDetainedLicense.ReleasedByUserID = clsGlobal.CurrentUser.UserID;
                 if (_OldDetainedLicense.Save())
                 {
                     MessageBox.Show("Detained License released Successfully", "License Released", MessageBoxButtons.OK, MessageBoxIcon.Information);

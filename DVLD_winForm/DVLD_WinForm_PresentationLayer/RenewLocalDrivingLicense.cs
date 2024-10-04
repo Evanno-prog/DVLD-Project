@@ -1,4 +1,5 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,8 +27,8 @@ namespace DVLD_WinForm_PresentationLayer
 
             lblApplicationDate.Text = DateTime.Now.ToString("d");
             lblIssueDate.Text = DateTime.Now.ToString("d");
-            lblCreatedBy.Text = clsGlobalSettings.CurrentUser.UserName;
-            lblApplicationFees.Text = Convert.ToInt16(clsApplicationType.Find(2).ApplicationFees).ToString();
+            lblCreatedBy.Text = clsGlobal.CurrentUser.UserName;
+            //lblApplicationFees.Text = Convert.ToInt16(clsApplicationType.Find(2).ApplicationFees).ToString();
 
         }
 
@@ -84,8 +85,8 @@ namespace DVLD_WinForm_PresentationLayer
                 _NewApplication.ApplicationTypeID = 2;
                 _NewApplication.ApplicationStatus = 1;
                 _NewApplication.LastStatusDate = DateTime.Now;
-                _NewApplication.PaidFees = clsApplicationType.Find(2).ApplicationFees;
-                _NewApplication.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                //_NewApplication.PaidFees = clsApplicationType.Find(2).ApplicationFees;
+                _NewApplication.CreatedByUserID = clsGlobal.CurrentUser.UserID;
                 _NewApplication.Save();
             //  --------------------------------------------------------------------------------------------------------
                 _NewLicense.ApplicationID = _NewApplication.ApplicationID;
@@ -98,7 +99,7 @@ namespace DVLD_WinForm_PresentationLayer
                 _NewLicense.PaidFees = clsLicenseClass.Find(_NewLicense.LicenseClass).ClassFees;
                 _NewLicense.IsActive = true;
                 _NewLicense.IssueReason = 2;
-                _NewLicense.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                _NewLicense.CreatedByUserID = clsGlobal.CurrentUser.UserID;
 
                 if (_NewLicense.Save())
                 {

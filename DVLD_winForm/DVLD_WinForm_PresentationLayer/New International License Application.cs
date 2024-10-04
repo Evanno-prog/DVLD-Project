@@ -1,4 +1,5 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,8 +42,8 @@ namespace DVLD_WinForm_PresentationLayer
                 _Application.ApplicationTypeID = 6;
                 _Application.ApplicationStatus = 1;
                 _Application.LastStatusDate = DateTime.Now;
-                _Application.PaidFees = clsApplicationType.Find(6).ApplicationFees;
-                _Application.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                //_Application.PaidFees = clsApplicationType.Find(6).ApplicationFees;
+                _Application.CreatedByUserID = clsGlobal.CurrentUser.UserID;
                 _Application.Save();
                 
                 _I_License = new clsInternationalLicense();
@@ -53,7 +54,7 @@ namespace DVLD_WinForm_PresentationLayer
                 DateTime dt = DateTime.Now.AddYears(1);
                 _I_License.ExpirationDate = dt;
                 _I_License.IsActive = true;
-                _I_License.CreatedByUserID = clsGlobalSettings.CurrentUser.UserID;
+                _I_License.CreatedByUserID = clsGlobal.CurrentUser.UserID;
                 if (_I_License.Save())
                 {
                     MessageBox.Show($"International license issued successfully with ID = {_I_License.InternationalLicenseID}", "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -95,10 +96,10 @@ namespace DVLD_WinForm_PresentationLayer
         {
             lblApplicationDate.Text = DateTime.Now.ToString("d");
             lblIssueDate.Text = DateTime.Now.ToString("d");
-            lblFees.Text = clsApplicationType.Find(6).ApplicationFees.ToString();
+            //lblFees.Text = clsApplicationType.Find(6).ApplicationFees.ToString();
             DateTime dt = DateTime.Now.AddYears(1);
             lblExpirationDate.Text = dt.ToString("d");
-            lblCreatedByUser.Text = clsGlobalSettings.CurrentUser.UserName;
+            lblCreatedByUser.Text = clsGlobal.CurrentUser.UserName;
         }
 
         private void New_International_License_Application_Load(object sender, EventArgs e)

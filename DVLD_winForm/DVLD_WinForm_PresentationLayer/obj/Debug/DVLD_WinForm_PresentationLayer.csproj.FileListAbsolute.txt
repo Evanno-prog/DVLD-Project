@@ -80,8 +80,6 @@ C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_Prese
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.LicenseHistory.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ListDrivers.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ListLocalDrivingLicenseApplication.resources
-C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.LoginScreen.resources
-C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.Main.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.Manage_Application_Types.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.Manage_Users.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ManageTestTypes.resources
@@ -120,3 +118,5 @@ C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_Prese
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmAddEditUser.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmUserInfo.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmChangePassword.resources
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmLogin.resources
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmMain.resources
