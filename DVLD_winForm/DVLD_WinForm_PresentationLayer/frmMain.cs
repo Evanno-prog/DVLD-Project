@@ -73,7 +73,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void manageApplicationsTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (Manage_Application_Types frm = new Manage_Application_Types())
+            using (frmListApplicationTypes frm = new frmListApplicationTypes())
             {
                 frm.ShowDialog();
             }   
@@ -83,7 +83,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ManageTestTypes frm = new ManageTestTypes())
+            using (frmListTestTypes frm = new frmListTestTypes())
             {
                 frm.ShowDialog();   
             }  

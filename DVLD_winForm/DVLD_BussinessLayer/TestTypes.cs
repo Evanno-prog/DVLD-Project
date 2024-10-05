@@ -1,85 +1,73 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using DVLD_DataAccessLayer;
+
 namespace DVLD_BussinessLayer
 {
-
     public class clsTestType
     {
+
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
-        public int TestTypeID { get; set; }
-        public string TestTypeTitle { get; set; }
-        public string TestTypeDescription { get; set; }
-        public decimal TestTypeFees { get; set; }
-
+        public enum enTestType { VisionTest = 1, WrittenTest = 2, StreetTest = 3 };
+        public enTestType ID { set; get; }
+        public string Title { set; get; }
+        public string Description { set; get; }
+        public float Fees { set; get; }
 
         public clsTestType()
         {
-            this.TestTypeID = default;
-            this.TestTypeTitle = default;
-            this.TestTypeDescription = default;
-            this.TestTypeFees = default;
-
-
+            this.ID = enTestType.VisionTest;
+            this.Title = "";
+            this.Description = "";
+            this.Fees = 0;
             Mode = enMode.AddNew;
-
         }
 
-        private clsTestType(int TestTypeID, string TestTypeTitle, string TestTypeDescription, decimal TestTypeFees)
+        private clsTestType(enTestType ID, string TestTypeTitel, string Description, float TestTypeFees)
         {
-            this.TestTypeID = TestTypeID;
-            this.TestTypeTitle = TestTypeTitle;
-            this.TestTypeDescription = TestTypeDescription;
-            this.TestTypeFees = TestTypeFees;
-
-
+            this.ID = ID;
+            this.Title = TestTypeTitel;
+            this.Description = Description;
+            this.Fees = TestTypeFees;
             Mode = enMode.Update;
-
         }
 
         private bool _AddNewTestType()
         {
             //call DataAccess Layer 
+            this.ID = (clsTestType.enTestType)clsTestTypeData.AddNewTestType(this.Title, this.Description, this.Fees);
 
-            this.TestTypeID = clsTestTypesDataAccess.AddNewTestType(this.TestTypeTitle, this.TestTypeDescription, this.TestTypeFees);
-
-            return (this.TestTypeID != -1);
-
+            return (this.Title != "");
         }
-
+   
         private bool _UpdateTestType()
         {
             //call DataAccess Layer 
-
-            return clsTestTypesDataAccess.UpdateTestType(this.TestTypeID, this.TestTypeTitle, this.TestTypeDescription, this.TestTypeFees);
-
+            return clsTestTypeData.UpdateTestType((int)
+           this.ID, this.Title, this.Description, this.Fees);
         }
-
-        public static clsTestType Find(int TestTypeID)
+    
+        public static clsTestType Find(enTestType TestTypeID)
         {
-            string TestTypeTitle = default;
-            string TestTypeDescription = default;
-            decimal TestTypeFees = default;
-
-
-            if (clsTestTypesDataAccess.GetTestTypeInfoByID(TestTypeID, ref TestTypeTitle, ref TestTypeDescription, ref TestTypeFees))
-                return new clsTestType(TestTypeID, TestTypeTitle, TestTypeDescription, TestTypeFees);
+            string Title = "", Description = ""; float Fees = 0;
+            if (clsTestTypeData.GetTestTypeInfoByID((int)TestTypeID, ref Title, ref Description, ref Fees))
+                return new clsTestType(TestTypeID, Title, Description, Fees);
             else
                 return null;
-
+        }
+   
+        public static DataTable GetAllTestTypes()
+        {
+            return clsTestTypeData.GetAllTestTypes();
         }
 
         public bool Save()
         {
-
-
             switch (Mode)
             {
                 case enMode.AddNew:
                     if (_AddNewTestType())
                     {
-
                         Mode = enMode.Update;
                         return true;
                     }
@@ -87,26 +75,10 @@ namespace DVLD_BussinessLayer
                     {
                         return false;
                     }
-
                 case enMode.Update:
-
                     return _UpdateTestType();
-
             }
-
-
-
-
             return false;
         }
-
-        public static DataTable GetAllTestTypes() { return clsTestTypesDataAccess.GetAllTestTypes(); }
-
-        public static bool DeleteTestType(int TestTypeID) { return clsTestTypesDataAccess.DeleteTestType(TestTypeID); }
-
-        public static bool isTestTypeExist(int TestTypeID) { return clsTestTypesDataAccess.IsTestTypeExist(TestTypeID); }
-
-
     }
-
 }

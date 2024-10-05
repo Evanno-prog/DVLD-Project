@@ -225,11 +225,11 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage Application Types.cs">
+    <Compile Include="Applications\ApplicationTypes\frmListApplicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage Application Types.Designer.cs">
-      <DependentUpon>Manage Application Types.cs</DependentUpon>
+    <Compile Include="Applications\ApplicationTypes\frmListApplicationTypes.Designer.cs">
+      <DependentUpon>frmListApplicationTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmListUsers.cs">
       <SubType>Form</SubType>
@@ -243,11 +243,11 @@
     <Compile Include="People\frmListPeople.Designer.cs">
       <DependentUpon>frmListPeople.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageTestTypes.cs">
+    <Compile Include="Tests\TestTypes\frmListTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageTestTypes.Designer.cs">
-      <DependentUpon>ManageTestTypes.cs</DependentUpon>
+    <Compile Include="Tests\TestTypes\frmListTestTypes.Designer.cs">
+      <DependentUpon>frmListTestTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="NewLocalDrivingLicenseApplication.cs">
       <SubType>Form</SubType>
@@ -293,17 +293,17 @@
     <Compile Include="TakeTest.Designer.cs">
       <DependentUpon>TakeTest.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateApplicationTypes.cs">
+    <Compile Include="Applications\ApplicationTypes\frmEditApplicationTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateApplicationTypes.Designer.cs">
-      <DependentUpon>UpdateApplicationTypes.cs</DependentUpon>
+    <Compile Include="Applications\ApplicationTypes\frmEditApplicationTypes.Designer.cs">
+      <DependentUpon>frmEditApplicationTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdateTestTypes.cs">
+    <Compile Include="Tests\TestTypes\frmEditTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateTestTypes.Designer.cs">
-      <DependentUpon>UpdateTestTypes.cs</DependentUpon>
+    <Compile Include="Tests\TestTypes\frmEditTestTypes.Designer.cs">
+      <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\frmUserInfo.cs">
       <SubType>Form</SubType>
@@ -383,8 +383,8 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage Application Types.resx">
-      <DependentUpon>Manage Application Types.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\ApplicationTypes\frmListApplicationTypes.resx">
+      <DependentUpon>frmListApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmListUsers.resx">
       <DependentUpon>frmListUsers.cs</DependentUpon>
@@ -395,8 +395,8 @@
     <EmbeddedResource Include="People\frmListPeople.resx">
       <DependentUpon>frmListPeople.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageTestTypes.resx">
-      <DependentUpon>ManageTestTypes.cs</DependentUpon>
+    <EmbeddedResource Include="Tests\TestTypes\frmListTestTypes.resx">
+      <DependentUpon>frmListTestTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="New International License Application.resx">
       <DependentUpon>New International License Application.cs</DependentUpon>
@@ -439,11 +439,11 @@
     <EmbeddedResource Include="TakeTest.resx">
       <DependentUpon>TakeTest.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateApplicationTypes.resx">
-      <DependentUpon>UpdateApplicationTypes.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\ApplicationTypes\frmEditApplicationTypes.resx">
+      <DependentUpon>frmEditApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateTestTypes.resx">
-      <DependentUpon>UpdateTestTypes.cs</DependentUpon>
+    <EmbeddedResource Include="Tests\TestTypes\frmEditTestTypes.resx">
+      <DependentUpon>frmEditTestTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>

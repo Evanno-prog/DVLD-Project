@@ -75,7 +75,7 @@ namespace DVLD_WinForm_PresentationLayer
                 lblApplicantPerson.Text = item["FullName"].ToString();
             }
 
-            lblTestTypesFees.Text = Convert.ToInt16(clsTestType.Find(1).TestTypeFees).ToString();
+            //lblTestTypesFees.Text = Convert.ToInt16(clsTestType.Find(1).TestTypeFees).ToString();
 
             lblTrial.Text = clsLocalDrivingLicenseApplication.GetNumberOfTrialTest(_LDLApplicationID, 1).ToString();
 
@@ -106,7 +106,7 @@ namespace DVLD_WinForm_PresentationLayer
                     lblTitle.Text = "Schedule Retake test";
                     gbRetakeTestInfo.Enabled = true;
                     lblRetakeAppFees.Text = "5";
-                    lblTotalFees.Text = Convert.ToInt16(clsTestType.Find(1).TestTypeFees + 5).ToString();
+                    //lblTotalFees.Text = Convert.ToInt16(clsTestType.Find(1).TestTypeFees + 5).ToString();
                     lblRTestAppID.Text = Rtest.RetakeTestID.ToString();
                 }
                 
@@ -122,7 +122,7 @@ namespace DVLD_WinForm_PresentationLayer
                     lblTitle.Text = "Schedule Retake test";
                     gbRetakeTestInfo.Enabled = true;
                     lblRetakeAppFees.Text = "5";
-                    lblTotalFees.Text = Convert.ToInt16(clsTestType.Find(1).TestTypeFees + 5).ToString();
+                    //lblTotalFees.Text = Convert.ToInt16(clsTestType.Find(1).TestTypeFees + 5).ToString();
                  
                     clsRetakeTest Rtest = clsRetakeTest.FindRtestInfoByTestAppointmentID(_TestAppointmentID);
                     lblRTestAppID.Text = (Rtest != null) ? Rtest.RetakeTestID.ToString() : "0";
@@ -152,7 +152,7 @@ namespace DVLD_WinForm_PresentationLayer
             _TestAppointment.TestTypeID = 1;
             _TestAppointment.AppointmentDate = dtpAppointmentDate.Value;
             _TestAppointment.LocalDrivingLicenseApplicationID = _LDLApplicationID;
-            _TestAppointment.PaidFees = clsTestType.Find(1).TestTypeFees;
+            //_TestAppointment.PaidFees = clsTestType.Find(1).TestTypeFees;
             if (_Mode == enMode.AddNew)
             {
                 _TestAppointment.CreatedByUserID = clsGlobal.CurrentUser.UserID;
