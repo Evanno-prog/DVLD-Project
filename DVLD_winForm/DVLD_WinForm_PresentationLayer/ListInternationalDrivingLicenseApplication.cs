@@ -61,10 +61,10 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (frmShowPersonInfo frm = new frmShowPersonInfo(clsApplication.Find((int)dgvListIntLicenses.CurrentRow.Cells[1].Value).ApplicantPersonID))
-            {
-                frm.ShowDialog();
-            }
+            //using (frmShowPersonInfo frm = new frmShowPersonInfo(clsApplication.Find((int)dgvListIntLicenses.CurrentRow.Cells[1].Value).ApplicantPersonID))
+            //{
+            //    frm.ShowDialog();
+            //}
         }
 
         private void ShowLicenseDetails_Click(object sender, EventArgs e)

@@ -89,20 +89,20 @@ namespace DVLD_WinForm_PresentationLayer
 
         public void LoadApplicationInfoData(int LDL_ApplicationID)
         {
-            _LDL_App = clsLocalDrivingLicenseApplication.Find(LDL_ApplicationID);
+            //_LDL_App = clsLocalDrivingLicenseApplication.Find(LDL_ApplicationID);
 
             lblLDLApplicationID.Text = LDL_ApplicationID.ToString();
             lblLicenseClass.Text = _GetLicenseClassName(_LDL_App.LicenseClassID);
-            DataTable Dt = clsApplication.GetLocalApplications(LDL_ApplicationID);
-            foreach (DataRow item in Dt.Rows)
-            {
-                lblPassedTests.Text = $"{Convert.ToInt16(item["PassedTestCount"])}/3";
-                lblApplicantPerson.Text = item["FullName"].ToString();
-            }
+            //DataTable Dt = clsApplication.GetLocalApplications(LDL_ApplicationID);
+            //foreach (DataRow item in Dt.Rows)
+            //{
+            //    lblPassedTests.Text = $"{Convert.ToInt16(item["PassedTestCount"])}/3";
+            //    lblApplicantPerson.Text = item["FullName"].ToString();
+            //}
             
-            _Application = clsApplication.Find(_LDL_App.ApplicationID);
+            //_Application = clsApplication.Find(_LDL_App.ApplicationID);
             lblAppID.Text = _Application.ApplicationID.ToString();
-            lblApplicationStatus.Text = _GetApplicationStatusName(_Application.ApplicationStatus);
+            //lblApplicationStatus.Text = _GetApplicationStatusName(_Application.ApplicationStatus);
             lblApplicationFees.Text =  (Convert.ToInt16(_Application.PaidFees)).ToString();
             lblApplicationTypes.Text = _GetApplicationTypeName(_Application.ApplicationTypeID);
             lblApplicationStatusDate.Text = _Application.LastStatusDate.ToString("d");

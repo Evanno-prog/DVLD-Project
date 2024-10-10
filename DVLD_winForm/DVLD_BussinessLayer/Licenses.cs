@@ -155,9 +155,16 @@ namespace DVLD_BussinessLayer
         public static bool DeleteLicense(int LicenseID) { return clsLicensesDataAccess.DeleteLicense(LicenseID); }
 
         public static bool isLicenseExist(int LicenseID) { return clsLicensesDataAccess.IsLicenseExist(LicenseID); }
-     
-        public static bool IsLicenseExistBySameAppliedLicenseClass(int DriverID, int LicenseClassID) { return clsLicensesDataAccess.IsLicenseExistBySameAppliedLicenseClass(DriverID,LicenseClassID); }
 
+        public static bool IsLicenseExistByPersonID(int PersonID, int LicenseClassID)
+        {
+            return (GetActiveLicenseIDByPersonID(PersonID, LicenseClassID) != -1);
+        }
+
+        public static int GetActiveLicenseIDByPersonID(int PersonID, int LicenseClassID)
+        {
+            return clsLicensesDataAccess.GetActiveLicenseIDByPersonID(PersonID, LicenseClassID);
+        }
 
     }
 

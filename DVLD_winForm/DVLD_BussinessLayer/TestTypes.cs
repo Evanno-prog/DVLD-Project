@@ -35,9 +35,14 @@ namespace DVLD_BussinessLayer
         private bool _AddNewTestType()
         {
             //call DataAccess Layer 
-            this.ID = (clsTestType.enTestType)clsTestTypeData.AddNewTestType(this.Title, this.Description, this.Fees);
+            int Result = clsTestTypeData.AddNewTestType(this.Title, this.Description, this.Fees);
 
-            return (this.Title != "");
+            if (Result != -1)
+            {
+                this.ID = (enTestType) Result;
+                return true;
+            }
+            return false;
         }
    
         private bool _UpdateTestType()

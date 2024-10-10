@@ -37,10 +37,10 @@ namespace DVLD_WinForm_PresentationLayer
                 llShowLicenseInfo.Enabled = true;
                 guna2btnIssue.Enabled = false;
                 _Application = new clsApplication();
-                _Application.ApplicantPersonID = clsApplication.Find(_License.ApplicationID).ApplicantPersonID;
+                //_Application.ApplicantPersonID = clsApplication.Find(_License.ApplicationID).ApplicantPersonID;
                 _Application.ApplicationDate = DateTime.Now;
                 _Application.ApplicationTypeID = 6;
-                _Application.ApplicationStatus = 1;
+                //_Application.ApplicationStatus = 1;
                 _Application.LastStatusDate = DateTime.Now;
                 //_Application.PaidFees = clsApplicationType.Find(6).ApplicationFees;
                 _Application.CreatedByUserID = clsGlobal.CurrentUser.UserID;

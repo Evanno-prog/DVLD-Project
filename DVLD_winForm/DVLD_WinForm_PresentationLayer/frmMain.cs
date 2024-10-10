@@ -93,7 +93,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (NewLocalDrivingLicenseApplication frm = new NewLocalDrivingLicenseApplication(-1))
+            using (frmNewLocalDrivingLicenseApplication frm = new frmNewLocalDrivingLicenseApplication(-1))
             {
                
                 frm.ShowDialog();

@@ -25,8 +25,8 @@ namespace DVLD_WinForm_PresentationLayer
         {
             InitializeComponent();
             _LDLApplicationID = lDLApplicationID;
-            _Application = clsApplication.Find(clsLocalDrivingLicenseApplication.Find(_LDLApplicationID).ApplicationID);
-            _LicenseClass = clsLicenseClass.Find(clsLocalDrivingLicenseApplication.Find(_LDLApplicationID).LicenseClassID);
+            //_Application = clsApplication.Find(clsLocalDrivingLicenseApplication.Find(_LDLApplicationID).ApplicationID);
+            //_LicenseClass = clsLicenseClass.Find(clsLocalDrivingLicenseApplication.Find(_LDLApplicationID).LicenseClassID);
 
         }
 
@@ -54,7 +54,7 @@ namespace DVLD_WinForm_PresentationLayer
             _License.DriverID = _Driver.DriverID;
             _License.LicenseClass = _LicenseClass.LicenseClassID;
             _License.Notes = (txtNotes.Text != "") ? txtNotes.Text : DBNull.Value.ToString();
-            _License.PaidFees = _Application.PaidFees;
+            //_License.PaidFees = _Application.PaidFees;
             _License.IsActive = true;
             _License.IssueReason = 1;
             _License.CreatedByUserID = clsGlobal.CurrentUser.UserID;
@@ -65,7 +65,7 @@ namespace DVLD_WinForm_PresentationLayer
             {
                 MessageBox.Show($"License Issued Successfully with License ID = {_License.LicenseID}", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                _Application.ApplicationStatus = 3;
+                //_Application.ApplicationStatus = 3;
                 _Application.LastStatusDate = DateTime.Now;
                 _Application.Save();
                 Close();

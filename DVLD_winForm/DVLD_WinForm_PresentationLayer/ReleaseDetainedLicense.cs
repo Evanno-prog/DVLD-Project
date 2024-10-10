@@ -79,10 +79,10 @@ namespace DVLD_WinForm_PresentationLayer
         {
             if (MessageBox.Show("Are you sure you want to Release this detained license?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                _NewApplication.ApplicantPersonID = clsApplication.Find(_License.ApplicationID).ApplicantPersonID;
+                //_NewApplication.ApplicantPersonID = clsApplication.Find(_License.ApplicationID).ApplicantPersonID;
                 _NewApplication.ApplicationDate = DateTime.Now;
                 _NewApplication.ApplicationTypeID = 5;
-                _NewApplication.ApplicationStatus = 1;
+                //_NewApplication.ApplicationStatus = 1;
                 _NewApplication.LastStatusDate = DateTime.Now;
                 //_NewApplication.PaidFees = clsApplicationType.Find(_NewApplication.ApplicationTypeID).ApplicationFees;
                 _NewApplication.CreatedByUserID = clsGlobal.CurrentUser.UserID;

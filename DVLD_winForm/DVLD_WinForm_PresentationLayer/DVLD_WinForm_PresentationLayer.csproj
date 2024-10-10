@@ -249,11 +249,11 @@
     <Compile Include="Tests\TestTypes\frmListTestTypes.Designer.cs">
       <DependentUpon>frmListTestTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewLocalDrivingLicenseApplication.cs">
+    <Compile Include="Applications\LocalDrivingLicenseApplication\frmNewLocalDrivingLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewLocalDrivingLicenseApplication.Designer.cs">
-      <DependentUpon>NewLocalDrivingLicenseApplication.cs</DependentUpon>
+    <Compile Include="Applications\LocalDrivingLicenseApplication\frmNewLocalDrivingLicenseApplication.Designer.cs">
+      <DependentUpon>frmNewLocalDrivingLicenseApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmShowPersonInfo.cs">
       <SubType>Form</SubType>
@@ -401,8 +401,8 @@
     <EmbeddedResource Include="New International License Application.resx">
       <DependentUpon>New International License Application.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewLocalDrivingLicenseApplication.resx">
-      <DependentUpon>NewLocalDrivingLicenseApplication.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\LocalDrivingLicenseApplication\frmNewLocalDrivingLicenseApplication.resx">
+      <DependentUpon>frmNewLocalDrivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmShowPersonInfo.resx">
       <DependentUpon>frmShowPersonInfo.cs</DependentUpon>

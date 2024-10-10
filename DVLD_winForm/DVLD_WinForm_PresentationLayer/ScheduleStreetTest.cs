@@ -31,8 +31,8 @@ namespace DVLD_WinForm_PresentationLayer
         {
             InitializeComponent();
             _LDLApplicationID = lDLApplicationID;
-            _LDLApplication = clsLocalDrivingLicenseApplication.Find(_LDLApplicationID);
-            _Application = clsApplication.Find(_LDLApplication.ApplicationID);
+            //_LDLApplication = clsLocalDrivingLicenseApplication.Find(_LDLApplicationID);
+            //_Application = clsApplication.Find(_LDLApplication.ApplicationID);
             _TestAppointmentID = TestAppointmentID;
             if (_TestAppointmentID == -1)
                 _Mode = enMode.AddNew;
@@ -71,16 +71,16 @@ namespace DVLD_WinForm_PresentationLayer
 
             lblLDLApplicationID.Text = _LDLApplicationID.ToString();
             lblLicenseClass.Text = _GetLicenseClassName(_LDLApplication.LicenseClassID);
-            DataTable Dt = clsApplication.GetLocalApplications(_LDLApplicationID);
-            foreach (DataRow item in Dt.Rows)
-            {
-                lblTrial.Text = clsLocalDrivingLicenseApplication.GetNumberOfTrialTest(_LDLApplicationID, 3).ToString();
-                lblApplicantPerson.Text = item["FullName"].ToString();
-            }
+            //DataTable Dt = clsApplication.GetLocalApplications(_LDLApplicationID);
+            //foreach (DataRow item in Dt.Rows)
+            //{
+            //    //lblTrial.Text = clsLocalDrivingLicenseApplication.GetNumberOfTrialTest(_LDLApplicationID, 3).ToString();
+            //    lblApplicantPerson.Text = item["FullName"].ToString();
+            //}
 
             lblTestTypesFees.Text = Convert.ToInt16(clsTestType.Find(clsTestType.enTestType.StreetTest).Fees).ToString();
 
-            lblTrial.Text = clsLocalDrivingLicenseApplication.GetNumberOfTrialTest(_LDLApplicationID, 3).ToString();
+            //lblTrial.Text = clsLocalDrivingLicenseApplication.GetNumberOfTrialTest(_LDLApplicationID, 3).ToString();
 
             if (_Mode == enMode.Update)
             {

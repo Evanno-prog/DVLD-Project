@@ -274,32 +274,52 @@ namespace DVLD_DataAccessLayer
             return isFound;
 
         }
-     
-        public static bool IsLicenseExistBySameAppliedLicenseClass(int DriverID, int LicenseClassID)
+
+        public static int GetActiveLicenseIDByPersonID(int PersonID, int LicenseClassID)
         {
-            bool isFound = false;
+            int LicenseID = -1;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = @"SELECT  Licenses.LicenseID
+                            FROM Licenses INNER JOIN
+                                                     Drivers ON Licenses.DriverID = Drivers.DriverID
+                            WHERE  
+                             
+                             Licenses.LicenseClass = @LicenseClass 
+                              AND Drivers.PersonID = @PersonID
+                              And IsActive=1;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@LicenseClass", LicenseClassID);
+
             try
             {
-                using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
-                {
-                    string query = "Select Found = 1 From Licenses Where DriverID = @DriverID and LicenseClass = @LicenseClassID and IsActive = 1;";
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
+                connection.Open();
 
-                        command.Parameters.AddWithValue("@DriverID", DriverID);
-                        command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
-                        connection.Open();
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            isFound = reader.HasRows;
-                        }
-                    }
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    LicenseID = insertedID;
                 }
             }
-            catch (Exception ex) {  }
 
-            return isFound;
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
 
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+
+            return LicenseID;
         }
 
         public static DataTable GetAllLicenses()

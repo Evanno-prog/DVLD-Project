@@ -27,7 +27,7 @@ namespace DVLD_WinForm_PresentationLayer
             InitializeComponent();
             _AppointmentID = AppointmentID;
             _TestAppointment = clsTestAppointment.Find(_AppointmentID);
-            _LDLApp = clsLocalDrivingLicenseApplication.Find(_TestAppointment.LocalDrivingLicenseApplicationID);
+            //_LDLApp = clsLocalDrivingLicenseApplication.Find(_TestAppointment.LocalDrivingLicenseApplicationID);
             _TestType_id= Testtype_id;
         }
 
@@ -84,15 +84,15 @@ namespace DVLD_WinForm_PresentationLayer
             lblDate.Text = _TestAppointment.AppointmentDate.ToString();
             lblTestTypesFees.Text = Convert.ToInt16(_TestAppointment.PaidFees).ToString();
 
-            DataTable Dt = clsApplication.GetLocalApplications(_LDLApp.LocalDrivingLicenseApplicationID);
+            //DataTable Dt = clsApplication.GetLocalApplications(_LDLApp.LocalDrivingLicenseApplicationID);
 
             lblLDLApplicationID.Text = _LDLApp.LocalDrivingLicenseApplicationID.ToString();
             lblLicenseClass.Text = _GetLicenseClassName(_LDLApp.LicenseClassID);
-            foreach (DataRow item in Dt.Rows)
-            {
-                lblTrial.Text = clsLocalDrivingLicenseApplication.GetNumberOfTrialTest(_LDLApp.LocalDrivingLicenseApplicationID, _TestAppointment.TestTypeID).ToString();
-                lblApplicantPerson.Text = item["FullName"].ToString();
-            }
+            //foreach (DataRow item in Dt.Rows)
+            //{
+            //    //lblTrial.Text = clsLocalDrivingLicenseApplication.GetNumberOfTrialTest(_LDLApp.LocalDrivingLicenseApplicationID, _TestAppointment.TestTypeID).ToString();
+            //    lblApplicantPerson.Text = item["FullName"].ToString();
+            //}
 
 
         }

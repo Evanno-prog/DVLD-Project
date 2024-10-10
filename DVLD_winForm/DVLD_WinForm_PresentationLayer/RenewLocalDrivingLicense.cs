@@ -80,10 +80,10 @@ namespace DVLD_WinForm_PresentationLayer
                 _OldLicense.IsActive = false;
                 _OldLicense.Save();
             //  --------------------------------------------------------------------------------------------------------
-                _NewApplication.ApplicantPersonID = clsApplication.Find(_OldLicense.ApplicationID).ApplicantPersonID;
+                //_NewApplication.ApplicantPersonID = clsApplication.Find(_OldLicense.ApplicationID).ApplicantPersonID;
                 _NewApplication.ApplicationDate = DateTime.Now;
                 _NewApplication.ApplicationTypeID = 2;
-                _NewApplication.ApplicationStatus = 1;
+                //_NewApplication.ApplicationStatus = 1;
                 _NewApplication.LastStatusDate = DateTime.Now;
                 //_NewApplication.PaidFees = clsApplicationType.Find(2).ApplicationFees;
                 _NewApplication.CreatedByUserID = clsGlobal.CurrentUser.UserID;

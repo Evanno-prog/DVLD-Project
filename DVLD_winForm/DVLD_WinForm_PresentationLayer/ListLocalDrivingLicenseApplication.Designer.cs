@@ -200,7 +200,6 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(259, 36);
             this.deleteToolStripMenuItem.Text = "Delete Application";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
@@ -213,7 +212,6 @@
             this.CancelApp.Name = "CancelApp";
             this.CancelApp.Size = new System.Drawing.Size(259, 36);
             this.CancelApp.Text = "Cancel Application";
-            this.CancelApp.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripSeparator3
             // 
