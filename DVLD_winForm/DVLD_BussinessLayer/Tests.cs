@@ -4,7 +4,6 @@ using DVLD_DataAccessLayer;
 
 namespace TestsBusinessLayer
 {
-
     public class clsTest
     {
         public enum enMode { AddNew = 0, Update = 1 };
@@ -127,6 +126,13 @@ namespace TestsBusinessLayer
         {
             return clsTestsDataAccess.GetLatestTestIDForCheck(LDLApplicationID,TestTypeID);
         }
+  
+        public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationID)
+        {
+            return clsTestsDataAccess.GetPassedTestCount(LocalDrivingLicenseApplicationID); 
+        }
+
+
     }
 
 }

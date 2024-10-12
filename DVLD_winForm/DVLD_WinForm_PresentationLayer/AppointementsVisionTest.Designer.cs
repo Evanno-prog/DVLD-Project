@@ -41,7 +41,7 @@
             this.lblRecordCountAppointment = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlL_D_L_ApplicationInfo1 = new DVLD_WinForm_PresentationLayer.ctrlL_D_L_ApplicationInfo();
+            this.ctrlL_D_L_ApplicationInfo1 = new DVLD_WinForm_PresentationLayer.ctrlLocalDrivingLicenseApplicationInfo();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListAppointments)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -212,7 +212,7 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private ctrlL_D_L_ApplicationInfo ctrlL_D_L_ApplicationInfo1;
+        private ctrlLocalDrivingLicenseApplicationInfo ctrlL_D_L_ApplicationInfo1;
         private System.Windows.Forms.Button btnAddAppointment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvListAppointments;

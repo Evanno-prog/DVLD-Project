@@ -210,6 +210,7 @@ namespace DVLD_DataAccessLayer
             return (rowsAffected > 0);
 
         }
+  
         public static bool DeleteTest(int TestID)
         {
             int rowsAffected = 0;
@@ -289,6 +290,49 @@ namespace DVLD_DataAccessLayer
             return dt;
         }
 
+        public static byte GetPassedTestCount(int LocalDrivingLicenseApplicationID)
+        {
+            byte PassedTestCount = 0;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
+
+            string query = @"SELECT PassedTestCount = count(TestTypeID)
+                         FROM Tests INNER JOIN
+                         TestAppointments ON Tests.TestAppointmentID = TestAppointments.TestAppointmentID
+						 where LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID and TestResult=1";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && byte.TryParse(result.ToString(), out byte ptCount))
+                {
+                    PassedTestCount = ptCount;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return PassedTestCount;
+
+
+        }
     }
 
 }

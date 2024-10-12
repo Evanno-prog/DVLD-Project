@@ -30,7 +30,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void Written_test_appointment_Load(object sender, EventArgs e)
         {
-            ctrlL_D_L_ApplicationInfo1.LoadApplicationInfoData(_LDLApplicationID);
+            //ctrlL_D_L_ApplicationInfo1.LoadApplicationInfoData(_LDLApplicationID);
             _RefreshListTestAppointments();
         }
 

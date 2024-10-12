@@ -114,6 +114,23 @@ namespace DVLD_BussinessLayer
 
         public static bool isLicenseClassExist(int LicenseClassID) { return clsLicenseClassesDataAccess.IsLicenseClassExist(LicenseClassID); }
 
+        private static int _CalculateAge(DateTime BirthDate)
+        {
+            DateTime Today = DateTime.Today;
+            int Age = Today.Year - BirthDate.Year;
+            if (BirthDate > Today.AddYears(-Age))
+            {
+                Age--;
+            }
+            return Age;
+        }
+
+        public static bool IsPersonAgeValidToApplyForThisLicenseClass(int PersonID, int LicenseClassID) 
+        {
+            clsPerson Person = clsPerson.Find(PersonID);
+            int Age = _CalculateAge(Person.DateOfBirth);
+            return (Age >= Find(LicenseClassID).MinimumAllowedAge);
+        }
 
     }
 

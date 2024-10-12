@@ -93,7 +93,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (frmNewLocalDrivingLicenseApplication frm = new frmNewLocalDrivingLicenseApplication(-1))
+            using (frmAddEditLocalDrivingLicenseApplication frm = new frmAddEditLocalDrivingLicenseApplication(-1))
             {
                
                 frm.ShowDialog();
@@ -102,7 +102,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void localDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ListLocalDrivingLicenseApplication frm = new ListLocalDrivingLicenseApplication())
+            using (frmListLocalDrivingLicenseApplication frm = new frmListLocalDrivingLicenseApplication())
             {
                 frm.ShowDialog();
             }
@@ -150,7 +150,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void retakeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ListLocalDrivingLicenseApplication frm = new ListLocalDrivingLicenseApplication())
+            using (frmListLocalDrivingLicenseApplication frm = new frmListLocalDrivingLicenseApplication())
             {
                 frm.ShowDialog();
             }

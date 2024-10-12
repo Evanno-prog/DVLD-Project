@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StreetTestAppointment));
             this.lblTitle = new System.Windows.Forms.Label();
             this.pbTestType = new System.Windows.Forms.PictureBox();
-            this.ctrlL_D_L_ApplicationInfo1 = new DVLD_WinForm_PresentationLayer.ctrlL_D_L_ApplicationInfo();
+            this.ctrlL_D_L_ApplicationInfo1 = new DVLD_WinForm_PresentationLayer.ctrlLocalDrivingLicenseApplicationInfo();
             this.lblRecordCountAppointment = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -212,7 +212,7 @@
 
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox pbTestType;
-        private ctrlL_D_L_ApplicationInfo ctrlL_D_L_ApplicationInfo1;
+        private ctrlLocalDrivingLicenseApplicationInfo ctrlL_D_L_ApplicationInfo1;
         private System.Windows.Forms.Label lblRecordCountAppointment;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;

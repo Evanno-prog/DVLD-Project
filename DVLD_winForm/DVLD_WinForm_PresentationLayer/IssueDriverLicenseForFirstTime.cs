@@ -32,7 +32,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void IssueDriverLicenseForFirstTime_Load(object sender, EventArgs e)
         {
-            ctrlL_D_L_ApplicationInfo1.LoadApplicationInfoData(_LDLApplicationID);
+            //ctrlL_D_L_ApplicationInfo1.LoadApplicationInfoData(_LDLApplicationID);
         }
 
         private void guna2btnSave_Click(object sender, EventArgs e)
