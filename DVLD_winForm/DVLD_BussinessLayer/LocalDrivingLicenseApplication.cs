@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Data;
+using DVLD_Buisness;
 using DVLD_DataAccessLayer;
 using static DVLD_BussinessLayer.clsApplication;
-using TestsBusinessLayer;
-
 namespace DVLD_BussinessLayer
 {
     public class clsLocalDrivingLicenseApplication : clsApplication
@@ -13,14 +12,16 @@ namespace DVLD_BussinessLayer
         public int LocalDrivingLicenseApplicationID { set; get; }
         public int LicenseClassID { set; get; }
         public clsLicenseClass LicenseClassInfo;
+    
         public string PersonFullName
         {
             get
             {
-                return base.PersonInfo.FullName;
+                return clsPerson.Find(base.ApplicantPersonID).FullName;
             }
 
         }
+
         public clsLocalDrivingLicenseApplication() 
         {
             this.LocalDrivingLicenseApplicationID = -1;
@@ -71,13 +72,13 @@ namespace DVLD_BussinessLayer
         public static clsLocalDrivingLicenseApplication FindByLocalDrivingAppLicenseID(int
         LocalDrivingLicenseApplicationID)
         {
-            // 
+
             int ApplicationID = -1, LicenseClassID = -1;
             bool IsFound = clsLocalDrivingLicenseApplicationData.GetLocalDrivingLicenseApplicationInfoByID
             (LocalDrivingLicenseApplicationID, ref ApplicationID, ref LicenseClassID);
             if (IsFound)
             {
-                //now we find the base application
+                //Now we find the base application
                 clsApplication Application = clsApplication.FindBaseApplication(ApplicationID);
                 //we return new object of that person with the right data
                 return new clsLocalDrivingLicenseApplication(
@@ -312,10 +313,10 @@ namespace DVLD_BussinessLayer
         //        return -1;
         //}
 
-        //public bool IsLicenseIssued()
-        //{
-        //    return (GetActiveLicenseID() != -1);
-        //}
+        public bool IsLicenseIssued()
+        {
+            return (GetActiveLicenseID() != -1);
+        }
 
         public int GetActiveLicenseID()
         {//this will get the license id that belongs to this application

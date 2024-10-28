@@ -60,7 +60,7 @@ namespace DVLD_BussinessLayer
 
             Mode = enMode.AddNew;
         }
-        private clsApplication(int ApplicationID, int ApplicantPersonID,DateTime ApplicationDate, int ApplicationTypeID,enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
+        public clsApplication(int ApplicationID, int ApplicantPersonID,DateTime ApplicationDate, int ApplicationTypeID,enApplicationStatus ApplicationStatus, DateTime LastStatusDate,
         float PaidFees, int CreatedByUserID)
         {
             this.ApplicationID = ApplicationID;

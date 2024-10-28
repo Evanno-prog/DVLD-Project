@@ -12,11 +12,11 @@ namespace DVLD_WinForm_PresentationLayer.Applications.LocalDrivingLicense
 {
     public partial class frmLocalDrivingApplicationInfo : Form
     {
-        private int _ApplicationID = -1;
-        public frmLocalDrivingApplicationInfo(int ApplicationID)
+        private int _LocalDrivingApplicationID = -1;
+        public frmLocalDrivingApplicationInfo(int LocalDrivingApplicationID)
         {
             InitializeComponent();
-            _ApplicationID = ApplicationID;
+            _LocalDrivingApplicationID = LocalDrivingApplicationID;
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace DVLD_WinForm_PresentationLayer.Applications.LocalDrivingLicense
 
         private void frmLocalDrivingApplicationInfo_Load(object sender, EventArgs e)
         {
-            ctrlLocalDrivingLicenseApplicationInfo1.LoadApplicationInfoByApplicationID(_ApplicationID);
+            ctrlLocalDrivingLicenseApplicationInfo1.LoadApplicationInfoByLocalDrivingAppID(_LocalDrivingApplicationID);
         }
 
     }
