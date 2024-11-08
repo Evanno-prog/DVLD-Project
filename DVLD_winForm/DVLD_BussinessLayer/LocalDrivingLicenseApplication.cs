@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Windows.Forms.VisualStyles;
 using DVLD_Buisness;
 using DVLD_DataAccessLayer;
 using static DVLD_BussinessLayer.clsApplication;
@@ -238,11 +239,11 @@ namespace DVLD_BussinessLayer
            (int)TestTypeID);
         }
 
-        //public clsTest GetLastTestPerTestType(clsTestType.enTestType TestTypeID)
-        //{
-        //    return clsTest.FindLastTestPerPersonAndLicenseClass(this.ApplicantPersonID, this.LicenseClassID,
-        //    TestTypeID);
-        //}
+        public clsTest GetLastTestPerTestType(clsTestType.enTestType TestTypeID)
+        {
+            return clsTest.FindLastTestPerPersonAndLicenseClass(this.ApplicantPersonID, this.LicenseClassID,
+            TestTypeID);
+        }
 
         public byte GetPassedTestCount()
         {
@@ -254,64 +255,65 @@ namespace DVLD_BussinessLayer
             return clsTest.GetPassedTestCount(LocalDrivingLicenseApplicationID);
         }
 
-        //public bool PassedAllTests()
-        //{
-        //    return clsTest.PassedAllTests(this.LocalDrivingLicenseApplicationID);
-        //}
+        public bool PassedAllTests()
+        {
+            return clsTest.PassedAllTests(this.LocalDrivingLicenseApplicationID);
+        }
 
-        //public static bool PassedAllTests(int LocalDrivingLicenseApplicationID)
-        //{
-        //    //if total passed test less than 3 it will return false otherwise will return true
-        //    return clsTest.PassedAllTests(LocalDrivingLicenseApplicationID);
-        //}
+        public static bool PassedAllTests(int LocalDrivingLicenseApplicationID)
+        {
+            //if total passed test less than 3 it will return false otherwise will return true
+            return clsTest.PassedAllTests(LocalDrivingLicenseApplicationID);
+        }
 
-        //public int IssueLicenseForTheFirtTime(string Notes, int CreatedByUserID)
-        //{
-        //    int DriverID = -1;
-        //    clsDriver Driver = clsDriver.FindByPersonID(this.ApplicantPersonID);
-        //    if (Driver == null)
-        //    {
-        //        //we check if the driver already there for this person.
-        //        Driver = new clsDriver();
+        public int IssueLicenseForTheFirtTime(string Notes, int CreatedByUserID)
+        {
 
-        //        Driver.PersonID = this.ApplicantPersonID;
-        //        Driver.CreatedByUserID = CreatedByUserID;
-        //        if (Driver.Save())
-        //        {
-        //            DriverID = Driver.DriverID;
-        //        }
-        //        else
-        //        {
-        //            return -1;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        DriverID = Driver.DriverID;
-        //    }
-        //    //now we diver is there, so we add new licesnse
+            int DriverID = -1;
+            clsDriver Driver = clsDriver.FindByPersonID(this.ApplicantPersonID);
+            if (Driver == null)
+            {
+                //we check if the driver already there for this person.
+                Driver = new clsDriver();
 
-        //    clsLicense License = new clsLicense();
-        //    License.ApplicationID = this.ApplicationID;
-        //    License.DriverID = DriverID;
-        //    License.LicenseClass = this.LicenseClassID;
-        //    License.IssueDate = DateTime.Now;
-        //    License.ExpirationDate = DateTime.Now.AddYears(this.LicenseClassInfo.DefaultValidityLength);
-        //    License.Notes = Notes;
-        //    License.PaidFees = this.LicenseClassInfo.ClassFees;
-        //    License.IsActive = true;
-        //    License.IssueReason = clsLicense.enIssueReason.FirstTime;
-        //    License.CreatedByUserID = CreatedByUserID;
-        //    if (License.Save())
-        //    {
-        //        //now we should set the application status to complete.
-        //        this.SetComplete();
-        //        return License.LicenseID;
-        //    }
+                Driver.PersonID = this.ApplicantPersonID;
+                Driver.CreatedByUserID = CreatedByUserID;
+                if (Driver.Save())
+                {
+                    DriverID = Driver.DriverID;
+                }
+                else
+                {
+                    return -1;
+                }
+            }
+            else
+            {
+                DriverID = Driver.DriverID;
+            }
+            //now driver is there, so we add new licesnse
 
-        //    else
-        //        return -1;
-        //}
+            clsLicense License = new clsLicense();
+            License.ApplicationID = this.ApplicationID;
+            License.DriverID = DriverID;
+            License.LicenseClass = this.LicenseClassID;
+            License.IssueDate = DateTime.Now;
+            License.ExpirationDate = DateTime.Now.AddYears(this.LicenseClassInfo.DefaultValidityLength);
+            License.Notes = Notes;
+            License.PaidFees = this.LicenseClassInfo.ClassFees;
+            License.IsActive = true;
+            License.IssueReason = clsLicense.enIssueReason.FirstTime;
+            License.CreatedByUserID = CreatedByUserID;
+            if (License.Save())
+            {
+                //now we should set the application status to complete.
+                this.SetComplete();
+                return License.LicenseID;
+            }
+            else
+                return -1;
+
+        }
 
         public bool IsLicenseIssued()
         {
@@ -319,7 +321,7 @@ namespace DVLD_BussinessLayer
         }
 
         public int GetActiveLicenseID()
-        {//this will get the license id that belongs to this application
+        {//This will get the license id that belongs to this application
             return clsLicense.GetActiveLicenseIDByPersonID(this.ApplicantPersonID, this.LicenseClassID);
         }
     }

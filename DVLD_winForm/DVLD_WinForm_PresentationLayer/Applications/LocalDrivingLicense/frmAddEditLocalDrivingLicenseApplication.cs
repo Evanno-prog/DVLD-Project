@@ -147,11 +147,11 @@ namespace DVLD_WinForm_PresentationLayer
                 return;
             }
 
-            if (clsLicense.IsLicenseExistByPersonID(_SelectedPersonID, LicenseClassID))
-            {
-                MessageBox.Show("Person already has a License with the same applied license class.\nChoose another LicenseClass:", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //if (clsLicense.IsLicenseExistByPersonID(_SelectedPersonID, LicenseClassID))
+            //{
+            //    MessageBox.Show("Person already has a License with the same applied license class.\nChoose another LicenseClass:", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
             _LocalDrivingLicenseApplication.LicenseClassID = LicenseClassID;
             _LocalDrivingLicenseApplication.ApplicantPersonID = ctrlPersonCardWithFilter1.PersonID;

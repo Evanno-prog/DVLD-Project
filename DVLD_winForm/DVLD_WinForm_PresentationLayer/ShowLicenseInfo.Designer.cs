@@ -32,7 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlLicenseInfo();
+            this.ctrlLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlDriverLicenseInfo();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +107,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ctrlLicenseInfo ctrlLicenseInfo1;
+        private ctrlDriverLicenseInfo ctrlLicenseInfo1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

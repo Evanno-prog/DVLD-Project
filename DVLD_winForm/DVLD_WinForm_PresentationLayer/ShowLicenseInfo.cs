@@ -28,7 +28,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void ShowLicenseInfo_Load(object sender, EventArgs e)
         {
-            ctrlLicenseInfo1.LoadDriverLiceseInfo(_LicenseID);
+            ctrlLicenseInfo1.LoadInfo(_LicenseID);
         }
     }
 }

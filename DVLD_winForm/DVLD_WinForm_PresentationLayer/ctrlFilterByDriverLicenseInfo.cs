@@ -1,4 +1,5 @@
-﻿using DVLD_BussinessLayer;
+﻿using DVLD_Buisness;
+using DVLD_BussinessLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,13 +40,13 @@ namespace DVLD_WinForm_PresentationLayer
         public void btnFindLicenseID_Click(object sender, EventArgs e)
         {
 
-            if (!clsLicense.isLicenseExist(Convert.ToInt16(txtLicenseID.Text)))
-            {
-                MessageBox.Show("LicenseID does not Exist!","Not found",MessageBoxButtons.OK,MessageBoxIcon.Error);
-                return;
-            }
+            //if (!clsLicense.isLicenseExist(Convert.ToInt16(txtLicenseID.Text)))
+            //{
+            //    MessageBox.Show("LicenseID does not Exist!","Not found",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            //    return;
+            //}
 
-            ctrlLicenseInfo1.LoadDriverLiceseInfo(Convert.ToInt16(txtLicenseID.Text));
+            ctrlLicenseInfo1.LoadInfo(Convert.ToInt16(txtLicenseID.Text));
 
 
 

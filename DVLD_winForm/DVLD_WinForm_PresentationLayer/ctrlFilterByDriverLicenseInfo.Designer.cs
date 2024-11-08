@@ -33,7 +33,7 @@
             this.btnFindLicenseID = new System.Windows.Forms.Button();
             this.txtLicenseID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ctrlLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlLicenseInfo();
+            this.ctrlLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlDriverLicenseInfo();
             this.gbFilterByLicenseID.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,7 +107,7 @@
 
         #endregion
 
-        private ctrlLicenseInfo ctrlLicenseInfo1;
+        private ctrlDriverLicenseInfo ctrlLicenseInfo1;
         private System.Windows.Forms.GroupBox gbFilterByLicenseID;
         private System.Windows.Forms.Button btnFindLicenseID;
         private System.Windows.Forms.TextBox txtLicenseID;

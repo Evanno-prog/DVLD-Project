@@ -20,8 +20,8 @@ namespace DVLD_WinForm_PresentationLayer
         }
 
         private clsApplication _NewApplication = new clsApplication();
-        private clsLicense _NewLicense = new clsLicense();
-        private clsLicense _OldLicense = null;
+        //private clsLicense _NewLicense = new clsLicense();
+        //private clsLicense _OldLicense = null;
 
         private void _LoadData()
         {
@@ -59,13 +59,13 @@ namespace DVLD_WinForm_PresentationLayer
 
             lblOldLicenseID.Text = LicenseID.ToString();
 
-            _OldLicense = clsLicense.Find(LicenseID);
+            //_OldLicense = clsLicense.Find(LicenseID);
 
-            if (!(_OldLicense.IsActive))
-            {
-                MessageBox.Show("Selected license is not Active, Choose an active license.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //if (!(_OldLicense.IsActive))
+            //{
+            //    MessageBox.Show("Selected license is not Active, Choose an active license.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
             guna2btnIssueReplacement.Enabled = true;
 
@@ -77,8 +77,8 @@ namespace DVLD_WinForm_PresentationLayer
             if (MessageBox.Show("Are you sure you want to Issue a Replacement for the license?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
 
-                _OldLicense.IsActive = false;
-                _OldLicense.Save();
+                //_OldLicense.IsActive = false;
+                //_OldLicense.Save();
             //  --------------------------------------------------------------------------------------------------------
                 //_NewApplication.ApplicantPersonID = clsApplication.Find(_OldLicense.ApplicationID).ApplicantPersonID;
                 _NewApplication.ApplicationDate = DateTime.Now;
@@ -89,30 +89,30 @@ namespace DVLD_WinForm_PresentationLayer
                 _NewApplication.CreatedByUserID = clsGlobal.CurrentUser.UserID;
                 _NewApplication.Save();
             //  --------------------------------------------------------------------------------------------------------
-                _NewLicense.ApplicationID = _NewApplication.ApplicationID;
-                _NewLicense.DriverID = _OldLicense.DriverID;
-                _NewLicense.LicenseClass = _OldLicense.LicenseClass;
-                _NewLicense.IssueDate = DateTime.Now;
-                DateTime dt = DateTime.Now.AddYears(clsLicenseClass.Find(_NewLicense.LicenseClass).DefaultValidityLength);
-                _NewLicense.ExpirationDate = dt;
-                _NewLicense.Notes = DBNull.Value.ToString();
-                _NewLicense.PaidFees = clsLicenseClass.Find(_NewLicense.LicenseClass).ClassFees;
-                _NewLicense.IsActive = true;
-                _NewLicense.IssueReason = (rbDamagedLicense.Checked) ? 3 : 4;
-                _NewLicense.CreatedByUserID = clsGlobal.CurrentUser.UserID;
+                //_NewLicense.ApplicationID = _NewApplication.ApplicationID;
+                //_NewLicense.DriverID = _OldLicense.DriverID;
+                //_NewLicense.LicenseClass = _OldLicense.LicenseClass;
+                //_NewLicense.IssueDate = DateTime.Now;
+                //DateTime dt = DateTime.Now.AddYears(clsLicenseClass.Find(_NewLicense.LicenseClass).DefaultValidityLength);
+                //_NewLicense.ExpirationDate = dt;
+                //_NewLicense.Notes = DBNull.Value.ToString();
+                //_NewLicense.PaidFees = clsLicenseClass.Find(_NewLicense.LicenseClass).ClassFees;
+                //_NewLicense.IsActive = true;
+                //_NewLicense.IssueReason = (rbDamagedLicense.Checked) ? 3 : 4;
+                //_NewLicense.CreatedByUserID = clsGlobal.CurrentUser.UserID;
 
-                if (_NewLicense.Save())
-                {
-                    MessageBox.Show($"License Replaced Successfully with ID = {_NewLicense.LicenseID}", "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    llShowNewLicenseInfo.Enabled = true;
-                    ctrlFilterByDriverLicenseInfo1.IsgbFilterByLicenseIDEnabled(false);
-                    gbReplacementFor.Enabled = guna2btnIssueReplacement.Enabled = false;
+                //if (_NewLicense.Save())
+                //{
+                //    MessageBox.Show($"License Replaced Successfully with ID = {_NewLicense.LicenseID}", "License Issued", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //    llShowNewLicenseInfo.Enabled = true;
+                //    ctrlFilterByDriverLicenseInfo1.IsgbFilterByLicenseIDEnabled(false);
+                //    gbReplacementFor.Enabled = guna2btnIssueReplacement.Enabled = false;
                     
-                    lblLReplacementAppID.Text = _NewApplication.ApplicationID.ToString();
-                    lblReplacedLicenseID.Text = _NewLicense.LicenseID.ToString();
-                }
-                else
-                    MessageBox.Show($"Data not saved", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    lblLReplacementAppID.Text = _NewApplication.ApplicationID.ToString();
+                //    lblReplacedLicenseID.Text = _NewLicense.LicenseID.ToString();
+                //}
+                //else
+                //    MessageBox.Show($"Data not saved", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
             }
@@ -121,18 +121,18 @@ namespace DVLD_WinForm_PresentationLayer
         
         private void llShowNewLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (ShowLicenseInfo frm = new ShowLicenseInfo(_NewLicense.LicenseID))
-            {
-                frm.ShowDialog();
-            }
+            //using (ShowLicenseInfo frm = new ShowLicenseInfo(_NewLicense.LicenseID))
+            //{
+            //    frm.ShowDialog();
+            //}
         }
 
         private void llShowLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (LicenseHistory frm = new LicenseHistory(_NewLicense.ApplicationID))
-            {
-                frm.ShowDialog();
-            }
+            //using (LicenseHistory frm = new LicenseHistory(_NewLicense.ApplicationID))
+            //{
+            //    frm.ShowDialog();
+            //}
         }
     }
 }

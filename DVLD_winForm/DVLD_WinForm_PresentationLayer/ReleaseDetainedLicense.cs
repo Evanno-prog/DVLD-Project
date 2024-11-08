@@ -19,7 +19,7 @@ namespace DVLD_WinForm_PresentationLayer
             InitializeComponent();
         }
 
-        private clsLicense _License = null;
+        //private clsLicense _License = null;
         private clsApplication _NewApplication = new clsApplication();
         private clsDetainedLicense _OldDetainedLicense = null;
         private DataTable _dt = null;
@@ -43,19 +43,19 @@ namespace DVLD_WinForm_PresentationLayer
             llShowLicenseInfo.Enabled = guna2btnRelease.Enabled = false;
             lblLicenseID.Text = LicenseID.ToString();
 
-            _License = clsLicense.Find(LicenseID);
+            //_License = clsLicense.Find(LicenseID);
 
-            if (!(_License.IsActive))
-            {
-                MessageBox.Show("Selected license is not Active, Choose an active license.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //if (!(_License.IsActive))
+            //{
+            //    MessageBox.Show("Selected license is not Active, Choose an active license.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
-            if (!clsDetainedLicense.IsLicenseDetained(_License.LicenseID))
-            {
-                MessageBox.Show("Selected license is not detained, choose another one:", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //if (!clsDetainedLicense.IsLicenseDetained(_License.LicenseID))
+            //{
+            //    MessageBox.Show("Selected license is not detained, choose another one:", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
              _dt = clsDetainedLicense.GetDetainedLicenseByLicenseID(LicenseID);
 
@@ -109,18 +109,18 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void llShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (ShowLicenseInfo frm = new ShowLicenseInfo(_License.LicenseID))
-            {
-                frm.ShowDialog();
-            }
+            //using (ShowLicenseInfo frm = new ShowLicenseInfo(_License.LicenseID))
+            //{
+            //    frm.ShowDialog();
+            //}
         }
 
         private void llShowLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (LicenseHistory frm = new LicenseHistory(_License.ApplicationID))
-            {
-                frm.ShowDialog();
-            }
+            //using (LicenseHistory frm = new LicenseHistory(_License.ApplicationID))
+            //{
+            //    frm.ShowDialog();
+            //}
         }
     }
 }

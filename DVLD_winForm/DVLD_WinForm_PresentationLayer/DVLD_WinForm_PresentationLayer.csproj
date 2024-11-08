@@ -119,11 +119,11 @@
     <Compile Include="ctrlInternationalLicenseInfo.Designer.cs">
       <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlLicenseInfo.cs">
+    <Compile Include="ctrlDriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlLicenseInfo.Designer.cs">
-      <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
+    <Compile Include="ctrlDriverLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\LocalDrivingLicense\Controls\ctrlLocalDrivingLicenseApplicationInfo.cs">
       <SubType>UserControl</SubType>
@@ -159,11 +159,11 @@
     <Compile Include="InternationalDriverInfo.Designer.cs">
       <DependentUpon>InternationalDriverInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="IssueDriverLicenseForFirstTime.cs">
+    <Compile Include="Licences\Local Licenses\frmIssueDriverLicenseForFirstTime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IssueDriverLicenseForFirstTime.Designer.cs">
-      <DependentUpon>IssueDriverLicenseForFirstTime.cs</DependentUpon>
+    <Compile Include="Licences\Local Licenses\frmIssueDriverLicenseForFirstTime.Designer.cs">
+      <DependentUpon>frmIssueDriverLicenseForFirstTime.cs</DependentUpon>
     </Compile>
     <Compile Include="LicenseHistory.cs">
       <SubType>Form</SubType>
@@ -344,8 +344,8 @@
     <EmbeddedResource Include="ctrlInternationalLicenseInfo.resx">
       <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlLicenseInfo.resx">
-      <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
+    <EmbeddedResource Include="ctrlDriverLicenseInfo.resx">
+      <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\LocalDrivingLicense\Controls\ctrlLocalDrivingLicenseApplicationInfo.resx">
       <DependentUpon>ctrlLocalDrivingLicenseApplicationInfo.cs</DependentUpon>
@@ -365,8 +365,8 @@
     <EmbeddedResource Include="InternationalDriverInfo.resx">
       <DependentUpon>InternationalDriverInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IssueDriverLicenseForFirstTime.resx">
-      <DependentUpon>IssueDriverLicenseForFirstTime.cs</DependentUpon>
+    <EmbeddedResource Include="Licences\Local Licenses\frmIssueDriverLicenseForFirstTime.resx">
+      <DependentUpon>frmIssueDriverLicenseForFirstTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LicenseHistory.resx">
       <DependentUpon>LicenseHistory.cs</DependentUpon>
@@ -510,6 +510,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Street Test 32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Licences\Local Licenses\Controls\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

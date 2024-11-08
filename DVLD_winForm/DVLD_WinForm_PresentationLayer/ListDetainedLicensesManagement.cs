@@ -43,10 +43,10 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (frmShowPersonInfo frm = new frmShowPersonInfo(clsDriver.Find(clsLicense.Find((int)dataGridView1.CurrentRow.Cells[1].Value).DriverID).PersonID)) 
-            {
-                frm.ShowDialog();
-            }
+            //using (frmShowPersonInfo frm = new frmShowPersonInfo(clsDriver.Find(clsLicense.Find((int)dataGridView1.CurrentRow.Cells[1].Value).DriverID).PersonID)) 
+            //{
+            //    frm.ShowDialog();
+            //}
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -59,10 +59,10 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (LicenseHistory frm = new LicenseHistory(clsLicense.Find((int)dataGridView1.CurrentRow.Cells[1].Value).ApplicationID))
-            {
-                frm.ShowDialog();
-            }
+            //using (LicenseHistory frm = new LicenseHistory(clsLicense.Find((int)dataGridView1.CurrentRow.Cells[1].Value).ApplicationID))
+            //{
+            //    frm.ShowDialog();
+            //}
         }
 
         private void btnDetainLicense_Click(object sender, EventArgs e)

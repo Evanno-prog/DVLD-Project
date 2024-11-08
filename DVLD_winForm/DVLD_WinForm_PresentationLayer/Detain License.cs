@@ -19,7 +19,7 @@ namespace DVLD_WinForm_PresentationLayer
             InitializeComponent();
         }
 
-        private clsLicense _License = null;
+        //private clsLicense _License = null;
         private clsDetainedLicense _DetainedLicense = new clsDetainedLicense();
 
         private void _LoadData()
@@ -39,19 +39,19 @@ namespace DVLD_WinForm_PresentationLayer
             llShowLicenseInfo.Enabled = guna2btnDetain.Enabled = false;
             lblLicenseID.Text = LicenseID.ToString();
 
-            _License = clsLicense.Find(LicenseID);
+            //_License = clsLicense.Find(LicenseID);
 
-            if (!(_License.IsActive))
-            {
-                MessageBox.Show("Selected license is not Active, Choose an active license.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //if (!(_License.IsActive))
+            //{
+            //    MessageBox.Show("Selected license is not Active, Choose an active license.", "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
-            if (clsDetainedLicense.IsLicenseDetained(_License.LicenseID))
-            {
-                MessageBox.Show("Selected license is already detained, choose another one:", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //if (clsDetainedLicense.IsLicenseDetained(_License.LicenseID))
+            //{
+            //    MessageBox.Show("Selected license is already detained, choose another one:", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
             guna2btnDetain.Enabled = true;
         }
@@ -63,18 +63,18 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void llShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (ShowLicenseInfo frm = new ShowLicenseInfo(_License.LicenseID))
-            {
-                frm.ShowDialog();
-            }
+            //using (ShowLicenseInfo frm = new ShowLicenseInfo(_License.LicenseID))
+            //{
+            //    frm.ShowDialog();
+            //}
         }
 
         private void llShowLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (LicenseHistory frm = new LicenseHistory(_License.ApplicationID))
-            {
-                frm.ShowDialog();
-            }
+            //using (LicenseHistory frm = new LicenseHistory(_License.ApplicationID))
+            //{
+            //    frm.ShowDialog();
+            //}
         }
 
         private void guna2btnDetain_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace DVLD_WinForm_PresentationLayer
             if (MessageBox.Show("Are you sure you want to detain this license?","Confirm",MessageBoxButtons.YesNo,MessageBoxIcon.Information) == DialogResult.Yes)
             {
 
-                _DetainedLicense.LicenseID = _License.LicenseID;
+                //_DetainedLicense.LicenseID = _License.LicenseID;
                 _DetainedLicense.DetainDate = DateTime.Now; 
                 _DetainedLicense.FineFees = Convert.ToDecimal(txtFineFees.Text);    
                 _DetainedLicense.CreatedByUserID = clsGlobal.CurrentUser.UserID;

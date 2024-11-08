@@ -129,7 +129,14 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void IssueDrivingLicenseFirstTime_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This funcation is not ready", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            using (frmIssueDriverLicenseForFirstTime frm = new frmIssueDriverLicenseForFirstTime((int)dgvLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value))
+            {
+                frm.ShowDialog();
+            }
+
+       //   Referesh
+            ListLocalDrivingLicenseApplication_Load(null, null);
         }
 
         private void CMSManageApplications_Opening(object sender, CancelEventArgs e)
