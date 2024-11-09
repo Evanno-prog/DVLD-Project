@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using DVLD_Buisness;
 using DVLD_BussinessLayer;
 using DVLD_WinForm_PresentationLayer.Applications.LocalDrivingLicense;
 
@@ -124,7 +125,21 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This funcation is not ready", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            int LicenseID = clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID((int)dgvLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value).GetActiveLicenseID();
+
+            if (LicenseID != -1)
+            {
+                using (frmShowLicenseInfo frm = new frmShowLicenseInfo(LicenseID))
+                {
+                    frm.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("No License Found!", "No License", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void IssueDrivingLicenseFirstTime_Click(object sender, EventArgs e)

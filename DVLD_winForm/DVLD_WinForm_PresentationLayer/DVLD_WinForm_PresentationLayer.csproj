@@ -107,11 +107,11 @@
     <Compile Include="Users\frmChangePassword.Designer.cs">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlFilterByDriverLicenseInfo.cs">
+    <Compile Include="Licences\Local Licenses\Controls\ctrlDriverLicenseInfoWithFilter.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlFilterByDriverLicenseInfo.Designer.cs">
-      <DependentUpon>ctrlFilterByDriverLicenseInfo.cs</DependentUpon>
+    <Compile Include="Licences\Local Licenses\Controls\ctrlDriverLicenseInfoWithFilter.Designer.cs">
+      <DependentUpon>ctrlDriverLicenseInfoWithFilter.cs</DependentUpon>
     </Compile>
     <Compile Include="ctrlInternationalLicenseInfo.cs">
       <SubType>UserControl</SubType>
@@ -119,10 +119,10 @@
     <Compile Include="ctrlInternationalLicenseInfo.Designer.cs">
       <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlDriverLicenseInfo.cs">
+    <Compile Include="Licences\Local Licenses\Controls\ctrlDriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlDriverLicenseInfo.Designer.cs">
+    <Compile Include="Licences\Local Licenses\Controls\ctrlDriverLicenseInfo.Designer.cs">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\LocalDrivingLicense\Controls\ctrlLocalDrivingLicenseApplicationInfo.cs">
@@ -219,11 +219,11 @@
     <Compile Include="ReplacementForDamageOrLostLicense.Designer.cs">
       <DependentUpon>ReplacementForDamageOrLostLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowLicenseInfo.cs">
+    <Compile Include="Licences\Local Licenses\frmShowLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowLicenseInfo.Designer.cs">
-      <DependentUpon>ShowLicenseInfo.cs</DependentUpon>
+    <Compile Include="Licences\Local Licenses\frmShowLicenseInfo.Designer.cs">
+      <DependentUpon>frmShowLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Users\Controls\ctrlUserCard.cs">
       <SubType>UserControl</SubType>
@@ -338,13 +338,13 @@
     <EmbeddedResource Include="Users\frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlFilterByDriverLicenseInfo.resx">
-      <DependentUpon>ctrlFilterByDriverLicenseInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Licences\Local Licenses\Controls\ctrlDriverLicenseInfoWithFilter.resx">
+      <DependentUpon>ctrlDriverLicenseInfoWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlInternationalLicenseInfo.resx">
       <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctrlDriverLicenseInfo.resx">
+    <EmbeddedResource Include="Licences\Local Licenses\Controls\ctrlDriverLicenseInfo.resx">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\LocalDrivingLicense\Controls\ctrlLocalDrivingLicenseApplicationInfo.resx">
@@ -427,8 +427,8 @@
     <EmbeddedResource Include="ReplacementForDamageOrLostLicense.resx">
       <DependentUpon>ReplacementForDamageOrLostLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShowLicenseInfo.resx">
-      <DependentUpon>ShowLicenseInfo.cs</DependentUpon>
+    <EmbeddedResource Include="Licences\Local Licenses\frmShowLicenseInfo.resx">
+      <DependentUpon>frmShowLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\frmTakeTest.resx">
       <DependentUpon>frmTakeTest.cs</DependentUpon>
@@ -511,8 +511,6 @@
   <ItemGroup>
     <None Include="Resources\Street Test 32.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Licences\Local Licenses\Controls\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detain_License));
             this.label1 = new System.Windows.Forms.Label();
-            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlFilterByDriverLicenseInfo();
+            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlDriverLicenseInfoWithFilter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtFineFees = new System.Windows.Forms.TextBox();
             this.lblCreatedBy = new System.Windows.Forms.Label();
@@ -354,7 +354,7 @@
 
         #endregion
 
-        private ctrlFilterByDriverLicenseInfo ctrlFilterByDriverLicenseInfo1;
+        private ctrlDriverLicenseInfoWithFilter ctrlFilterByDriverLicenseInfo1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox2;

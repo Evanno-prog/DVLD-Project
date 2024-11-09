@@ -59,7 +59,7 @@
             this.llShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.guna2btnRelease = new Guna.UI2.WinForms.Guna2Button();
             this.guna2btnClose = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlFilterByDriverLicenseInfo();
+            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlDriverLicenseInfoWithFilter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -463,7 +463,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private ctrlFilterByDriverLicenseInfo ctrlFilterByDriverLicenseInfo1;
+        private ctrlDriverLicenseInfoWithFilter ctrlFilterByDriverLicenseInfo1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblApplicationFees;
         private System.Windows.Forms.PictureBox pictureBox5;

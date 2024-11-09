@@ -68,7 +68,7 @@
             this.guna2btnRenew = new Guna.UI2.WinForms.Guna2Button();
             this.llShowLicensesHistory = new System.Windows.Forms.LinkLabel();
             this.llShowNewLicenseInfo = new System.Windows.Forms.LinkLabel();
-            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlFilterByDriverLicenseInfo();
+            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlDriverLicenseInfoWithFilter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -585,7 +585,7 @@
 
         #endregion
 
-        private ctrlFilterByDriverLicenseInfo ctrlFilterByDriverLicenseInfo1;
+        private ctrlDriverLicenseInfoWithFilter ctrlFilterByDriverLicenseInfo1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI2.WinForms.Guna2Button guna2btnClose;

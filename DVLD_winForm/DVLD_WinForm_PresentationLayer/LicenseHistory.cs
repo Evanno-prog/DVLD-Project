@@ -51,7 +51,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void ShowLicenseDetails_Click(object sender, EventArgs e)
         {
-            using (ShowLicenseInfo frm = new ShowLicenseInfo((int)dgvLocalLicensesHistory.CurrentRow.Cells[0].Value))
+            using (frmShowLicenseInfo frm = new frmShowLicenseInfo((int)dgvLocalLicensesHistory.CurrentRow.Cells[0].Value))
             {
                 frm.ShowDialog();
             }

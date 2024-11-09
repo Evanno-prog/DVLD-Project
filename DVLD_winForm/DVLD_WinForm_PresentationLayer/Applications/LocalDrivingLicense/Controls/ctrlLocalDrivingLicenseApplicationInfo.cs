@@ -81,7 +81,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (ShowLicenseInfo frm = new ShowLicenseInfo(_LocalDrivingLicenseApplication.GetActiveLicenseID()))
+            using (frmShowLicenseInfo frm = new frmShowLicenseInfo(_LocalDrivingLicenseApplication.GetActiveLicenseID()))
             {
                 frm.ShowDialog();
             }

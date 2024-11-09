@@ -51,7 +51,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            using (ShowLicenseInfo frm = new ShowLicenseInfo((int)dataGridView1.CurrentRow.Cells[1].Value))
+            using (frmShowLicenseInfo frm = new frmShowLicenseInfo((int)dataGridView1.CurrentRow.Cells[1].Value))
             {
                 frm.ShowDialog();
             }
@@ -96,7 +96,7 @@ namespace DVLD_WinForm_PresentationLayer
             using (ReleaseDetainedLicense frm = new ReleaseDetainedLicense())
             {
                 int LicenseID = Convert.ToInt16(dataGridView1.CurrentRow.Cells[1].Value);
-                frm.SetValueTotxtLicenseID(LicenseID.ToString());
+                //frm.SetValueTotxtLicenseID(LicenseID.ToString());
                 
                 frm.ShowDialog();
             }

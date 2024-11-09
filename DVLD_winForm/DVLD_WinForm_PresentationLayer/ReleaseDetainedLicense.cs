@@ -29,12 +29,12 @@ namespace DVLD_WinForm_PresentationLayer
 
         }
 
-        public void SetValueTotxtLicenseID(string Num)
-        {
-            ctrlFilterByDriverLicenseInfo1.SetTextValue(Num);
-            ctrlFilterByDriverLicenseInfo1.btnFindLicenseID_Click(null, null);
-            ctrlFilterByDriverLicenseInfo1.IsgbFilterByLicenseIDEnabled(false);
-        }
+        //public void SetValueTotxtLicenseID(string Num)
+        //{
+        //    ctrlFilterByDriverLicenseInfo1.SetTextValue(Num);
+        //    ctrlFilterByDriverLicenseInfo1.btnFindLicenseID_Click(null, null);
+        //    ctrlFilterByDriverLicenseInfo1.IsgbFilterByLicenseIDEnabled(false);
+        //}
 
         private void ctrlFilterByDriverLicenseInfo1_OnLicenseSelected(int LicenseID)
         {

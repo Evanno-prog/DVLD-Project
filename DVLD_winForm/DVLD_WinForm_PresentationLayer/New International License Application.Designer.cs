@@ -59,7 +59,7 @@
             this.guna2btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.llShowLicensesHistory = new System.Windows.Forms.LinkLabel();
             this.llShowLicenseInfo = new System.Windows.Forms.LinkLabel();
-            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlFilterByDriverLicenseInfo();
+            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlDriverLicenseInfoWithFilter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -491,6 +491,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2btnClose;
         private System.Windows.Forms.LinkLabel llShowLicensesHistory;
         private System.Windows.Forms.LinkLabel llShowLicenseInfo;
-        private ctrlFilterByDriverLicenseInfo ctrlFilterByDriverLicenseInfo1;
+        private ctrlDriverLicenseInfoWithFilter ctrlFilterByDriverLicenseInfo1;
     }
 }

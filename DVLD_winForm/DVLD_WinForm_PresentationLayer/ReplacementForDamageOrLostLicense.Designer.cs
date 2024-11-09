@@ -54,7 +54,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.guna2btnIssueReplacement = new Guna.UI2.WinForms.Guna2Button();
-            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlFilterByDriverLicenseInfo();
+            this.ctrlFilterByDriverLicenseInfo1 = new DVLD_WinForm_PresentationLayer.ctrlDriverLicenseInfoWithFilter();
             this.llShowNewLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.llShowLicenseHistory = new System.Windows.Forms.LinkLabel();
             this.gbReplacementFor.SuspendLayout();
@@ -430,7 +430,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
-        private ctrlFilterByDriverLicenseInfo ctrlFilterByDriverLicenseInfo1;
+        private ctrlDriverLicenseInfoWithFilter ctrlFilterByDriverLicenseInfo1;
         private System.Windows.Forms.GroupBox gbReplacementFor;
         private System.Windows.Forms.RadioButton rbLostLicense;
         private System.Windows.Forms.RadioButton rbDamagedLicense;
