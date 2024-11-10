@@ -76,7 +76,6 @@ C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_Prese
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.Manage_Users.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.New_International_License_Application.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.Properties.Resources.resources
-C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ShowLicenseInfo.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.csproj.GenerateResource.cache
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.csproj.CoreCompileInputs.cache
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.csproj.CopyComplete
@@ -85,7 +84,6 @@ C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_Prese
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlInternationalLicenseInfo.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.InternationalDriverInfo.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ListInternationalDrivingLicenseApplication.resources
-C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.RenewLocalDrivingLicense.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ReplacementForDamageOrLostLicense.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.Detain_License.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ReleaseDetainedLicense.resources
@@ -119,3 +117,5 @@ C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_Prese
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmIssueDriverLicenseForFirstTime.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlDriverLicenseInfo.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlDriverLicenseInfoWithFilter.resources
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmRenewLocalDrivingLicense.resources
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmShowLicenseInfo.resources

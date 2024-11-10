@@ -207,11 +207,11 @@
     <Compile Include="ReleaseDetainedLicense.Designer.cs">
       <DependentUpon>ReleaseDetainedLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="RenewLocalDrivingLicense.cs">
+    <Compile Include="Applications\RenewLocalDrivingLicense\frmRenewLocalDrivingLicense.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RenewLocalDrivingLicense.Designer.cs">
-      <DependentUpon>RenewLocalDrivingLicense.cs</DependentUpon>
+    <Compile Include="Applications\RenewLocalDrivingLicense\frmRenewLocalDrivingLicense.Designer.cs">
+      <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="ReplacementForDamageOrLostLicense.cs">
       <SubType>Form</SubType>
@@ -421,8 +421,8 @@
     <EmbeddedResource Include="ReleaseDetainedLicense.resx">
       <DependentUpon>ReleaseDetainedLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RenewLocalDrivingLicense.resx">
-      <DependentUpon>RenewLocalDrivingLicense.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\RenewLocalDrivingLicense\frmRenewLocalDrivingLicense.resx">
+      <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReplacementForDamageOrLostLicense.resx">
       <DependentUpon>ReplacementForDamageOrLostLicense.cs</DependentUpon>

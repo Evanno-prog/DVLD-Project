@@ -56,7 +56,6 @@
             // btnFind
             // 
             this.btnFind.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFind.Enabled = false;
             this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFind.Image = ((System.Drawing.Image)(resources.GetObject("btnFind.Image")));
             this.btnFind.Location = new System.Drawing.Point(466, 23);
