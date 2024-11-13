@@ -177,11 +177,11 @@
     <Compile Include="ListDetainedLicensesManagement.Designer.cs">
       <DependentUpon>ListDetainedLicensesManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListDrivers.cs">
+    <Compile Include="Drivers\frmListDrivers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListDrivers.Designer.cs">
-      <DependentUpon>ListDrivers.cs</DependentUpon>
+    <Compile Include="Drivers\frmListDrivers.Designer.cs">
+      <DependentUpon>frmListDrivers.cs</DependentUpon>
     </Compile>
     <Compile Include="ListInternationalDrivingLicenseApplication.cs">
       <SubType>Form</SubType>
@@ -213,11 +213,11 @@
     <Compile Include="Applications\RenewLocalDrivingLicense\frmRenewLocalDrivingLicense.Designer.cs">
       <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReplacementForDamageOrLostLicense.cs">
+    <Compile Include="Applications\ReplaceForDamageOrLostLicense\frmReplacementForDamageOrLostLicenseApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReplacementForDamageOrLostLicense.Designer.cs">
-      <DependentUpon>ReplacementForDamageOrLostLicense.cs</DependentUpon>
+    <Compile Include="Applications\ReplaceForDamageOrLostLicense\frmReplacementForDamageOrLostLicenseApplication.Designer.cs">
+      <DependentUpon>frmReplacementForDamageOrLostLicenseApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="Licences\Local Licenses\frmShowLicenseInfo.cs">
       <SubType>Form</SubType>
@@ -374,8 +374,8 @@
     <EmbeddedResource Include="ListDetainedLicensesManagement.resx">
       <DependentUpon>ListDetainedLicensesManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListDrivers.resx">
-      <DependentUpon>ListDrivers.cs</DependentUpon>
+    <EmbeddedResource Include="Drivers\frmListDrivers.resx">
+      <DependentUpon>frmListDrivers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListInternationalDrivingLicenseApplication.resx">
       <DependentUpon>ListInternationalDrivingLicenseApplication.cs</DependentUpon>
@@ -424,8 +424,8 @@
     <EmbeddedResource Include="Applications\RenewLocalDrivingLicense\frmRenewLocalDrivingLicense.resx">
       <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReplacementForDamageOrLostLicense.resx">
-      <DependentUpon>ReplacementForDamageOrLostLicense.cs</DependentUpon>
+    <EmbeddedResource Include="Applications\ReplaceForDamageOrLostLicense\frmReplacementForDamageOrLostLicenseApplication.resx">
+      <DependentUpon>frmReplacementForDamageOrLostLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licences\Local Licenses\frmShowLicenseInfo.resx">
       <DependentUpon>frmShowLicenseInfo.cs</DependentUpon>

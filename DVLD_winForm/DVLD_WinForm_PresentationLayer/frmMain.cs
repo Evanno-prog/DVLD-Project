@@ -110,7 +110,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void driversToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ListDrivers frm = new ListDrivers())
+            using (frmListDrivers frm = new frmListDrivers())
             {
                 frm.ShowDialog();
             }
@@ -142,7 +142,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void replacmentForLostOrDamegedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ReplacementForDamageOrLostLicense frm = new ReplacementForDamageOrLostLicense())
+            using (frmReplacementForDamageOrLostLicenseApplication frm = new frmReplacementForDamageOrLostLicenseApplication())
             {
                 frm.ShowDialog();
             }

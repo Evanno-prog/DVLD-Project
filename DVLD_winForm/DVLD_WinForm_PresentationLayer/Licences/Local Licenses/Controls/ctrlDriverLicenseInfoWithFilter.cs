@@ -63,7 +63,7 @@ namespace DVLD_WinForm_PresentationLayer
             _LicenseID = ctrlDriverLicenseInfo1.LicenseID;
             if (OnLicenseSelected != null && FilterEnabled)
             {
-                LicenseIDSelected(LicenseID);
+                LicenseIDSelected(_LicenseID);
             }
 
         }

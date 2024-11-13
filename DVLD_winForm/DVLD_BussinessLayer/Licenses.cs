@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Data;
-using DVLD_BussinessLayer;
 using DVLD_DataAccess;
-namespace DVLD_Buisness
+namespace DVLD_BussinessLayer
 {
     public class clsLicense
     {
