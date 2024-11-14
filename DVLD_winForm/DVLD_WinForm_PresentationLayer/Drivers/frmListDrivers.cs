@@ -119,7 +119,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (LicenseHistory frm = new LicenseHistory((int)dgvDrivers.CurrentRow.Cells[1].Value)) 
+            using (frmShowPersonLicensesHistory frm = new frmShowPersonLicensesHistory((int)dgvDrivers.CurrentRow.Cells[1].Value)) 
             {
                 frm.ShowDialog();
             }

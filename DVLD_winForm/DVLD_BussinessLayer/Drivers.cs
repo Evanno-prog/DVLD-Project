@@ -95,14 +95,17 @@ namespace DVLD_BussinessLayer
             return false;
         }
 
-        //public static DataTable GetLicenses(int DriverID)
-        //{
-        //    return clsLicense.GetDriverLicenses(DriverID);
-        //}
+        public static DataTable GetLicenses(int DriverID)
+        {
+            return clsLicense.GetDriverLicenses(DriverID);
+        }
 
-        //public static DataTable GetInternationalLicenses(int DriverID)
-        //{
-        //    return clsInternationalLicense.GetDriverInternationalLicenses(DriverID);
-        //}
+        public static DataTable GetInternationalLicenses(int DriverID)
+        {
+            // Bussiness and DataAccess of clsInternationalLicense not implemented yet :-)
+
+            //return clsInternationalLicense.GetDriverInternationalLicenses(DriverID);
+            return null;
+        }
     }
 }

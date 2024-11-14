@@ -123,7 +123,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void llShowLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (LicenseHistory frm = new LicenseHistory(ctrlFilterByDriverLicenseInfo1.SelectedLicenseInfo.DriverInfo.PersonID))
+            using (frmShowPersonLicensesHistory frm = new frmShowPersonLicensesHistory(ctrlFilterByDriverLicenseInfo1.SelectedLicenseInfo.DriverInfo.PersonID))
             {
                 frm.ShowDialog();
             }

@@ -69,7 +69,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void ShowLicenseDetails_Click(object sender, EventArgs e)
         {
-            using (InternationalDriverInfo frm = new InternationalDriverInfo((int)dgvListIntLicenses.CurrentRow.Cells[0].Value))
+            using (frmShowInternationalLicencesInfo frm = new frmShowInternationalLicencesInfo((int)dgvListIntLicenses.CurrentRow.Cells[0].Value))
             {
                 frm.ShowDialog();
             }
@@ -77,7 +77,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (LicenseHistory frm = new LicenseHistory((int)dgvListIntLicenses.CurrentRow.Cells[1].Value))
+            using (frmShowPersonLicensesHistory frm = new frmShowPersonLicensesHistory((int)dgvListIntLicenses.CurrentRow.Cells[1].Value))
             {
                 frm.ShowDialog();
             }

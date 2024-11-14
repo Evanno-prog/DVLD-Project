@@ -77,7 +77,7 @@ namespace DVLD_WinForm_PresentationLayer
                 return;
             }
 
-            using (LicenseHistory frm = new LicenseHistory(_Application.ApplicationID))
+            using (frmShowPersonLicensesHistory frm = new frmShowPersonLicensesHistory(_Application.ApplicationID))
             {
                 frm.ShowDialog();
             }
@@ -86,7 +86,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void llShowLicenseInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            using (InternationalDriverInfo frm = new InternationalDriverInfo(_I_License.InternationalLicenseID))
+            using (frmShowInternationalLicencesInfo frm = new frmShowInternationalLicencesInfo(_I_License.InternationalLicenseID))
             {
                 frm.ShowDialog();
             }
