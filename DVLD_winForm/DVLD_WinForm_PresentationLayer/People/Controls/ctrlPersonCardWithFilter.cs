@@ -65,15 +65,15 @@ namespace DVLD_WinForm_PresentationLayer
 
         public void LoadPersonInfo(int PersonID)
         {
-            txtValueFilter.Text = PersonID.ToString();
             cbFilterBy.SelectedIndex = 1;
+            txtValueFilter.Text = PersonID.ToString();
             _FindNow();
         } 
 
         public void LoadPersonInfo(string NationalNo)
         {
-            txtValueFilter.Text= NationalNo;
             cbFilterBy.SelectedIndex = 0;
+            txtValueFilter.Text = NationalNo;
             _FindNow();
         }
 
@@ -111,8 +111,9 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void DataBackEvent(object sender,int PersonID)
         {
-            txtValueFilter.Text = PersonID.ToString();
+         
             cbFilterBy.SelectedIndex = 1;
+            txtValueFilter.Text = PersonID.ToString();
             _FindNow();
         }
     

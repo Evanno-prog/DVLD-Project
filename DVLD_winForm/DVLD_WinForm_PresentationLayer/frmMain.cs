@@ -166,7 +166,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ReleaseDetainedLicense frm = new ReleaseDetainedLicense())
+            using (frmReleaseDetainedLicenseApplication frm = new frmReleaseDetainedLicenseApplication())
             {
                 frm.ShowDialog();
             }

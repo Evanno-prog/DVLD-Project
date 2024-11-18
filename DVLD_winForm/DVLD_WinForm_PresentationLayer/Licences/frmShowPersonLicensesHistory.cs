@@ -13,48 +13,54 @@ namespace DVLD_WinForm_PresentationLayer
 {
     public partial class frmShowPersonLicensesHistory : Form
     {
-        private int _ApplicationID = 0;
- 
-        public frmShowPersonLicensesHistory(int applicationID)
+
+        private int _PersonID = -1;
+
+        public frmShowPersonLicensesHistory()
         {
             InitializeComponent();
-            _ApplicationID = applicationID;
         }
 
-        private void _RefreshLocalLicenseHistory()
+        public frmShowPersonLicensesHistory(int PersonID)
         {
-            //DataView dv = clsLicense.GetAllLocalLicenseHistoryByDriverID(clsDriver.FindDriverByPersonID(clsApplication.Find(_ApplicationID).ApplicantPersonID).DriverID).DefaultView;
-            //dgvLocalLicensesHistory.DataSource = dv;
-            //lblRecordCount.Text = dv.Count.ToString();
+            InitializeComponent();
+            _PersonID = PersonID;
         }
-
-        private void _RefreshInternationalLicenseHistory()
-        {
-
-            //DataView Dv = clsInternationalLicense.GetAllInternationalLicenseHistoryByDriverID(clsDriver.FindDriverByPersonID(clsApplication.Find(_ApplicationID).ApplicantPersonID).DriverID).DefaultView;
-            //dgvInternationalLicensesHistory.DataSource = Dv;
-            //lblCountInterRecord.Text = Dv.Count.ToString();
-
-        }
+  
 
         private void LicenseHistory_Load(object sender, EventArgs e)
         {
-            _RefreshLocalLicenseHistory();
-
-            _RefreshInternationalLicenseHistory();
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void ShowLicenseDetails_Click(object sender, EventArgs e)
-        {
-            using (frmShowLicenseInfo frm = new frmShowLicenseInfo((int)dgvLocalLicensesHistory.CurrentRow.Cells[0].Value))
+            if (_PersonID != -1)
             {
-                frm.ShowDialog();
+                ctrlPersonCardWithFilter1.LoadPersonInfo(_PersonID);
+                ctrlPersonCardWithFilter1.FilterEnabled = false;
+                ctrlDriverLicenses1.LoadInfoByPersonID(_PersonID);
+            }
+            else
+            {
+                ctrlPersonCardWithFilter1.Enabled = true;
+                ctrlPersonCardWithFilter1.FilterFocus();
             }
         }
+
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ctrlPersonCardWithFilter1_OnPersonSelected(int SelectedPersonID)
+        {
+            _PersonID = SelectedPersonID;
+
+            if (_PersonID == -1)
+            {
+                ctrlDriverLicenses1.Clear();
+            }
+            else
+                ctrlDriverLicenses1.LoadInfoByPersonID(_PersonID);
+
+        }
+
     }
 }

@@ -74,7 +74,7 @@ namespace DVLD_BussinessLayer
 
             this.DriverInfo = clsDriver.FindByDriverID(this.DriverID);
             this.LicenseClassInfo = clsLicenseClass.Find(this.LicenseClass);
-            //this.DetainedInfo = clsDetainedLicense.FindByLicenseID(this.LicenseID);
+            this.DetainedInfo = clsDetainedLicense.FindByLicenseID(this.LicenseID);
             Mode = enMode.Update;
         }
         
@@ -186,11 +186,10 @@ namespace DVLD_BussinessLayer
             clsDetainedLicense detainedLicense = new clsDetainedLicense();
             detainedLicense.LicenseID = this.LicenseID;
             detainedLicense.DetainDate = DateTime.Now;
-            detainedLicense.FineFees =  Convert.ToDecimal(FineFees);
+            detainedLicense.FineFees = FineFees;
             detainedLicense.CreatedByUserID = CreatedByUserID;
             if (!detainedLicense.Save())
             {
-
                 return -1;
             }
 
@@ -215,8 +214,8 @@ namespace DVLD_BussinessLayer
                 return false;
             }
             ApplicationID = Application.ApplicationID;
-            //return this.DetainedInfo.ReleaseDetainedLicense(ReleasedByUserID, Application.ApplicationID);
-            return true;
+            return this.DetainedInfo.ReleaseDetainedLicense(ReleasedByUserID, Application.ApplicationID);
+     
         }
 
         public clsLicense RenewLicense(string Notes, int CreatedByUserID)
@@ -297,7 +296,6 @@ namespace DVLD_BussinessLayer
 
         }
    
-        
     }
 
 }

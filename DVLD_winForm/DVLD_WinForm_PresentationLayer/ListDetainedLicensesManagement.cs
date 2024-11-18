@@ -75,7 +75,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void btnReleaseLicense_Click(object sender, EventArgs e)
         {
-            using (ReleaseDetainedLicense frm = new ReleaseDetainedLicense())
+            using (frmReleaseDetainedLicenseApplication frm = new frmReleaseDetainedLicenseApplication())
             {
                 frm.ShowDialog();
             }
@@ -93,7 +93,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ReleaseDetainedLicense frm = new ReleaseDetainedLicense())
+            using (frmReleaseDetainedLicenseApplication frm = new frmReleaseDetainedLicenseApplication())
             {
                 int LicenseID = Convert.ToInt16(dataGridView1.CurrentRow.Cells[1].Value);
                 //frm.SetValueTotxtLicenseID(LicenseID.ToString());

@@ -204,7 +204,13 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This funcation is not ready", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            int PersonID = clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID((int)dgvLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value).ApplicantPersonID;
+            using (frmShowPersonLicensesHistory frm = new frmShowPersonLicensesHistory(PersonID))
+            {
+                frm.ShowDialog();
+            }
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

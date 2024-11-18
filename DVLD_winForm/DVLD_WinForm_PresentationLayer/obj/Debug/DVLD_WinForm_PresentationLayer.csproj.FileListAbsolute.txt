@@ -82,7 +82,6 @@ C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_Prese
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlInternationalLicenseInfo.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ListInternationalDrivingLicenseApplication.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.Detain_License.resources
-C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ReleaseDetainedLicense.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ListDetainedLicensesManagement.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlPersonCard.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.ctrlPersonCardWithFilter.resources
@@ -120,3 +119,4 @@ C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_Prese
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.Licences.Controls.ctrlDriverLicenses.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmShowInternationalLicencesInfo.resources
 C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmShowPersonLicensesHistory.resources
+C:\Users\lenovo\Documents\My-Github\DVLD-Project\DVLD_winForm\DVLD_WinForm_PresentationLayer\obj\Debug\DVLD_WinForm_PresentationLayer.frmReleaseDetainedLicenseApplication.resources
