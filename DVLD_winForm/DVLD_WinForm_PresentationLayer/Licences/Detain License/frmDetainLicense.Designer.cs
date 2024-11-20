@@ -1,6 +1,6 @@
 ﻿namespace DVLD_WinForm_PresentationLayer
 {
-    partial class Detain_License
+    partial class frmDetainLicense
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Detain_License));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDetainLicense));
             this.label1 = new System.Windows.Forms.Label();
             this.ctrlDriverLicenseInfoWithFilter = new DVLD_WinForm_PresentationLayer.ctrlDriverLicenseInfoWithFilter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -324,7 +324,7 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // Detain_License
+            // frmDetainLicense
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -339,10 +339,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrlDriverLicenseInfoWithFilter);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "Detain_License";
+            this.Name = "frmDetainLicense";
             this.Text = "Detain License";
-            this.Activated += new System.EventHandler(this.Detain_License_Activated);
-            this.Load += new System.EventHandler(this.Detain_License_Load);
+            this.Activated += new System.EventHandler(this.frmDetainLicense_Activated);
+            this.Load += new System.EventHandler(this.frmDetainLicense_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

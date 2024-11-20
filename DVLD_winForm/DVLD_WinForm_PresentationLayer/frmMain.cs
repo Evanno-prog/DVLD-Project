@@ -158,7 +158,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void detainLicenseToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            using (Detain_License frm = new Detain_License())
+            using (frmDetainLicense frm = new frmDetainLicense())
             {
                 frm.ShowDialog();
             }

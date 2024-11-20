@@ -12,19 +12,19 @@ using System.Windows.Forms;
 
 namespace DVLD_WinForm_PresentationLayer
 {
-    public partial class Detain_License : Form
+    public partial class frmDetainLicense : Form
     {
 
         private int _DetainID = -1;
         private int _SelectedLicenseID = -1;
 
-        public Detain_License()
+        public frmDetainLicense()
         {
             InitializeComponent();
         }
 
 
-        private void Detain_License_Load(object sender, EventArgs e)
+        private void frmDetainLicense_Load(object sender, EventArgs e)
         {
             lblCreatedBy.Text = clsGlobal.CurrentUser.UserName;
             lblDetainDate.Text = clsFormat.DateToShort(DateTime.Now);
@@ -130,7 +130,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         }
 
-        private void Detain_License_Activated(object sender, EventArgs e)
+        private void frmDetainLicense_Activated(object sender, EventArgs e)
         {
             ctrlDriverLicenseInfoWithFilter.txtLicenseIdFocus();
         }

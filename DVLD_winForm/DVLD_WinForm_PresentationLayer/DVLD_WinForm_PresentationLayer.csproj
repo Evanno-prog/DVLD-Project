@@ -177,10 +177,10 @@
     <Compile Include="Licences\frmShowPersonLicensesHistory.Designer.cs">
       <DependentUpon>frmShowPersonLicensesHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListDetainedLicensesManagement.cs">
+    <Compile Include="Applications\Release Detain License\ListDetainedLicensesManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListDetainedLicensesManagement.Designer.cs">
+    <Compile Include="Applications\Release Detain License\ListDetainedLicensesManagement.Designer.cs">
       <DependentUpon>ListDetainedLicensesManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Drivers\frmListDrivers.cs">
@@ -380,7 +380,7 @@
     <EmbeddedResource Include="Licences\frmShowPersonLicensesHistory.resx">
       <DependentUpon>frmShowPersonLicensesHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListDetainedLicensesManagement.resx">
+    <EmbeddedResource Include="Applications\Release Detain License\ListDetainedLicensesManagement.resx">
       <DependentUpon>ListDetainedLicensesManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Drivers\frmListDrivers.resx">
