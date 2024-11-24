@@ -63,7 +63,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void btnAddNewLocalDrivingLicenseApp_Click(object sender, EventArgs e)
         {
-            using (frmAddEditLocalDrivingLicenseApplication frm = new frmAddEditLocalDrivingLicenseApplication((int)dgvLocalDrivingLicenseApplication.CurrentRow.Cells[0].Value))
+            using (frmAddEditLocalDrivingLicenseApplication frm = new frmAddEditLocalDrivingLicenseApplication())
             {
                 frm.ShowDialog();
             }

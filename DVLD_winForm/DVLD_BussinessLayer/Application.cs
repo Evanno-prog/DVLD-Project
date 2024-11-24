@@ -21,14 +21,14 @@ namespace DVLD_BussinessLayer
         public clsPerson PersonInfo { set; get; }
         public DateTime ApplicationDate { set; get; }
         public int ApplicationTypeID { set; get; }
-    
+
         public clsApplicationType ApplicationTypeInfo;
         public enApplicationStatus ApplicationStatus { set; get; }
+
         public string StatusText
         {
             get
             {
-
                 switch (ApplicationStatus)
                 {
                     case enApplicationStatus.New:
@@ -41,8 +41,8 @@ namespace DVLD_BussinessLayer
                         return "Unknown";
                 }
             }
-
         }
+
         public DateTime LastStatusDate { set; get; }
         public float PaidFees { set; get; }
         public int CreatedByUserID { set; get; }

@@ -102,10 +102,7 @@ namespace DVLD_BussinessLayer
 
         public static DataTable GetInternationalLicenses(int DriverID)
         {
-            // Bussiness and DataAccess of clsInternationalLicense not implemented yet :-)
-
-            //return clsInternationalLicense.GetDriverInternationalLicenses(DriverID);
-            return null;
+            return clsInternationalLicense.GetDriverInternationalLicenses(DriverID);
         }
     }
 }

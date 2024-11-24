@@ -1,4 +1,5 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Applications.International_License;
 using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
@@ -93,9 +94,8 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (frmAddEditLocalDrivingLicenseApplication frm = new frmAddEditLocalDrivingLicenseApplication(-1))
+            using (frmAddEditLocalDrivingLicenseApplication frm = new frmAddEditLocalDrivingLicenseApplication())
             {
-               
                 frm.ShowDialog();
             }
         }
@@ -118,7 +118,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void internationalDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (New_International_License_Application frm = new New_International_License_Application())
+            using (frmNewInternationalLicenseApplication frm = new frmNewInternationalLicenseApplication())
             {
                 frm.ShowDialog();
             }
@@ -126,7 +126,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void internationalLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (ListInternationalDrivingLicenseApplication frm = new ListInternationalDrivingLicenseApplication())
+            using (frmListInternationalDrivingLicenseApplication frm = new frmListInternationalDrivingLicenseApplication())
             {
                 frm.ShowDialog();
             }

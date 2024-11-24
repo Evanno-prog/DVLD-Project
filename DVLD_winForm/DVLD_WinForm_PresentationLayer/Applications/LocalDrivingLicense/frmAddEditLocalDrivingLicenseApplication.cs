@@ -140,18 +140,18 @@ namespace DVLD_WinForm_PresentationLayer
                 return;
             }
 
-            if (clsLicenseClass.IsPersonAgeValidToApplyForThisLicenseClass(_SelectedPersonID,LicenseClassID))
+            if (clsLicenseClass.IsPersonAgeValidToApplyForThisLicenseClass(_SelectedPersonID, LicenseClassID))
             {
                 MessageBox.Show("Choose another License Class, Person age is not valid for this license class", "Age not valid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cbLicenseClass.Focus();
                 return;
             }
 
-            //if (clsLicense.IsLicenseExistByPersonID(_SelectedPersonID, LicenseClassID))
-            //{
-            //    MessageBox.Show("Person already has a License with the same applied license class.\nChoose another LicenseClass:", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+            if (clsLicense.IsLicenseExistByPersonID(_SelectedPersonID, LicenseClassID))
+            {
+                MessageBox.Show("Person already has a License with the same applied license class.\nChoose another LicenseClass:", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             _LocalDrivingLicenseApplication.LicenseClassID = LicenseClassID;
             _LocalDrivingLicenseApplication.ApplicantPersonID = ctrlPersonCardWithFilter1.PersonID;

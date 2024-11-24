@@ -47,6 +47,7 @@ namespace DVLD_BussinessLayer
             this.CreatedByUserID = CreatedByUserID;
             this.LicenseClassID = LicenseClassID;
             this.LicenseClassInfo = clsLicenseClass.Find(LicenseClassID);
+            this.CreatedByUserInfo = clsUser.FindByUserID(CreatedByUserID);
             Mode = enMode.Update;
         }
     
