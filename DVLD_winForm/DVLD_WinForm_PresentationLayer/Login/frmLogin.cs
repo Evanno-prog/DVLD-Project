@@ -30,7 +30,7 @@ namespace DVLD_WinForm_PresentationLayer
             clsUser User = clsUser.FindByUsernameAndPassword(guna2txtUserName.Text.Trim(), guna2txtPassword.Text.Trim());
             if (User != null)
             {
-                //incase the user is not active
+                //Incase the user is not active
                 if (!User.IsActive)
                 {
                     MessageBox.Show("This User is Not active! Contact your admin", "User in active", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -66,6 +66,7 @@ namespace DVLD_WinForm_PresentationLayer
 
         private void LoginScreen_Load(object sender, EventArgs e)
         {
+
             string UserName = "", Password = "";
 
             if (clsGlobal.GetStoredCredential(ref UserName, ref Password))
