@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DVLD_BussinessLayer;
 using DVLD_WinForm_PresentationLayer.Global_Classes;
-
 namespace DVLD_WinForm_PresentationLayer
 {
     public partial class frmLogin : Form
@@ -18,6 +18,8 @@ namespace DVLD_WinForm_PresentationLayer
         {
             InitializeComponent();
         }
+
+        private byte _CountFailedLogin = 3;
 
         private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
@@ -59,11 +61,27 @@ namespace DVLD_WinForm_PresentationLayer
             else
             {
                 guna2txtUserName.Focus();
-                MessageBox.Show("Invalid UserName/Password!", "Wrong credintials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                _CountFailedLogin--;
+                MessageBox.Show($"Invalid UserName/Password! you have ({_CountFailedLogin}) Trial(s) before luck your account.", "Wrong credintials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                if (_CountFailedLogin == 0)
+                {
+                    MessageBox.Show("Account locked after 3 failed trails.\nContact system administration to unlock your account", "Wrong credintials", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    guna2btnLogin.Enabled = false;
+                    // Specify the source name for the event log
+                    string sourceName = "DVLD";
+                    // Create the event source if it does not exist
+                    if (!EventLog.SourceExists(sourceName))
+                    {
+                        EventLog.CreateEventSource(sourceName, "Application");
+                    }
+                    // Log an information event
+                    EventLog.WriteEntry(sourceName, "Account locked after 3 failed trails. Contact system administration to unlock your account", EventLogEntryType.Error);
+
+                }
             }
-
         }
-
+    
         private void LoginScreen_Load(object sender, EventArgs e)
         {
 
