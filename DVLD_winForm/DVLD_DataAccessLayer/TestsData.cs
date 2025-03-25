@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Data;
 using DVLD_DataAccessLayer;
+using DVLD_DataAccessLayer.Global_Class;
 
 namespace DVLD_DataAccess
 {
@@ -42,7 +43,7 @@ namespace DVLD_DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
                 isFound = false;
             }
             finally
@@ -103,7 +104,7 @@ INNER JOIN
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
                 isFound = false;
             }
             finally
@@ -132,7 +133,7 @@ INNER JOIN
             }
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message); 
             }
             finally
             {
@@ -175,7 +176,7 @@ INNER JOIN
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
             }
             finally
             {
@@ -208,7 +209,7 @@ INNER JOIN
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
                 return false;
             }
             finally
@@ -240,7 +241,7 @@ where LocalDrivingLicenseApplicationID
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
             }
             finally
             {
@@ -249,4 +250,4 @@ where LocalDrivingLicenseApplicationID
             return PassedTestCount;
         }
     }
-}
+}

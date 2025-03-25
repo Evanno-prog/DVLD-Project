@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_DataAccessLayer.Global_Class;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -43,7 +44,7 @@ namespace DVLD_DataAccessLayer
                     }
                 }
             }
-            catch (Exception ex) {  }
+            catch (Exception ex) { clsLogging.LogExceptionToTheEventLog(ex.Message); }
             return isFound;
 
         }
@@ -82,7 +83,7 @@ namespace DVLD_DataAccessLayer
                     }
                 }
             }
-            catch (Exception ex) {  }
+            catch (Exception ex) { clsLogging.LogExceptionToTheEventLog(ex.Message); }
             return isFound;
 
         }
@@ -123,7 +124,7 @@ namespace DVLD_DataAccessLayer
                 }
             }
 
-            catch (Exception ex) {  }
+            catch (Exception ex) { clsLogging.LogExceptionToTheEventLog(ex.Message); }
             return ID;
 
         }
@@ -157,7 +158,7 @@ namespace DVLD_DataAccessLayer
                 }
             }
 
-            catch (Exception ex) { }
+            catch (Exception ex) { clsLogging.LogExceptionToTheEventLog(ex.Message); }
             return (rowsAffected > 0);
 
         }
@@ -179,7 +180,7 @@ namespace DVLD_DataAccessLayer
                     }
                 }
             }
-            catch (Exception ex) {  }
+            catch (Exception ex) { clsLogging.LogExceptionToTheEventLog(ex.Message); }
 
             return (rowsAffected > 0);
 
@@ -206,7 +207,7 @@ namespace DVLD_DataAccessLayer
                     }
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex) { clsLogging.LogExceptionToTheEventLog(ex.Message); }
 
             return isFound;
 
@@ -235,7 +236,7 @@ namespace DVLD_DataAccessLayer
                 }
             }
 
-            catch (Exception ex) {  }
+            catch (Exception ex) { clsLogging.LogExceptionToTheEventLog(ex.Message); }
 
             return dt;
         }

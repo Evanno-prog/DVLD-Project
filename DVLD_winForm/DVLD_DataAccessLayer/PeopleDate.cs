@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DVLD_DataAccessLayer.Global_Class;
+using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
@@ -71,7 +72,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
 
                 isFound = false;
             }
@@ -148,7 +149,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
                 isFound = false;
             }
             finally
@@ -206,7 +207,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
             }
             finally
             {
@@ -268,7 +269,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
                 return false;
             }
             finally
@@ -308,7 +309,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message); 
             }
             finally
             {
@@ -332,7 +333,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message); 
             }
             finally
             {
@@ -357,7 +358,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
                 isFound = false;
             }
             finally
@@ -383,7 +384,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
                 isFound = false;
             }
             finally
