@@ -1,4 +1,5 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -171,10 +172,12 @@ namespace DVLD_WinForm_PresentationLayer
             }
 
             _User.UserName = txtUserName.Text.Trim();
-            _User.Password = txtPassword.Text.Trim();
+            string salt = clsUtil.GenerateSalt();
+            string HashPasswordWithSalt = clsUtil.HashPasswordWithSalt(txtPassword.Text.Trim(), salt);
+            _User.Password = HashPasswordWithSalt;
             _User.PersonID = ctrlPersonCardWithFilter.PersonID;
             _User.IsActive = chkIsActive.Checked;
-
+            _User.Salt = salt;
             if (_User.Save())
             {
                 lblUserID.Text = _User.UserID.ToString();

@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
@@ -76,5 +79,105 @@ namespace DVLD_WinForm_PresentationLayer.Global_Classes
             sourceFile = destinationFile;
             return true;
         }
+
+
+        // Hash password with Salt techniques
+        // [1]: Generate salt
+        public static string GenerateSalt(int size = 16)
+        {
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                byte[] salt = new byte[size];
+                rng.GetBytes(salt);
+                return Convert.ToBase64String(salt);
+            }
+
+        }
+
+        // [2]: Hash password with salt
+        public static string HashPasswordWithSalt(string password, string salt)
+        {
+
+            var CombinedHashWithSalt = Encoding.UTF8.GetBytes(password + salt);
+
+            using (SHA256 sha256 = SHA256.Create())
+            {
+
+                byte[] Hash = sha256.ComputeHash(CombinedHashWithSalt);
+                return Convert.ToBase64String(Hash);
+            }
+
+        }
+
+        public static bool ChangePassword(int UserID, string NewPassword)
+        {
+            int rowsAffected = 0;
+            string salt = GenerateSalt();
+            string HashPasswordWithsalt = HashPasswordWithSalt(NewPassword, salt);
+            SqlConnection connection = new SqlConnection("Server=.;Database=DVLD;User Id=sa;Password=sa123456;");
+            string query = @"Update Users 
+                 set Password = @Password,
+                     Salt = @salt
+                 where UserID = @UserID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@UserID", UserID);
+            command.Parameters.AddWithValue("@Password", HashPasswordWithsalt);
+            command.Parameters.AddWithValue("@salt", salt);
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return (rowsAffected > 0);
+        }
+
+        public static bool DoesHashedPasswordWithSaltMatch(int UserID, string EnteredPassword)
+        {
+
+            string StoredSalt = default;
+            string StoredHashWithSalt = default;
+
+            SqlConnection connection = new SqlConnection("Server=.;Database=DVLD;User Id=sa;Password=sa123456;");
+            string query = @"Select Password, Salt from Users 
+                             where UserID = @UserID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@UserID", UserID);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+
+                    StoredSalt = (string)reader["Salt"];
+                    StoredHashWithSalt = (string)reader["Password"];
+                    // First: Hash entered password with stored salt
+                    string Enteredpassword = HashPasswordWithSalt(EnteredPassword, StoredSalt);
+                    return Enteredpassword == StoredHashWithSalt;
+
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+
+        }
+
+
     }
 }

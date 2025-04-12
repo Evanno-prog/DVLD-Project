@@ -1,10 +1,12 @@
 ﻿using DVLD_BussinessLayer;
+using DVLD_WinForm_PresentationLayer.Global_Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -60,8 +62,12 @@ namespace DVLD_WinForm_PresentationLayer
                 MessageBox.Show("Some fields are not valid! put the mouse over the red icon(s) to see the error", "Validation error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            // Hash new password with salt
+            string Salt = clsUtil.GenerateSalt();
+            string HashEnteredPasswordWithSalt = clsUtil.HashPasswordWithSalt(txtNewPassword.Text.Trim(),Salt);
+            _User.Password = HashEnteredPasswordWithSalt;
+            _User.Salt = Salt;
 
-            _User.Password = txtNewPassword.Text.Trim();
             if (_User.ChangePassword())
             {
                 MessageBox.Show("Password Changed succfully", "Changed succfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -84,7 +90,9 @@ namespace DVLD_WinForm_PresentationLayer
             else
                 errorProvider1.SetError(txtCurrentPassword, null);
 
-            if (_User.Password != txtCurrentPassword.Text)
+            string StoredSalt = clsUser.GetStoredSaltByUserName(_User.UserName);
+            string EnteredHashPasswordWithSalt = clsUtil.HashPasswordWithSalt(txtCurrentPassword.Text, StoredSalt);
+            if (_User.Password != EnteredHashPasswordWithSalt)
             {
                 errorProvider1.SetError(txtCurrentPassword, "Current Password is wrong!");
                 e.Cancel = true;

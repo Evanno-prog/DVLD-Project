@@ -2,13 +2,16 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Runtime.Remoting.Messaging;
+using System.Text;
+
 namespace DVLD_DataAccessLayer
 {
     public class clsUserData
     {
 
         public static bool GetUserInfoByUserID(int UserID, ref int PersonID, ref string UserName,
-        ref string Password, ref bool IsActive)
+        ref string Password, ref bool IsActive, ref string Salt)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
@@ -27,7 +30,8 @@ namespace DVLD_DataAccessLayer
                     UserName = (string)reader["UserName"];
                     Password = (string)reader["Password"];
                     IsActive = (bool)reader["IsActive"];
-
+                    Salt = reader["Salt"]?.ToString();
+                    Salt = Salt ?? "";
                 }
                 else
                 {
@@ -50,7 +54,7 @@ namespace DVLD_DataAccessLayer
         }
 
         public static bool GetUserInfoByPersonID(int PersonID, ref int UserID, ref string UserName,
-        ref string Password, ref bool IsActive)
+        ref string Password, ref bool IsActive, ref string Salt)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
@@ -69,6 +73,7 @@ namespace DVLD_DataAccessLayer
                     UserName = (string)reader["UserName"];
                     Password = (string)reader["Password"];
                     IsActive = (bool)reader["IsActive"];
+                    Salt = (string)reader["Salt"];
                 }
                 else
                 {
@@ -90,7 +95,7 @@ namespace DVLD_DataAccessLayer
         }
 
         public static bool GetUserInfoByUsernameAndPassword(string UserName, string Password,
-        ref int UserID, ref int PersonID, ref bool IsActive)
+        ref int UserID, ref int PersonID, ref bool IsActive, ref string Salt)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
@@ -101,23 +106,26 @@ namespace DVLD_DataAccessLayer
             try
             {
                 connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                if (reader.Read())
+                using (SqlDataReader reader = command.ExecuteReader())
                 {
-                    // The record was found
-                    isFound = true;
-                    UserID = (int)reader["UserID"];
-                    PersonID = (int)reader["PersonID"];
-                    UserName = (string)reader["UserName"];
-                    Password = (string)reader["Password"];
-                    IsActive = (bool)reader["IsActive"];
+                    if (reader.Read())
+                    {
+                        // The record was found
+                        isFound = true;
+                        UserID = (int)reader["UserID"];
+                        PersonID = (int)reader["PersonID"];
+                        UserName = (string)reader["UserName"];
+                        Password = (string)reader["Password"];
+                        IsActive = (bool)reader["IsActive"];
+                        Salt = (string)reader["Salt"];
+                    }
+                    else
+                    {
+                        // The record was not found
+                        isFound = false;
+                    }
                 }
-                else
-                {
-                    // The record was not found
-                    isFound = false;
-                }
-                reader.Close();
+
             }
             catch (Exception ex)
             {
@@ -131,20 +139,64 @@ namespace DVLD_DataAccessLayer
             return isFound;
         }
 
+        public static string GetStoredSaltByUserName(string UserName)
+        {
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                connection.Open();
+                string Query = "Select Salt from Users where UserName = @UserName;";
+                using (SqlCommand command = new SqlCommand(Query, connection))
+                {
+
+                    command.Parameters.AddWithValue("@UserName", UserName);
+                    try
+                    {
+                        string salt = default;
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+
+                            if (reader.Read())
+                            {
+                                // The record was found
+
+                                salt = reader["Salt"].ToString();
+                            }
+                            else
+                            {
+                                // The record was not found
+                                return "";
+                            }
+
+                        }
+                        return salt;
+                    }
+                    catch (Exception Ex)
+                    {
+                        clsLogging.LogExceptionToTheEventLog(Ex.Message);
+                        return "";
+                    }
+
+                }
+
+            }
+        }
+
         public static int AddNewUser(int PersonID, string UserName,
-        string Password, bool IsActive)
+        string Password, bool IsActive, string Salt)
         {
             //this function will return the new person id if succeeded and -1 if not.
             int UserID = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
             string query = @"INSERT INTO Users (PersonID,UserName,Password,IsActive)
-             VALUES (@PersonID, @UserName,@Password,@IsActive);
+             VALUES (@PersonID, @UserName,@Password,@IsActive,@Salt);
              SELECT SCOPE_IDENTITY();";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonID", PersonID);
             command.Parameters.AddWithValue("@UserName", UserName);
             command.Parameters.AddWithValue("@Password", Password);
             command.Parameters.AddWithValue("@IsActive", IsActive);
+            command.Parameters.AddWithValue("@Salt", Salt);
             try
             {
                 connection.Open();
@@ -166,7 +218,7 @@ namespace DVLD_DataAccessLayer
         }
 
         public static bool UpdateUser(int UserID, int PersonID, string UserName,
-        string Password, bool IsActive)
+        string Password, bool IsActive, string Salt)
         {
             int rowsAffected = 0;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
@@ -174,7 +226,8 @@ namespace DVLD_DataAccessLayer
              set PersonID = @PersonID,
              UserName = @UserName,
              Password = @Password,
-             IsActive = @IsActive
+             IsActive = @IsActive,
+             Salt = @Salt
              where UserID = @UserID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonID", PersonID);
@@ -182,6 +235,7 @@ namespace DVLD_DataAccessLayer
             command.Parameters.AddWithValue("@Password", Password);
             command.Parameters.AddWithValue("@IsActive", IsActive);
             command.Parameters.AddWithValue("@UserID", UserID);
+            command.Parameters.AddWithValue("@Salt", Salt);
             try
             {
                 connection.Open();
@@ -222,7 +276,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                clsLogging.LogExceptionToTheEventLog(ex.Message); 
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
             }
             finally
             {
@@ -247,7 +301,7 @@ namespace DVLD_DataAccessLayer
             }
             catch (Exception ex)
             {
-                clsLogging.LogExceptionToTheEventLog(ex.Message); 
+                clsLogging.LogExceptionToTheEventLog(ex.Message);
             }
             finally
             {
@@ -334,16 +388,18 @@ namespace DVLD_DataAccessLayer
             return isFound;
         }
 
-        public static bool ChangePassword(int UserID, string NewPassword)
+        public static bool ChangePassword(int UserID, string NewPassword, string salt)
         {
             int rowsAffected = 0;
             SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString);
             string query = @"Update Users 
-                 set Password = @Password
+                 set Password = @Password,
+                     Salt = @salt
                  where UserID = @UserID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@UserID", UserID);
             command.Parameters.AddWithValue("@Password", NewPassword);
+            command.Parameters.AddWithValue("@salt", salt);
             try
             {
                 connection.Open();
