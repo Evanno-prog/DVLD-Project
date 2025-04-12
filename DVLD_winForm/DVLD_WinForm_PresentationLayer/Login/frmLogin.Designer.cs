@@ -29,45 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.chkRememberMe = new System.Windows.Forms.CheckBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.pbShowHidePassword = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowHidePassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(839, 3);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 35);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 0;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(411, 494);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -152,6 +131,19 @@
             this.guna2txtPassword.TabIndex = 6;
             this.guna2txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // chkRememberMe
+            // 
+            this.chkRememberMe.AutoSize = true;
+            this.chkRememberMe.Checked = true;
+            this.chkRememberMe.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkRememberMe.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkRememberMe.Location = new System.Drawing.Point(600, 301);
+            this.chkRememberMe.Name = "chkRememberMe";
+            this.chkRememberMe.Size = new System.Drawing.Size(146, 25);
+            this.chkRememberMe.TabIndex = 8;
+            this.chkRememberMe.Text = "Remember Me:";
+            this.chkRememberMe.UseVisualStyleBackColor = true;
+            // 
             // guna2btnLogin
             // 
             this.guna2btnLogin.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
@@ -171,28 +163,27 @@
             this.guna2btnLogin.Text = "Login";
             this.guna2btnLogin.Click += new System.EventHandler(this.guna2btnLogin_Click);
             // 
-            // chkRememberMe
+            // pbShowHidePassword
             // 
-            this.chkRememberMe.AutoSize = true;
-            this.chkRememberMe.Checked = true;
-            this.chkRememberMe.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkRememberMe.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkRememberMe.Location = new System.Drawing.Point(600, 301);
-            this.chkRememberMe.Name = "chkRememberMe";
-            this.chkRememberMe.Size = new System.Drawing.Size(146, 25);
-            this.chkRememberMe.TabIndex = 8;
-            this.chkRememberMe.Text = "Remember Me:";
-            this.chkRememberMe.UseVisualStyleBackColor = true;
+            this.pbShowHidePassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbShowHidePassword.Image = global::DVLD_WinForm_PresentationLayer.Properties.Resources.hide;
+            this.pbShowHidePassword.Location = new System.Drawing.Point(759, 260);
+            this.pbShowHidePassword.Name = "pbShowHidePassword";
+            this.pbShowHidePassword.Size = new System.Drawing.Size(26, 23);
+            this.pbShowHidePassword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbShowHidePassword.TabIndex = 11;
+            this.pbShowHidePassword.TabStop = false;
+            this.pbShowHidePassword.Click += new System.EventHandler(this.pbShowHidePassword_Click);
             // 
-            // pictureBox2
+            // pictureBox1
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(542, 193);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(47, 35);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(411, 494);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -204,6 +195,29 @@
             this.pictureBox3.TabIndex = 10;
             this.pictureBox3.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(542, 193);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(47, 35);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(839, 3);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 35);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
+            // 
             // frmLogin
             // 
             this.AcceptButton = this.guna2btnLogin;
@@ -211,6 +225,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(883, 494);
+            this.Controls.Add(this.pbShowHidePassword);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -227,10 +242,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginScreen";
             this.Load += new System.EventHandler(this.LoginScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbShowHidePassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +265,6 @@
         private System.Windows.Forms.CheckBox chkRememberMe;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pbShowHidePassword;
     }
 }

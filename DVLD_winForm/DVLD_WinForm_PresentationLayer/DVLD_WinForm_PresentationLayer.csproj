@@ -525,6 +525,11 @@
   <ItemGroup>
     <None Include="Resources\Street Test 32.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\visible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -123,6 +123,16 @@ namespace DVLD_WinForm_PresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hide {
+            get {
+                object obj = ResourceManager.GetObject("hide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Male_512 {
             get {
                 object obj = ResourceManager.GetObject("Male 512", resourceCulture);
@@ -176,6 +186,16 @@ namespace DVLD_WinForm_PresentationLayer.Properties {
         internal static System.Drawing.Bitmap users_64 {
             get {
                 object obj = ResourceManager.GetObject("users 64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visible {
+            get {
+                object obj = ResourceManager.GetObject("visible", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

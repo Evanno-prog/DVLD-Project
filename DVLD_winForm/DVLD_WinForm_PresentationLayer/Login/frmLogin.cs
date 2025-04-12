@@ -97,5 +97,18 @@ namespace DVLD_WinForm_PresentationLayer
                 chkRememberMe.Checked = false;
         }
 
+        private void pbShowHidePassword_Click(object sender, EventArgs e)
+        {
+            if (guna2txtPassword.PasswordChar == '*')
+            {
+                pbShowHidePassword.Image = Properties.Resources.visible;
+                guna2txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                pbShowHidePassword.Image = Properties.Resources.hide;
+                guna2txtPassword.PasswordChar = '*';
+            }
+        }
     }
 }
